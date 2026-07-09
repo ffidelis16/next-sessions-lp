@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Novas frentes de receita no e-commerce | Nuvemshop Next</title>
+<meta name="description" content="Encontro presencial e reservado em São Paulo. Veja como marcas cresceram com assinatura, B2B e exportação sem depender de um só canal. 70 lugares.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Você cresceu até onde este modelo alcança.">
+<meta property="og:description" content="Uma noite presencial com quem transformou assinatura, B2B e exportação em receita previsível. 25 de agosto, São Paulo.">
+<meta property="og:image" content="ASSET_OG_1200x630.jpg">
+<meta property="og:url" content="https://www.nuvemshop.com.br/next/next-sessions-modelos-de-negocio">
+<meta name="theme-color" content="#00102E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Produção: carregar Ivy Presto pelo kit Adobe da Nuvemshop. Bodoni Moda entra só como fallback de preview. -->
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500;1,6..96,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500;1,6..96,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"></noscript>
+
+<!-- Hero fullscreen: preload pra LCP. Trocar pela URL final no HubSpot. -->
+<link rel="preload" as="image" href="asset-hero-sala.webp" imagesrcset="asset-hero-sala-m.webp 1080w, asset-hero-sala.webp 2000w" imagesizes="100vw" fetchpriority="high">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"O evento é gratuito?","acceptedAnswer":{"@type":"Answer","text":"Sim. É um evento gratuito para convidados."}},
+  {"@type":"Question","name":"O evento é aberto ao público?","acceptedAnswer":{"@type":"Answer","text":"Não. É uma sala reservada, para um grupo selecionado de lojistas e convidados."}},
+  {"@type":"Question","name":"Posso levar alguém da minha empresa?","acceptedAnswer":{"@type":"Answer","text":"Sim. Em geral, reservamos até 2 convites por marca, para manter o perfil da sala."}},
+  {"@type":"Question","name":"Confirmar presença garante meu lugar?","acceptedAnswer":{"@type":"Answer","text":"Sim. Ao preencher o formulário, sua presença fica confirmada enquanto houver disponibilidade na sala."}},
+  {"@type":"Question","name":"O que acontece depois que confirmo?","acceptedAnswer":{"@type":"Answer","text":"Você recebe por e-mail a confirmação, a programação e as informações de acesso ao escritório."}},
+  {"@type":"Question","name":"O evento será gravado?","acceptedAnswer":{"@type":"Answer","text":"Não. O valor está em estar na sala."}},
+  {"@type":"Question","name":"Vai ter apresentação comercial?","acceptedAnswer":{"@type":"Answer","text":"Não. A noite é de conteúdo prático e troca entre pares."}},
+  {"@type":"Question","name":"Como funciona o networking?","acceptedAnswer":{"@type":"Answer","text":"Uma noite pensada para a troca, com degustação de vinho guiada por sommelier."}},
+  {"@type":"Question","name":"Onde acontece?","acceptedAnswer":{"@type":"Answer","text":"No escritório da Nuvemshop, na Vila Olímpia, São Paulo."}},
+  {"@type":"Question","name":"Há estacionamento?","acceptedAnswer":{"@type":"Answer","text":"Sim. O escritório tem estacionamento próprio, além de diversas opções na região da Vila Olímpia."}}]
+}
+</script>
+
+<style>
+/* ============================================================
+   NEXT SESSIONS · 25/08 — Modelos de negócio
+   Soberana · mobile-first · mono-azul sobre navy
+   Tipografia: Plus Jakarta Sans (marca) + Ivy Presto (acento)
+   Pesos delicados: títulos em 500, acento em serifa italic 400
+   ============================================================ */
+:root{
+  /* base mais funda que o Galaxy Blue da casa (#010B23), mono-azul */
+  --ink-900:#010A22; --ink-850:#03123A; --ink-800:#061C4C; --ink-700:#0A2A6B;
+  /* azuis: acento no Highlight Blue oficial (#59A9FF); corpo mantém o suave */
+  --blue-600:#0050C3; --blue-500:#1E6BE0; --blue-400:#3E8BF5; --blue-300:#59A9FF;
+  --blue-200:#FFFFFF; --blue-150:#FFFFFF; --sky:#84CAFF; --ice-100:#EEF4FC; --ice-200:#DFE9F7;
+  --paper:#F4F7FC; --line-dk:rgba(133,202,255,.16); --line-lt:rgba(6,30,76,.10); --white:#FFF;
+  --sans:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --serif:'ivypresto-display','Ivy Presto Display','Ivy Presto','Bodoni Moda', Georgia, serif;
+  --pad-x:22px; --sec-y:72px; --maxw:1120px;
+  --r-lg:24px; --r-md:18px; --r-sm:12px; --r-pill:999px;
+  --sh-soft:0 18px 50px rgba(0,8,34,.42); --sh-card:0 16px 40px rgba(4,22,60,.09);
+  --sh-glow:0 0 0 1px rgba(133,202,255,.5), 0 14px 44px rgba(30,107,224,.42);
+  /* vidro e brilho */
+  --glass:rgba(6,20,54,.46); --glass-bd:rgba(133,202,255,.20);
+  --glow-cta:0 0 0 1px rgba(133,202,255,.55), 0 16px 46px rgba(89,169,255,.4);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--ink-900);color:var(--white);line-height:1.55;font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--blue-400);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad-x);padding-right:var(--pad-x)}
+.section{padding-top:var(--sec-y);padding-bottom:var(--sec-y)}
+
+/* --- Tipografia: delicada --- */
+.eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-300)}
+h1,h2,h3{font-weight:500;line-height:1.14;letter-spacing:-.022em;text-wrap:balance}
+p{text-wrap:pretty}
+/* Acento serifa italic: semibold e em linha própria (separado do Jakarta) */
+.ac,.alc,.win{font-family:var(--serif);font-weight:600;font-style:italic;letter-spacing:0;display:block}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:600;font-size:1rem;letter-spacing:-.005em;padding:15px 26px;border-radius:var(--r-pill);white-space:nowrap;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .2s var(--ease);will-change:transform}
+/* Primário: branco de alto contraste sobre navy (padrão dark da marca), azul sobre claro */
+.btn-primary{background:#fff;color:var(--blue-600);box-shadow:0 10px 30px rgba(0,6,26,.42)}
+.btn-primary:hover{background:#EAF3FF;transform:translateY(-2px);box-shadow:var(--glow-cta)}
+.light .btn-primary,.modal__panel .btn-primary{background:var(--blue-600);color:#fff;box-shadow:0 8px 26px rgba(0,80,195,.38)}
+.light .btn-primary:hover,.modal__panel .btn-primary:hover{background:var(--blue-500);color:#fff;box-shadow:var(--sh-glow)}
+.btn-ghost{background:rgba(255,255,255,.04);color:#fff;box-shadow:inset 0 0 0 1.5px rgba(133,202,255,.34);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.btn-ghost:hover{background:rgba(133,202,255,.08);box-shadow:inset 0 0 0 1.5px rgba(133,202,255,.8);transform:translateY(-2px)}
+.btn-block{width:100%}
+.btn-sm{padding:9px 18px;font-size:.85rem}
+
+/* --- STICKY / MOBILE CTA --- */
+.stickybar{position:fixed;top:0;left:0;width:100%;z-index:60;background:rgba(3,22,59,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line-dk);transform:translateY(-100%);transition:transform .4s var(--ease);display:none}
+.stickybar.show{transform:translateY(0)}
+.stickybar__in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:11px var(--pad-x);max-width:var(--maxw);margin:0 auto}
+.stickybar__left{display:flex;align-items:center;gap:14px;min-width:0}
+.stickybar__logo{font-weight:600;font-size:.92rem;letter-spacing:-.01em;white-space:nowrap}
+.stickybar__seats{font-size:.8rem;color:var(--blue-200);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stickybar .btn{padding:10px 20px;font-size:.9rem}
+@media(min-width:860px){.stickybar{display:block}}
+.mobilecta{position:fixed;left:0;bottom:0;width:100%;z-index:60;padding:12px var(--pad-x) calc(12px + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(0,16,46,.98) 60%,rgba(0,16,46,0));transform:translateY(120%);transition:transform .4s var(--ease)}
+.mobilecta.show{transform:translateY(0)}
+.mobilecta__seats{text-align:center;font-size:.72rem;letter-spacing:.04em;color:var(--blue-300);margin-bottom:8px}
+@media(min-width:860px){.mobilecta{display:none}}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;padding-top:34px;padding-bottom:40px;overflow:hidden;background:var(--ink-900)}
+.hero__bg{position:absolute;inset:0;z-index:0}
+.hero__photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 42%}
+/* Fade elegante mobile-first: sala revelada no topo, texto emergindo do escuro embaixo, fusão na navy */
+.hero__grad{position:absolute;inset:0;background:
+  linear-gradient(180deg,
+    var(--ink-900) 0%,
+    rgba(1,10,34,.99) 32%,
+    rgba(1,10,34,.93) 56%,
+    rgba(1,10,34,.55) 71%,
+    rgba(1,10,34,.2) 84%,
+    rgba(1,10,34,.52) 94%,
+    var(--ink-900) 100%)}
+/* Brilho azul que ecoa a luz do palco, sem competir com o texto */
+.hero__glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(56% 44% at 80% 29%,rgba(89,169,255,.32),transparent 60%);mix-blend-mode:screen}
+.hero__in{position:relative;z-index:2;display:flex;flex-direction:column;flex:1;max-width:var(--maxw);margin:0 auto;width:100%;padding-left:var(--pad-x);padding-right:var(--pad-x)}
+.hero__topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:auto}
+.brandline{display:inline-flex;align-items:center}
+.logo{height:22px;width:auto;color:#fff;display:block}
+.foot__brand .logo{height:20px}
+.brandline .dot{width:22px;height:22px;border-radius:7px;background:linear-gradient(135deg,#3E8BF5,#0050C3);box-shadow:0 4px 14px rgba(0,80,195,.5)}
+.brandline .sub{font-weight:400;color:var(--blue-200);font-size:.9rem}
+.tag-presencial{font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-150);padding:8px 14px;border-radius:var(--r-pill);border:1px solid var(--line-dk);white-space:nowrap}
+.hero__body{padding-top:40px;padding-bottom:8px;text-shadow:0 1px 2px rgba(1,10,34,.4),0 2px 34px rgba(1,10,34,.72)}
+.hero__ctas .btn-primary{text-shadow:none}
+.hero__series{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.15rem;color:var(--blue-300);margin-bottom:14px}
+.hero__tag{display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-150);padding:7px 14px;border-radius:var(--r-pill);border:1px solid var(--glass-bd);background:rgba(133,202,255,.05);margin-bottom:22px}
+.hero h1{font-size:clamp(2.05rem,7.2vw,4.7rem);max-width:13ch;margin-bottom:22px;letter-spacing:-.03em;text-wrap:balance}
+.hero h1 .alc{color:var(--blue-300)}
+.hero__sub{font-size:clamp(1.02rem,2.6vw,1.26rem);color:var(--blue-200);max-width:45ch;line-height:1.55;margin-bottom:28px;font-weight:400}
+.logistics{display:flex;flex-wrap:wrap;gap:10px 18px;margin-bottom:24px}
+.logi{display:flex;align-items:center;gap:9px;font-size:.9rem;color:var(--blue-150);font-weight:500}
+.logi svg{width:17px;height:17px;flex:none;color:var(--blue-400)}
+
+/* readout compacto de ocupação */
+.occ{display:flex;align-items:center;gap:13px;border:1px solid var(--glass-bd);border-radius:var(--r-md);padding:13px 16px;margin-bottom:26px;max-width:390px;background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 34px rgba(0,6,26,.4),inset 0 1px 0 rgba(255,255,255,.07)}
+.occ__arc{flex:none}
+.occ__meta{min-width:0}
+.occ__state{font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-300);display:inline-block;margin-bottom:3px}
+.occ__state.is-last{color:#fff;background:var(--blue-600);padding:3px 9px;border-radius:var(--r-pill);animation:pulse 2.6s var(--ease) infinite}
+.occ__state.is-wait{color:#fff;background:var(--ink-700);padding:3px 9px;border-radius:var(--r-pill)}
+.occ__count{font-size:.94rem;color:var(--blue-150)}
+.occ__count b{color:#fff;font-weight:600}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(62,139,245,.5)}50%{box-shadow:0 0 0 6px rgba(62,139,245,0)}}
+
+.hero__ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+.hero__ctas .btn{padding:13px 22px;font-size:.95rem}
+.btn__arw{width:16px;height:16px;transition:transform .25s var(--ease)}
+.btn-ghost:hover .btn__arw{transform:translateX(3px)}
+.hero__micro{font-size:.82rem;color:var(--blue-300);margin-top:16px;display:flex;align-items:center;gap:8px}
+.hero__micro svg{width:15px;height:15px;color:var(--blue-400)}
+@media(max-width:479px){.hero__ctas{flex-direction:column;align-items:stretch}.hero__ctas .btn{width:100%}}
+
+/* ============================================================
+   A SALA — teatro (menor, integrado)
+   ============================================================ */
+.sala{background:linear-gradient(180deg,var(--ink-900),#020e28 55%,var(--ink-900));overflow:hidden}
+.sala .eyebrow{color:var(--blue-300)}
+.sala__grid{display:grid;gap:30px;align-items:center}
+.sala h2{font-size:clamp(1.7rem,5vw,2.5rem);margin:12px 0 14px;max-width:18ch}
+.sala__lead{color:var(--blue-200);font-size:1.02rem;line-height:1.6;max-width:46ch;margin-bottom:18px;font-weight:400}
+.sala__count{font-size:1rem;color:var(--blue-150)}
+.sala__count b{color:#fff;font-weight:600}
+.sala__state{display:inline-block;margin-top:12px;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-300);padding:6px 14px;border-radius:var(--r-pill);background:rgba(62,139,245,.14)}
+.sala__state.is-last{color:#fff;background:var(--blue-600);animation:pulse 2.6s var(--ease) infinite}
+.sala__state.is-wait{color:#fff;background:var(--ink-700)}
+
+.sala__viz{display:flex;flex-direction:column;align-items:center;gap:22px}
+.sala__counter{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center}
+.theater-wrap{position:relative;width:100%;max-width:300px;margin:0 auto}
+/* Cone de luz do palco: sobe do ponto-base central, puramente imagético */
+.theater-wrap::before{content:"";position:absolute;left:50%;bottom:2px;transform:translateX(-50%);width:216px;height:184px;background:linear-gradient(to top,rgba(130,182,255,.42),rgba(96,156,244,.13) 42%,transparent 84%);clip-path:polygon(50% 100%,11% 0,89% 0);filter:blur(7px);pointer-events:none;z-index:0}
+.theater-wrap::after{content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);width:150px;height:66px;background:radial-gradient(ellipse at 50% 100%,rgba(158,200,255,.6),rgba(90,150,240,.12) 45%,transparent 72%);filter:blur(5px);pointer-events:none;z-index:0}
+.theater{position:relative;z-index:1;width:100%;height:190px;margin:0 auto}
+.seat-arm{position:absolute;left:50%;bottom:16px;transform-origin:bottom center;display:flex;align-items:flex-start;justify-content:center}
+.seat{width:6px;height:6px;border-radius:50%;background:rgba(126,178,247,.09);transition:background .55s var(--ease),box-shadow .55s var(--ease),transform .55s var(--ease)}
+.seat.taken{background:#8FBEFA;box-shadow:0 0 10px rgba(78,150,246,.9),0 0 22px rgba(62,139,245,.4);transform:scale(1.3)}
+.stage{position:absolute;left:50%;bottom:3px;transform:translateX(-50%);width:58px;height:6px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(190,220,255,.98),rgba(120,176,252,0) 72%);box-shadow:0 0 34px 7px rgba(120,176,252,.5)}
+@media(min-width:820px){.sala__grid{grid-template-columns:1.1fr .9fr}.theater-wrap{max-width:300px}.theater{height:190px}}
+
+/* ============================================================
+   A TESE — check-bullets (estilo da casa)
+   ============================================================ */
+.tese{background:var(--ink-850);position:relative}
+.tese h2{font-size:clamp(1.8rem,5.2vw,2.7rem);margin-bottom:14px;max-width:18ch}
+.tese__teto{color:var(--blue-200);font-size:1.02rem;max-width:54ch;margin-bottom:30px;opacity:.82;font-weight:400}
+.checks{display:grid;gap:20px;max-width:620px;margin-bottom:28px}
+.check{display:flex;gap:14px;align-items:flex-start}
+.check__ico{width:26px;height:26px;border-radius:50%;background:rgba(62,139,245,.16);display:grid;place-items:center;color:var(--blue-400);flex:none;margin-top:2px}
+.check__ico svg{width:14px;height:14px}
+.check__t{font-weight:600;font-size:1.05rem;margin-bottom:3px;letter-spacing:-.01em}
+.check__d{color:var(--blue-200);font-size:.96rem;line-height:1.5;max-width:44ch;font-weight:400}
+.tese__close{font-size:1.1rem;color:var(--blue-150);max-width:56ch;line-height:1.6;font-weight:400}
+.tese__close b{color:#fff;font-weight:600}
+/* Tese em 3 cards (peso narrativo, padrão de card da casa) */
+.models{display:grid;gap:14px;margin:30px 0}
+.model{position:relative;border-radius:var(--r-md);padding:24px 22px;background:linear-gradient(180deg,rgba(133,202,255,.06),rgba(6,20,54,.34));box-shadow:inset 0 0 0 1px var(--line-dk);overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.model::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue-400),transparent 72%);opacity:.75}
+.model:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px rgba(133,202,255,.42),0 18px 44px rgba(0,8,34,.5)}
+.model__k{font-size:.64rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--blue-300)}
+.model__t{font-size:1.3rem;font-weight:500;margin:10px 0 8px;letter-spacing:-.01em}
+.model__d{color:var(--blue-200);font-size:.98rem;line-height:1.55;font-weight:400}
+@media(min-width:760px){.models{grid-template-columns:repeat(3,1fr);gap:16px}}
+
+/* ============================================================
+   PLAYBOOK — timeline + speakers
+   ============================================================ */
+.playbook h2{font-size:clamp(1.8rem,5.2vw,2.7rem);margin-bottom:12px}
+.playbook__sub{color:var(--blue-200);font-size:1.02rem;max-width:52ch;margin-bottom:38px;font-weight:400}
+.timeline{position:relative;margin-left:8px;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:4px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,transparent,var(--line-dk) 8%,var(--line-dk) 92%,transparent)}
+.tl{position:relative;padding:16px 14px 16px 0;border-radius:var(--r-md);transition:background .35s var(--ease)}
+.tl::before{content:"";position:absolute;left:-26px;top:22px;width:9px;height:9px;border-radius:50%;background:var(--blue-400);box-shadow:0 0 0 4px rgba(62,139,245,.16);transform:translateX(-1px);transition:box-shadow .35s var(--ease),background .35s var(--ease)}
+.tl:hover{background:radial-gradient(140% 100% at -4% 50%,rgba(89,169,255,.11),transparent 60%)}
+.tl:hover .tl__t{color:#fff}
+.tl:hover::before{background:var(--sky);box-shadow:0 0 0 5px rgba(62,139,245,.22),0 0 18px rgba(89,169,255,.9)}
+.tl__time{font-weight:600;font-size:.8rem;color:var(--blue-300);letter-spacing:.03em;font-variant-numeric:tabular-nums;margin-bottom:4px}
+.tl__t{font-size:1.08rem;font-weight:600;margin-bottom:6px;letter-spacing:-.01em}
+.tl__d{color:var(--blue-200);font-size:.94rem;line-height:1.55;max-width:56ch;font-weight:400}
+.tl__who{margin-top:8px;font-size:.83rem;color:var(--blue-300);font-weight:500}
+.tl--anchor{background:linear-gradient(180deg,rgba(30,107,224,.15),rgba(10,42,107,.13));border:1px solid var(--line-dk);border-radius:var(--r-md);padding:20px;margin:6px 0 6px -6px}
+.tl--anchor::before{background:var(--blue-400);box-shadow:0 0 0 5px rgba(62,139,245,.22),0 0 16px rgba(62,139,245,.65);width:11px;height:11px;top:26px;left:-26px}
+.tl--anchor .tl__t{font-size:1.18rem}
+.tl--anchor .tl__k{display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--blue-400);margin-bottom:8px}
+.ph{color:var(--blue-500);font-style:italic;font-weight:500}
+
+.speakers{margin-top:54px}
+.playbook__cta{margin-top:46px;text-align:center}
+.speakers h3{font-size:1.35rem;margin-bottom:6px}
+.speakers__sub{color:var(--blue-200);font-size:.98rem;margin-bottom:26px;max-width:50ch;font-weight:400}
+.spk-grid{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+.spk{position:relative;border-radius:var(--r-md);overflow:hidden;background:linear-gradient(180deg,rgba(10,42,107,.26),rgba(6,20,54,.34));box-shadow:inset 0 0 0 1px var(--line-dk);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.spk:hover{transform:translateY(-5px);box-shadow:inset 0 0 0 1px rgba(133,202,255,.42),0 20px 46px rgba(0,8,34,.55)}
+.spk__photo{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--ink-800)}
+.spk__photo img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s var(--ease)}
+.spk:hover .spk__photo img{transform:scale(1.045)}
+.spk__photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(2,10,34,.72) 100%)}
+.spk__info{padding:15px 16px 19px}
+.spk__name{font-weight:600;font-size:1rem;letter-spacing:-.01em}
+.spk__role{color:var(--blue-300);font-size:.8rem;font-weight:500;margin:2px 0 8px}
+.spk__contrib{color:var(--blue-200);font-size:.88rem;line-height:1.5;font-weight:400}
+@media(min-width:760px){.spk-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* A experiência (degustação) — slot de foto entra em .exp__media quando houver */
+.exp{display:grid;grid-template-columns:1fr;margin-top:48px;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(180deg,rgba(10,42,107,.3),rgba(6,20,54,.36));box-shadow:inset 0 0 0 1px var(--line-dk)}
+.exp__media{position:relative;min-height:200px;display:grid;place-items:center;color:var(--sky);background:radial-gradient(120% 92% at 32% 22%,rgba(89,169,255,.24),transparent 60%),linear-gradient(135deg,#071a4d,#03123a)}
+.exp__media svg{width:76px;height:76px;filter:drop-shadow(0 6px 26px rgba(89,169,255,.55))}
+.exp__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.exp__body{padding:30px 28px}
+.exp__body h3{font-size:clamp(1.5rem,4vw,2rem);margin:10px 0 12px;max-width:16ch}
+.exp__body h3 .ac{color:var(--blue-300)}
+.exp__body p{color:var(--blue-200);font-size:1rem;line-height:1.6;max-width:46ch;font-weight:400}
+@media(min-width:760px){.exp{grid-template-columns:.92fr 1.08fr}.exp__media{min-height:240px}}
+
+/* --- Marcas na sala (strip de acabamento) --- */
+.marcas{border-top:1px solid var(--line-dk);border-bottom:1px solid var(--line-dk);padding:34px 0;text-align:center}
+.marcas__label{font-size:.66rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--blue-300);margin-bottom:18px}
+.marcas__row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px 46px}
+.marca-logo{width:auto;object-fit:contain;opacity:.82;transition:opacity .3s var(--ease)}
+.marca-logo:hover{opacity:1}
+.m-pwrd{height:20px}.m-suamesa{height:40px}.m-pitada{height:30px}
+
+/* ============================================================
+   LOCAL + FAQ + DEPOIMENTOS — seção clara (respiro)
+   ============================================================ */
+.light{background:var(--paper);color:#0b1b3a}
+.light .eyebrow{color:var(--blue-600)}
+.light h2{color:#08183a;font-size:clamp(1.75rem,4.8vw,2.5rem);margin-bottom:18px;max-width:20ch}
+.light h2 .ac{color:var(--blue-600)}
+.light h3{color:#08183a}
+.local__lead{color:#3a4a67;font-size:1.02rem;max-width:52ch;margin-bottom:26px;line-height:1.6;font-weight:400}
+.local__card{background:#fff;border-radius:var(--r-lg);box-shadow:var(--sh-card);overflow:hidden}
+.local__map{height:250px;overflow:hidden;position:relative}
+.local__map img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.local__map::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(1,10,34,.12),transparent 40%)}
+.local__info{padding:22px}
+.local__row{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line-lt)}
+.local__row:last-child{border-bottom:none}
+.local__row svg{width:19px;height:19px;color:var(--blue-600);flex:none;margin-top:2px}
+.local__row .lbl{font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#5b6b86;margin-bottom:2px}
+.local__row .val{font-weight:500;color:#0b1b3a;font-size:.97rem}
+.local__row a.val{color:var(--blue-600);text-decoration:underline;text-underline-offset:3px}
+.local__cta{padding:0 22px 22px}
+
+.faq{margin-top:52px}
+.faq h3{font-size:1.35rem;margin-bottom:6px}
+.faq__intro{color:#3a4a67;margin-bottom:22px;font-size:.98rem;font-weight:400}
+.faq__group{margin-bottom:24px}
+.faq__gt{font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-600);margin-bottom:4px}
+.acc{border-bottom:1px solid var(--line-lt)}
+.acc__btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;text-align:left;font-weight:500;font-size:1rem;color:#0b1b3a;letter-spacing:-.01em}
+/* Toggle padrão NEXT: círculo com + (fechado) / − navy sólido (aberto) */
+.acc__ico{position:relative;width:30px;height:30px;flex:none;border-radius:50%;background:transparent;box-shadow:inset 0 0 0 1.5px rgba(6,30,76,.26);transition:background .25s var(--ease),box-shadow .25s var(--ease)}
+.acc__ico::before,.acc__ico::after{content:"";position:absolute;top:50%;left:50%;width:11px;height:1.8px;border-radius:2px;background:#08183a;transform:translate(-50%,-50%);transition:opacity .25s var(--ease),background .25s var(--ease)}
+.acc__ico::after{transform:translate(-50%,-50%) rotate(90deg)}
+.acc[open] .acc__ico{background:var(--ink-900);box-shadow:none}
+.acc[open] .acc__ico::before,.acc[open] .acc__ico::after{background:#fff}
+.acc[open] .acc__ico::after{opacity:0}
+.acc__body{padding:0 0 18px;color:#42536e;font-size:.95rem;line-height:1.6;max-width:62ch;font-weight:400}
+.acc summary{list-style:none}
+.acc summary::-webkit-details-marker{display:none}
+
+/* Depoimentos (card estilo casa) */
+.depo{margin-top:56px}
+.depo__head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:24px;flex-wrap:wrap}
+.depo h2{margin-bottom:0}
+.depo__grid{display:grid;gap:16px}
+.tcard{background:#fff;border-radius:var(--r-lg);padding:28px 26px;box-shadow:var(--sh-card),inset 0 0 0 1px rgba(6,30,76,.06);position:relative}
+.tcard__mark{font-family:var(--serif);font-weight:500;font-size:2.6rem;line-height:.6;color:var(--ink-900);display:block;margin-bottom:10px}
+.tcard__text{color:#1a2740;font-size:1.05rem;line-height:1.6;margin-bottom:22px;font-weight:400}
+.tcard__by{display:flex;align-items:center;gap:12px}
+.tcard__ph{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--blue-400),var(--ink-700));flex:none}
+.tcard__n{font-weight:600;color:#08183a;font-size:.95rem}
+.tcard__r{color:#5b6b86;font-size:.82rem}
+@media(min-width:760px){.depo__grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ============================================================
+   STATS + FECHO — navy (decisão)
+   ============================================================ */
+.close{background:radial-gradient(78% 48% at 50% 0%,rgba(62,139,245,.15),transparent 62%),linear-gradient(180deg,var(--ink-900),var(--ink-850))}
+.stats-head{font-size:clamp(1.6rem,5vw,2.4rem);margin-bottom:26px;max-width:20ch}
+.stats-head .ac{color:var(--blue-300)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:56px}
+.statcard{border-radius:var(--r-md);padding:24px 20px;background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:inset 0 0 0 1px var(--line-dk);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.statcard:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px rgba(133,202,255,.42),0 16px 40px rgba(0,8,34,.5)}
+.statcard__ico{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 32% 26%,rgba(89,169,255,.3),rgba(62,139,245,.1));display:grid;place-items:center;color:var(--sky);margin-bottom:16px;box-shadow:inset 0 0 0 1px rgba(133,202,255,.26)}
+.statcard__ico svg{width:22px;height:22px}
+.statcard__n{font-size:clamp(1.9rem,6vw,2.6rem);font-weight:600;letter-spacing:-.03em;color:#fff;line-height:1}
+.statcard__l{color:var(--blue-200);font-size:.8rem;margin-top:8px;line-height:1.35;font-weight:400}
+
+.final{text-align:center;max-width:620px;margin:0 auto}
+.final h2,.final h3{font-size:clamp(2rem,6.2vw,3rem);margin-bottom:16px}
+.final h2 .ac,.final h3 .ac{color:var(--blue-300)}
+.final p{color:var(--blue-200);font-size:1.06rem;margin-bottom:22px;max-width:44ch;margin-inline:auto;font-weight:400}
+.final .occ{margin-inline:auto;justify-content:center}
+.final__micro{font-size:.82rem;color:var(--blue-300);margin-top:16px}
+
+.foot{border-top:1px solid var(--line-dk);padding:28px var(--pad-x) 34px;text-align:center}
+.foot__brand{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:600;margin-bottom:12px;letter-spacing:-.01em}
+.foot__brand .dot{width:20px;height:20px;border-radius:6px;background:linear-gradient(135deg,#3E8BF5,#0050C3)}
+.foot__legal{color:var(--blue-300);font-size:.78rem}
+
+/* --- MODAL --- */
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal__bd{position:absolute;inset:0;background:rgba(0,8,24,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.modal__panel{position:relative;background:#fff;color:#0b1b3a;border-radius:var(--r-lg);width:100%;max-width:480px;max-height:88vh;overflow:auto;padding:30px 26px 26px;box-shadow:0 40px 90px rgba(0,8,30,.5);animation:pop .35s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.modal__x{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:var(--ice-100);display:grid;place-items:center;color:var(--blue-600)}
+.modal__x:hover{background:var(--ice-200)}
+.modal__eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-600);margin-bottom:6px}
+.modal__title{font-size:1.35rem;font-weight:500;letter-spacing:-.02em;margin-bottom:6px;color:#08183a}
+.modal__sub{color:#42536e;font-size:.92rem;margin-bottom:20px;font-weight:400}
+.modal__form{min-height:120px}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}.seat{transition:none!important}}
+@media(min-width:860px){:root{--sec-y:110px;--pad-x:40px}.hero__body{padding-top:56px;max-width:52ch}.stats{gap:16px}
+  /* Desktop: escurece a esquerda (coluna de texto) e revela a sala à direita, ainda fundindo na base */
+  .hero__photo{object-position:68% 42%}
+  .hero__grad{background:
+    linear-gradient(96deg,rgba(1,10,34,.95) 0%,rgba(1,10,34,.86) 28%,rgba(1,10,34,.5) 56%,rgba(1,10,34,.12) 100%),
+    radial-gradient(120% 120% at 20% 60%,transparent 45%,rgba(1,10,34,.5) 100%),
+    linear-gradient(180deg,rgba(1,10,34,.45) 0%,transparent 24%,transparent 58%,rgba(1,10,34,.6) 88%,var(--ink-900) 100%)}
+}
+/* Sala: espelhos de ICP */
+.sala__mirrors{list-style:none;display:grid;gap:11px;margin:16px 0;padding:0;max-width:46ch}
+.sala__mirrors li{color:var(--blue-200);font-size:.95rem;line-height:1.55;padding-left:20px;position:relative;font-weight:400}
+.sala__mirrors li::before{content:"—";position:absolute;left:0;color:var(--blue-400)}
+/* O que você leva */
+.leva{background:var(--ink-850)}
+.leva h2{font-size:clamp(1.8rem,5.2vw,2.7rem);margin-bottom:22px;max-width:22ch}
+.leva h2 .ac{color:var(--blue-300)}
+.leva__list{list-style:none;display:grid;gap:14px;max-width:640px}
+.leva__list li{color:var(--blue-200);font-size:.97rem;line-height:1.55;padding-left:22px;position:relative;font-weight:400}
+.leva__list li::before{content:"→";position:absolute;left:0;color:var(--blue-400)}
+
+/* ===== Refinamentos mobile ===== */
+@media(max-width:859px){
+  /* Folga pra barra fixa de CTA não cobrir o rodapé */
+  .foot{padding-bottom:104px}
+}
+@media(max-width:759px){
+  .exp__media{min-height:150px}
+  .exp__media svg{width:62px;height:62px}
+  /* Cabeçalhos centralizados no mobile (respiro editorial) */
+  .sala .eyebrow,.sala h2,.sala__lead,
+  .tese .eyebrow,.tese h2,.tese__teto,.tese__close,
+  .playbook .eyebrow,.playbook h2,.playbook__sub,.speakers h3,.speakers__sub,
+  .leva .eyebrow,.leva h2,
+  .light .eyebrow,.light h2,.local__lead,
+  .close .eyebrow,.stats-head{text-align:center}
+  .sala h2,.sala__lead,.tese h2,.tese__teto,.tese__close,.playbook h2,.playbook__sub,.speakers__sub,.leva h2,.light h2,.local__lead,.stats-head{margin-left:auto;margin-right:auto}
+  /* Participantes: slider full-bleed que vaza à direita */
+  .spk-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+    margin-left:calc(-1 * var(--pad-x));margin-right:calc(-1 * var(--pad-x));
+    padding:4px var(--pad-x) 6px;scroll-padding-left:var(--pad-x)}
+  .spk-grid::-webkit-scrollbar{display:none}
+  .spk{flex:0 0 72%;scroll-snap-align:start}
+}
+@media(max-width:559px){
+  /* CTA do header some no mobile (redundante com o CTA do corpo + barra fixa) */
+  .hero__topbar .btn-sm{display:none}
+  /* Stats: cards horizontais empilhados, o número respira (some o corte do +1.000) */
+  .stats{grid-template-columns:1fr;gap:10px;margin-bottom:44px}
+  .statcard{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"ico num" "ico lbl";column-gap:16px;row-gap:2px;align-items:center;padding:18px 20px}
+  .statcard__ico{grid-area:ico;margin-bottom:0}
+  .statcard__n{grid-area:num;font-size:2.2rem}
+  .statcard__l{grid-area:lbl;margin-top:0}
+}
+</style>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.seat{background:rgba(126,178,247,.14)!important}</style></noscript>
+</head>
+<body>
+
+<!-- Sprite de ícones do sistema Nimbus (Nuvemshop DS), vetores fiéis, viewBox 45x45 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="ic-calendar" viewBox="0 0 45 45"><path d="M11.5312 22.5V25.875H8.4375V22.5H11.5312Z" fill="currentColor"/><path d="M11.5312 32.625V29.25H8.4375V32.625H11.5312Z" fill="currentColor"/><path d="M36.2812 22.5V25.875H33.1875V22.5H36.2812Z" fill="currentColor"/><path d="M36.2812 32.625V29.25H33.1875V32.625H36.2812Z" fill="currentColor"/><path d="M30.0938 22.5V25.875H27V22.5H30.0938Z" fill="currentColor"/><path d="M30.0938 32.625V29.25H27V32.625H30.0938Z" fill="currentColor"/><path d="M23.9062 22.5V25.875H20.8125V22.5H23.9062Z" fill="currentColor"/><path d="M23.9062 32.625V29.25H20.8125V32.625H23.9062Z" fill="currentColor"/><path d="M17.7188 22.5V25.875H14.625V22.5H17.7188Z" fill="currentColor"/><path d="M17.7188 32.625V29.25H14.625V32.625H17.7188Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3359 4.21875V7.03125H34.3828V4.21875H37.8984V7.03125H40.0781C42.0198 7.03125 43.5938 8.60525 43.5938 10.5469V37.2656C43.5938 39.2073 42.0198 40.7812 40.0781 40.7812H4.92187C2.98025 40.7812 1.40625 39.2073 1.40625 37.2656V10.5469C1.40625 8.60525 2.98025 7.03125 4.92188 7.03125H6.82031V4.21875H10.3359ZM4.92188 10.5469H40.0781V14.0625H4.92188V10.5469ZM4.92187 17.5781L4.92187 37.2656H40.0781V17.5781H4.92187Z" fill="currentColor"/></symbol>
+<symbol id="ic-location" viewBox="0 0 45 45"><path d="M22.5 1.46676C18.4975 1.31429 14.5973 2.75209 11.6514 5.46605C8.70559 8.18001 6.95357 11.9495 6.77812 15.9511C6.77812 30.0136 17.6906 40.1668 21.3188 43.1199C21.6513 43.3942 22.0689 43.5442 22.5 43.5442C22.9311 43.5442 23.3487 43.3942 23.6813 43.1199C27.3094 40.1668 38.2219 30.098 38.2219 15.9511C38.0464 11.9495 36.2944 8.18001 33.3486 5.46605C30.4027 2.75209 26.5025 1.31429 22.5 1.46676ZM22.5 39.3793C19.8865 37.0829 17.563 34.4761 15.5812 31.6168C12.2652 27.0548 10.4206 21.5895 10.2937 15.9511C10.4681 12.8817 11.8494 10.0058 14.1361 7.95093C16.4228 5.89604 19.4295 4.82891 22.5 4.98238C25.5705 4.82891 28.5772 5.89604 30.8639 7.95093C33.1506 10.0058 34.5319 12.8817 34.7063 15.9511C34.7063 27.4261 26.3813 36.0886 22.5 39.3793Z" fill="currentColor"/><path d="M22.5 7.15029C21.4846 7.10893 20.4712 7.26955 19.5183 7.62282C18.5655 7.97608 17.6923 8.51498 16.9493 9.20827C16.2063 9.90155 15.6083 10.7354 15.19 11.6616C14.7717 12.5877 14.5414 13.5876 14.5125 14.6034C14.5451 15.618 14.7779 16.6162 15.1975 17.5406C15.6171 18.465 16.2151 19.2974 16.9574 19.9899C17.6996 20.6825 18.5713 21.2216 19.5225 21.5762C20.4737 21.9309 21.4855 22.0941 22.5 22.0565C24.5421 22.1173 26.5253 21.3676 28.0165 19.9712C29.5078 18.5748 30.386 16.6451 30.4594 14.6034C30.4267 13.5912 30.1948 12.5954 29.777 11.6729C29.3592 10.7505 28.7637 9.91935 28.0245 9.22716C27.2852 8.53497 26.4169 7.99526 25.4689 7.6389C24.521 7.28253 23.5121 7.1165 22.5 7.15029ZM22.5 18.5409C21.3928 18.6024 20.3063 18.2225 19.4787 17.4844C18.651 16.7464 18.1497 15.7104 18.0844 14.6034C18.1497 13.4964 18.651 12.4604 19.4787 11.7224C20.3063 10.9844 21.3928 10.6045 22.5 10.6659C23.6101 10.6043 24.6996 10.9833 25.5318 11.7206C26.3639 12.458 26.8713 13.494 26.9438 14.6034C26.8713 15.7129 26.3639 16.7489 25.5318 17.4862C24.6996 18.2235 23.6101 18.6026 22.5 18.5409Z" fill="currentColor"/></symbol>
+<symbol id="ic-star" viewBox="0 0 45 45"><path d="M22.4438 8.81715L26.4656 16.6078L27.3375 18.2671L29.1938 18.4921L37.9688 19.4765L31.6125 25.3546L30.2063 26.6765L32.0344 36.8578L24.0188 32.864L22.4438 32.0765L20.8406 32.864L12.825 36.914L14.6531 26.7328L13.2469 25.3546L6.89063 19.5046L15.6656 18.4921L17.5219 18.2671L18.3937 16.6078L22.4438 8.81715ZM22.4438 3.19215C22.1169 3.18389 21.7942 3.26622 21.5112 3.43003C21.2283 3.59384 20.9962 3.83273 20.8406 4.12027L15.2156 14.9203L2.53125 16.4671C2.22544 16.5085 1.93722 16.6343 1.69897 16.8304C1.46072 17.0266 1.28188 17.2852 1.18255 17.5774C1.08321 17.8696 1.06731 18.1836 1.13664 18.4843C1.20597 18.7851 1.35777 19.0605 1.575 19.2796L10.8563 27.9421L8.71875 39.7828C8.68167 40.0307 8.69938 40.2838 8.77064 40.5242C8.8419 40.7645 8.96498 40.9864 9.13121 41.1741C9.29744 41.3617 9.50279 41.5107 9.73279 41.6105C9.9628 41.7102 10.2119 41.7584 10.4625 41.7515C10.7133 41.7553 10.9622 41.7074 11.1938 41.6109L22.4438 35.9859L33.6938 41.6109C33.9467 41.7389 34.2259 41.8063 34.5094 41.8078C34.76 41.8146 35.0091 41.7665 35.2391 41.6667C35.4691 41.567 35.6744 41.418 35.8407 41.2303C36.0069 41.0426 36.13 40.8208 36.2012 40.5804C36.2725 40.34 36.2902 40.087 36.2531 39.839L34.1156 27.9984L43.425 19.3078C43.6422 19.0886 43.794 18.8132 43.8634 18.5125C43.9327 18.2118 43.9168 17.8977 43.8175 17.6055C43.7181 17.3134 43.5393 17.0547 43.301 16.8586C43.0628 16.6624 42.7746 16.5366 42.4688 16.4953L29.7 15.0609L24.075 4.2609C23.9251 3.95849 23.6919 3.70519 23.4029 3.5308C23.114 3.35641 22.7812 3.26819 22.4438 3.27652V3.19215Z" fill="currentColor"/></symbol>
+<symbol id="ic-users" viewBox="0 0 45 45"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.3338 18.7768C16.4751 18.7768 18.6121 16.8393 18.6121 13.9684C18.6121 11.0975 16.4751 9.16007 14.3338 9.16007C12.1926 9.16007 10.0556 11.0975 10.0556 13.9684C10.0556 16.8393 12.1926 18.7768 14.3338 18.7768ZM14.3338 22.2986C18.634 22.2986 22.1339 18.5633 22.1339 13.9684C22.1339 9.3735 18.634 5.63826 14.3338 5.63826C10.0336 5.63826 6.53378 9.3735 6.53378 13.9684C6.53378 18.5633 10.0336 22.2986 14.3338 22.2986Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M34.5552 19.8476C35.9738 19.8476 37.5227 18.5378 37.5227 16.4391C37.5227 14.3403 35.9738 13.0305 34.5552 13.0305C33.1365 13.0305 31.5877 14.3403 31.5877 16.4391C31.5877 18.5378 33.1365 19.8476 34.5552 19.8476ZM34.5552 23.3694C38.1328 23.3694 41.0445 20.2618 41.0445 16.4391C41.0445 12.6163 38.1328 9.50871 34.5552 9.50871C30.9776 9.50871 28.0659 12.6163 28.0659 16.4391C28.0659 20.2618 30.9776 23.3694 34.5552 23.3694Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.3338 29.3356C8.26267 29.3356 3.52181 33.941 3.52181 39.3617H0C0 31.786 6.53449 25.8138 14.3338 25.8138C22.1331 25.8138 28.6675 31.786 28.6675 39.3617H25.1457C25.1457 33.941 20.4049 29.3356 14.3338 29.3356Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M34.3817 30.4156C31.0795 30.4156 28.3816 32.49 27.5538 35.1735L24.1885 34.1354C25.4959 29.8968 29.6182 26.8938 34.3817 26.8938C40.1315 26.8938 45 31.3031 45 36.9585V39.3617H41.4782V36.9585C41.4782 33.4581 38.4034 30.4156 34.3817 30.4156Z" fill="currentColor"/></symbol>
+<symbol id="ic-store" viewBox="0 0 45 45"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 21.0205C27.3389 21.0205 31.1199 25.1119 31.1201 29.9795V40.7812H27.6045V29.9795C27.6043 26.8937 25.2406 24.5371 22.5 24.5371C19.7594 24.5371 17.3957 26.8937 17.3955 29.9795V40.7812H13.8799V29.9795C13.8801 25.1119 17.6611 21.0205 22.5 21.0205ZM38.3164 4.21777C41.231 4.21789 43.5937 6.58161 43.5938 9.49707V40.7803H40.0752V9.49707C40.0751 8.52534 39.2878 7.73742 38.3164 7.7373H6.68359C5.71217 7.73742 4.92488 8.52534 4.9248 9.49707V40.7803H1.40625V9.49707C1.40633 6.58162 3.76902 4.21789 6.68359 4.21777H38.3164ZM37.9629 15.9199H7.00195V12.2598H37.9629V15.9199Z" fill="currentColor"/></symbol>
+<symbol id="ic-logo" viewBox="0 0 170 29"><path d="M24.7764 0C32.4484 0.0123461 38.6865 6.28658 38.6865 14.0137C38.6864 21.7406 32.4363 28.0272 24.7539 28.0273C20.9828 28.0273 17.5584 26.5101 15.0479 24.0537C13.7208 24.6144 12.2867 24.913 10.8369 24.9131C4.86203 24.9131 8.20907e-05 20.0232 0 14.0137C0 8.00425 4.86141 3.1145 10.8379 3.11426C12.3106 3.11426 13.7369 3.40642 15.0605 3.9707C17.6464 1.44241 21.1103 0.00541084 24.7461 0H24.7764ZM163.753 7.50098C164.922 7.50098 165.978 7.79213 166.921 8.37207C167.864 8.95222 168.611 9.73227 169.167 10.7109V10.7129C169.723 11.6897 170 12.8076 170 14.0137C170 15.2197 169.727 16.3218 169.18 17.3145C168.633 18.3089 167.888 19.092 166.946 19.665C166.005 20.2381 164.933 20.5254 163.732 20.5254C162.835 20.5254 162.011 20.3489 161.259 19.998C160.751 19.7618 160.314 19.445 159.947 19.0537V24.9287H156.938V7.77637H159.765V9.25195C160.154 8.76184 160.64 8.3632 161.224 8.06348C161.953 7.68804 162.796 7.50103 163.753 7.50098ZM24.7607 3.11426C22.1958 3.11602 19.7391 4.03137 17.8018 5.66602C20.2685 7.74327 21.6729 10.7532 21.6729 14.0137H18.5771C18.5771 11.5415 17.4483 9.26973 15.4795 7.7832C14.1331 6.7658 12.5269 6.22858 10.8369 6.22852C6.5696 6.22852 3.0957 9.72162 3.0957 14.0137C3.09579 18.3057 6.56965 21.7988 10.8369 21.7988C11.5644 21.7988 12.2853 21.6932 12.9795 21.4922C11.6155 19.3268 10.8213 16.7627 10.8213 14.0137H13.917C13.9171 20.023 18.7783 24.9118 24.7529 24.9121C30.7273 24.9115 35.5888 20.021 35.5889 14.0137C35.5889 8.00592 30.7321 3.11787 24.7607 3.11426ZM62.6523 15.251C62.6523 15.7552 62.7596 16.1947 62.9717 16.5703C63.1838 16.9459 63.48 17.239 63.8604 17.4541C64.2408 17.6675 64.6745 17.7744 65.1602 17.7744C65.6455 17.7744 66.1012 17.6673 66.4814 17.4541C66.8619 17.2407 67.1552 16.9459 67.3604 16.5703C67.5654 16.1965 67.6689 15.7552 67.6689 15.251V7.77637H70.6562V15.3428C70.6562 16.3672 70.4245 17.2685 69.96 18.0479C69.4954 18.8271 68.8574 19.4356 68.0459 19.8711C67.2324 20.3066 66.2709 20.5254 65.1611 20.5254C64.0515 20.5253 63.1048 20.3066 62.2773 19.8711C61.4482 19.4356 60.8026 18.8272 60.3398 18.0479C59.8754 17.2685 59.6445 16.3654 59.6445 15.3428V7.77637H62.6523V15.251ZM122.868 7.49805C124.037 7.49805 125.072 7.77983 125.968 8.3457C126.864 8.91175 127.502 9.70771 127.883 10.7305L125.604 11.8076C125.391 11.2416 125.034 10.7956 124.532 10.4658C124.031 10.1378 123.468 9.97169 122.846 9.97168C122.344 9.97168 121.948 10.0825 121.66 10.3047C121.371 10.5269 121.228 10.8293 121.228 11.2119L121.226 11.2168C121.226 11.4319 121.287 11.6225 121.408 11.79C121.529 11.9592 121.701 12.0946 121.922 12.2021C122.143 12.3097 122.397 12.4093 122.687 12.501L124.669 13.0967C125.688 13.4035 126.474 13.8616 127.029 14.4717C127.583 15.0836 127.861 15.8336 127.861 16.7188C127.861 17.4681 127.663 18.1291 127.269 18.7021C126.874 19.2752 126.326 19.723 125.628 20.0439C124.928 20.3649 124.107 20.5254 123.166 20.5254C121.844 20.5253 120.693 20.2079 119.713 19.5732C118.733 18.9384 118.052 18.0794 117.672 16.9932L119.929 15.916C120.248 16.6196 120.693 17.1696 121.263 17.5664C121.832 17.9631 122.467 18.163 123.166 18.1631C123.697 18.1631 124.123 18.0409 124.442 17.7959C124.761 17.5508 124.922 17.2298 124.922 16.833C124.922 16.588 124.856 16.385 124.727 16.2246C124.597 16.0642 124.427 15.9271 124.213 15.8125C123.999 15.6979 123.757 15.602 123.483 15.5244L121.455 14.9512C120.421 14.6602 119.636 14.1982 119.096 13.5635C118.556 12.9287 118.285 12.185 118.285 11.3281C118.285 10.5647 118.48 9.89432 118.867 9.32129C119.255 8.74833 119.795 8.30041 120.485 7.97949C121.176 7.65859 121.971 7.49808 122.868 7.49805ZM90.2217 7.50098C91.1947 7.50098 92.049 7.66149 92.7871 7.98242C93.5252 8.30335 94.1508 8.74648 94.668 9.3125V9.30859C95.1834 9.87464 95.58 10.5206 95.8535 11.2471C96.1269 11.9735 96.2637 12.7567 96.2637 13.5977C96.2637 13.8268 96.2513 14.0524 96.2285 14.2744C96.2057 14.4966 96.1649 14.6994 96.1035 14.8828H87.1729C87.2149 15.3006 87.3152 15.6867 87.4746 16.041C87.7393 16.63 88.1359 17.0853 88.6602 17.4062C89.1843 17.7271 89.789 17.8877 90.4727 17.8877C91.1563 17.8877 91.7382 17.743 92.2168 17.4521C92.6953 17.163 93.0722 16.7733 93.3457 16.2832L95.7617 17.4746C95.518 18.0706 95.1393 18.5982 94.6221 19.0566C94.1049 19.515 93.4898 19.8746 92.7764 20.1338C92.0628 20.393 91.2875 20.5234 90.4512 20.5234C89.175 20.5234 88.053 20.2342 87.0889 19.6523C86.123 19.0722 85.3739 18.2864 84.8428 17.292C84.3116 16.2992 84.0449 15.244 84.0449 13.9902C84.045 12.7366 84.3193 11.6258 84.8662 10.6543C85.4132 9.68275 86.1497 8.91562 87.0771 8.34961C88.0027 7.78374 89.0508 7.50102 90.2217 7.50098ZM148.676 7.50098C149.906 7.50099 151.014 7.78368 152.003 8.34961V8.34766C152.992 8.91369 153.778 9.68252 154.363 10.6523C154.949 11.624 155.241 12.7597 155.241 14.0117C155.241 15.2637 154.945 16.3798 154.353 17.3584C153.76 18.337 152.969 19.1078 151.982 19.6738C150.995 20.2398 149.879 20.5224 148.678 20.5225C147.477 20.5225 146.379 20.2399 145.383 19.6738C144.387 19.1096 143.593 18.337 143.001 17.3584C142.408 16.3815 142.111 15.2637 142.111 14.0117C142.111 12.7597 142.408 11.6437 143.001 10.665C143.594 9.68816 144.382 8.91564 145.371 8.34961C146.358 7.78362 147.445 7.50098 148.676 7.50098ZM52.875 7.5C53.7569 7.5 54.5972 7.69894 55.3037 8.0957C56.0101 8.49421 56.5599 9.04828 56.9561 9.75879L56.9531 9.76074C57.3474 10.4713 57.5459 11.2929 57.5459 12.2256V20.251H54.5596V12.9365C54.5596 12.3864 54.4533 11.9114 54.2412 11.5146C54.0291 11.1179 53.7303 10.811 53.3516 10.5977C52.9712 10.3844 52.5382 10.2773 52.0527 10.2773C51.5672 10.2774 51.1325 10.3844 50.7539 10.5977C50.3736 10.811 50.0774 11.118 49.8652 11.5146C49.6513 11.9132 49.5459 12.3864 49.5459 12.9365V20.251H46.5371V7.77637H49.3633V9.31055C49.6508 8.7957 50.0504 8.38649 50.5605 8.08496C51.2215 7.69526 51.9932 7.50001 52.875 7.5ZM77.8613 15.918L80.8125 7.77637H84.0732L79.1943 20.251H76.5508L71.6709 7.77637H74.9307L77.8613 15.918ZM111.83 7.5C112.712 7.5 113.498 7.69894 114.19 8.0957C114.881 8.49421 115.424 9.04825 115.82 9.75879L115.822 9.76074C116.217 10.4713 116.415 11.2929 116.415 12.2256V20.251H113.429V12.9365C113.429 12.3864 113.331 11.9114 113.133 11.5146C112.935 11.118 112.657 10.811 112.3 10.5977C111.942 10.3844 111.521 10.2773 111.034 10.2773C110.547 10.2774 110.145 10.3843 109.78 10.5977C109.416 10.811 109.134 11.1181 108.938 11.5146C108.739 11.9132 108.642 12.3864 108.642 12.9365V20.251H105.655V12.9365C105.655 12.3864 105.557 11.9114 105.359 11.5146C105.161 11.1179 104.884 10.811 104.526 10.5977C104.169 10.3844 103.748 10.2774 103.261 10.2773C102.773 10.2773 102.372 10.3843 102.007 10.5977C101.642 10.811 101.36 11.118 101.164 11.5146C100.966 11.9132 100.867 12.3864 100.867 12.9365V20.251H97.8594V7.77637H100.686V9.34375C100.938 8.85023 101.286 8.45688 101.733 8.16602C102.417 7.72341 103.222 7.50098 104.149 7.50098C105.168 7.50098 106.064 7.76941 106.839 8.30371C107.328 8.64047 107.707 9.04587 107.979 9.5166C108.31 8.99124 108.72 8.566 109.209 8.24512C109.968 7.74789 110.843 7.50003 111.83 7.5ZM132.532 9.01953C132.799 8.64056 133.137 8.32845 133.547 8.08691C134.208 7.69723 134.98 7.501 135.861 7.50098C136.743 7.50098 137.583 7.7009 138.29 8.09766C138.996 8.49616 139.547 9.05023 139.943 9.76074H139.941C140.336 10.4713 140.534 11.293 140.534 12.2256V20.251H137.548V12.9365C137.548 12.3864 137.441 11.9114 137.229 11.5146C137.016 11.118 136.724 10.811 136.351 10.5977C135.977 10.3843 135.54 10.2773 135.039 10.2773C134.538 10.2774 134.119 10.3844 133.74 10.5977C133.36 10.811 133.064 11.118 132.852 11.5146C132.638 11.9132 132.532 12.3864 132.532 12.9365V20.251H129.523V3.12305H132.532V9.01953ZM148.676 10.2773C148.008 10.2773 147.415 10.4379 146.897 10.7588C146.381 11.0797 145.974 11.5221 145.678 12.0879C145.381 12.6539 145.232 13.2942 145.232 14.0137C145.232 14.733 145.382 15.3782 145.678 15.9512C145.974 16.5241 146.381 16.9721 146.897 17.293C147.413 17.6139 147.992 17.7744 148.676 17.7744C149.36 17.7744 149.956 17.6139 150.466 17.293C150.974 16.972 151.378 16.5242 151.674 15.9512C151.97 15.3782 152.119 14.7312 152.119 14.0137C152.119 13.296 151.97 12.6539 151.674 12.0879C151.378 11.5237 150.974 11.0797 150.466 10.7588C149.956 10.4379 149.344 10.2774 148.676 10.2773ZM163.387 10.2773C162.733 10.2774 162.144 10.4379 161.62 10.7588C161.096 11.0797 160.685 11.5218 160.389 12.0879C160.092 12.6539 159.943 13.2801 159.943 14.0137C159.943 14.7471 160.092 15.396 160.389 15.9619C160.685 16.528 161.096 16.9711 161.62 17.292C162.144 17.6127 162.703 17.7734 163.387 17.7734C164.07 17.7734 164.676 17.6129 165.2 17.292C165.724 16.9711 166.139 16.5279 166.442 15.9619C166.746 15.3977 166.898 14.7313 166.898 14.0137C166.898 13.296 166.746 12.6539 166.442 12.0879C166.137 11.5239 165.724 11.0797 165.2 10.7588C164.676 10.4379 164.041 10.2773 163.387 10.2773ZM90.2236 9.97754C89.6013 9.97755 89.0452 10.1381 88.5596 10.459C88.0724 10.7799 87.7038 11.2381 87.4531 11.834C87.3585 12.0596 87.2872 12.3048 87.2363 12.5674H93.0693C93.0518 12.2854 92.9952 12.0159 92.9023 11.7656C92.6972 11.2155 92.3623 10.7799 91.8994 10.459C91.4348 10.1381 90.846 9.97754 90.2236 9.97754Z" fill="currentColor"/></symbol>
+</defs></svg>
+
+<div class="stickybar" id="stickybar" aria-hidden="true">
+  <div class="stickybar__in">
+    <div class="stickybar__left">
+      <span class="stickybar__logo">Next Sessions · 25/08</span>
+      <span class="stickybar__seats" data-seats-text></span>
+    </div>
+    <button class="btn btn-primary" data-open-form>Confirmar minha presença</button>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero__bg">
+    <img class="hero__photo" src="asset-hero-sala.webp" srcset="asset-hero-sala-m.webp 1080w, asset-hero-sala.webp 2000w" sizes="100vw" alt="Plateia numa sessão presencial da Nuvemshop Next, sala cheia sob luz azul" fetchpriority="high" decoding="async" width="2000" height="1333">
+    <div class="hero__grad"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+  </div>
+  <div class="hero__in">
+    <div class="hero__topbar">
+      <a class="brandline" href="#top" aria-label="Nuvemshop Next"><svg class="logo" viewBox="0 0 170 29" aria-hidden="true"><use href="#ic-logo"/></svg></a>
+      <button class="btn btn-primary btn-sm" data-open-form>Confirmar minha presença</button>
+    </div>
+    <div class="hero__body">
+      <p class="hero__series reveal">Next Sessions</p>
+      <span class="hero__tag reveal">Modelos de negócio · 25 de agosto</span>
+      <h1 class="reveal">Você cresceu até onde seu modelo <span class="alc">alcança.</span></h1>
+      <p class="hero__sub reveal">A pergunta agora é qual nova frente faz sentido para o seu momento: assinatura, B2B ou exportação. Uma noite com marcas que já tomaram essa decisão, para você separar uma expansão viável de uma aposta precipitada.</p>
+      <div class="occ reveal">
+        <svg class="occ__arc" width="52" height="34" viewBox="0 0 52 34" data-arc fill="none" aria-hidden="true"></svg>
+        <div class="occ__meta">
+          <span class="occ__state" data-seats-state>Sala reservada</span>
+          <div class="occ__count" data-seats-count></div>
+        </div>
+      </div>
+      <div class="logistics reveal">
+        <span class="logi"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>25 de agosto, terça</span>
+        <span class="logi"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18h30 às 22h</span>
+        <span class="logi"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Vila Olímpia, SP</span>
+      </div>
+      <div class="hero__ctas reveal">
+        <button class="btn btn-primary" data-open-form>Confirmar minha presença</button>
+        <a class="btn btn-ghost" href="#playbook">Ver programação da noite <svg class="btn__arw" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <p class="hero__micro reveal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Evento presencial e reservado. 70 lugares.</p>
+    </div>
+  </div>
+</header>
+
+<!-- ============ A SALA (teatro menor, ao lado da copy) ============ -->
+<section class="section sala" id="sala">
+  <div class="wrap">
+    <div class="sala__grid">
+      <div class="sala__copy reveal">
+        <p class="eyebrow">A sala</p>
+        <h2>Para quem já domina um modelo e está diante do próximo.</h2>
+        <p class="sala__lead">Setenta lugares para founders e líderes de e-commerce com operação rodando, avaliando novas frentes de receita.</p>
+        <ul class="sala__mirrors">
+          <li>Seu canal principal é forte, mas o próximo ciclo não pode depender só dele.</li>
+          <li>Assinatura, B2B ou exportação já são hipótese, mas falta critério para priorizar.</li>
+          <li>Você quer ouvir quem já colocou uma dessas frentes de pé antes de levar a pauta ao time.</li>
+        </ul>
+      </div>
+      <div class="sala__viz reveal">
+        <div class="theater-wrap">
+          <div class="theater" data-theater aria-hidden="true"></div>
+          <div class="stage" aria-hidden="true"></div>
+        </div>
+        <div class="sala__counter">
+          <span class="sala__state" data-seats-state>Sala reservada</span>
+          <div class="sala__count" data-seats-count></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ A TESE (check-bullets) ============ -->
+<section class="section tese">
+  <div class="wrap">
+    <p class="eyebrow reveal">A tese da noite</p>
+    <h2 class="reveal">Diversificar não é abrir tudo. <span class="win">É escolher a frente certa primeiro.</span></h2>
+    <p class="tese__teto reveal">Assinatura, B2B e exportação ampliam receita e reduzem a dependência de um só canal. Mas cada uma exige decisões próprias de operação, margem, oferta e time.</p>
+    <div class="models">
+      <article class="model reveal"><span class="model__k">Modelo 01</span><h3 class="model__t">Assinatura</h3><p class="model__d">Quando faz sentido virar recorrência, e o que precisa estar pronto para sustentar.</p></article>
+      <article class="model reveal"><span class="model__k">Modelo 02</span><h3 class="model__t">B2B</h3><p class="model__d">Como abrir atacado sem confundir canal novo com operação duplicada.</p></article>
+      <article class="model reveal"><span class="model__k">Modelo 03</span><h3 class="model__t">Exportação</h3><p class="model__d">Exportar começa na operação, não no idioma. O que avaliar antes de entrar em um novo mercado.</p></article>
+    </div>
+    <p class="tese__close reveal"><b>A noite existe para você sair com critério para comparar essas frentes, não com mais uma tendência para discutir depois.</b></p>
+  </div>
+</section>
+
+<!-- ============ PLAYBOOK ============ -->
+<section class="section playbook" id="playbook">
+  <div class="wrap">
+    <p class="eyebrow reveal">O playbook da noite</p>
+    <h2 class="reveal">Uma sequência, <span class="ac">não uma grade.</span></h2>
+    <p class="playbook__sub reveal">Cada momento tem uma função: entender o tema, ver como funciona na prática e trocar com quem está na mesma decisão.</p>
+    <div class="timeline">
+      <div class="tl reveal"><div class="tl__time">18h30</div><div class="tl__t">Welcome</div><div class="tl__d">Recepção dos convidados e primeira rodada de networking.</div></div>
+      <div class="tl reveal"><div class="tl__time">19h00</div><div class="tl__t">Abertura</div><div class="tl__d">Por que abrir novas frentes exige discutir modelo de receita, não só canal.</div><div class="tl__who">Gustavo Batista · Nuvemshop</div></div>
+      <div class="tl tl--anchor reveal">
+        <span class="tl__k">A palestra</span>
+        <div class="tl__time">19h10</div>
+        <div class="tl__t">D2C, atacado, assinatura e exportação</div>
+        <div class="tl__d">Amanda Aliperti abre os bastidores da PWRD by Coffee: as decisões que permitiram rodar D2C, atacado, assinatura e exportação em paralelo, e o que cada uma custou antes de dar certo.</div>
+        <div class="tl__who">Amanda Aliperti · PWRD by Coffee</div>
+      </div>
+      <div class="tl reveal"><div class="tl__time">19h50</div><div class="tl__t">O painel · Receita que se renova</div><div class="tl__d">Os bastidores de quem transformou assinatura em pilar do negócio, e os números por trás da decisão.</div><div class="tl__who">Beatriz Daniel (Sua Mesa Suas Vontades) + Vinicius Fonseca (Pitada Natural) · Mediação: Gustavo Batista</div></div>
+      <div class="tl reveal"><div class="tl__time">20h20</div><div class="tl__t">O que levar daqui</div><div class="tl__d">Fechamento da conversa e principais critérios para comparar assinatura, B2B e exportação no seu contexto.</div><div class="tl__who">Gustavo Batista · Nuvemshop</div></div>
+      <div class="tl reveal"><div class="tl__time">20h30</div><div class="tl__t">Networking, com degustação</div><div class="tl__d">A noite não termina na palestra. O momento de troca ganha uma degustação de vinho guiada por sommelier, para aproximar quem está na sala.</div></div>
+    </div>
+    <div class="speakers">
+      <h3 class="reveal">Quem conduz a conversa</h3>
+      <p class="speakers__sub reveal">Fundadores e operadores que ajudam a responder, na prática, como novas frentes de receita saem da ideia e entram na operação.</p>
+      <div class="spk-grid">
+        <article class="spk reveal"><div class="spk__photo"><img src="speaker-amanda.webp" alt="Amanda Aliperti, fundadora da PWRD by Coffee" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Amanda Aliperti</div><div class="spk__role">Fundadora · PWRD by Coffee</div><div class="spk__contrib">Opera D2C, atacado, assinatura e exportação em paralelo. Na palestra, mostra como montou essa estrutura e o que decidir primeiro.</div></div></article>
+        <article class="spk reveal"><div class="spk__photo"><img src="speaker-beatriz.webp" alt="Beatriz Daniel, Sua Mesa Suas Vontades" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Beatriz Daniel</div><div class="spk__role">Sua Mesa Suas Vontades</div><div class="spk__contrib">No painel, o que muda quando a assinatura vira pilar do negócio: operação, oferta e relação com o cliente.</div></div></article>
+        <article class="spk reveal"><div class="spk__photo"><img src="speaker-vinicius.webp" alt="Vinicius Fonseca, Pitada Natural" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Vinicius Fonseca</div><div class="spk__role">Pitada Natural</div><div class="spk__contrib">No painel, a visão de quem apostou em recorrência cedo, e o que muda para quem entra agora.</div></div></article>
+        <article class="spk reveal"><div class="spk__photo"><img src="speaker-gustavo.webp" alt="Gustavo Batista, Nuvemshop" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Gustavo Batista</div><div class="spk__role">Nuvemshop</div><div class="spk__contrib">Conduz a conversa e conecta os casos ao contexto das marcas da comunidade Next.</div></div></article>
+      </div>
+    </div>
+    <div class="exp reveal">
+      <div class="exp__media" aria-hidden="true">
+        <!-- Trocar por foto real da degustação/networking quando houver: <img src="asset-degustacao.webp" alt="Degustação de vinho guiada por sommelier"> -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10c0 5-2.2 8-5 8S7 8 7 3Z"/><path d="M12 11v7M8.5 21h7"/></svg>
+      </div>
+      <div class="exp__body">
+        <span class="tl__k" style="color:var(--blue-400)">A experiência</span>
+        <h3>A noite fecha com <span class="ac">uma taça na mão.</span></h3>
+        <p>Depois da conversa, o networking ganha uma degustação de vinho guiada por sommelier. Um encerramento sensorial, à altura de quem está na sala.</p>
+      </div>
+    </div>
+    <div class="playbook__cta"><button class="btn btn-primary" data-open-form>Confirmar minha presença</button></div>
+  </div>
+</section>
+
+<!-- ============ O QUE VOCÊ LEVA ============ -->
+<section class="section leva">
+  <div class="wrap">
+    <p class="eyebrow reveal">O que você leva</p>
+    <h2 class="reveal">Critérios para decidir, <span class="ac">não uma lista de tendências.</span></h2>
+    <ul class="leva__list">
+      <li class="reveal">Como avaliar se assinatura, B2B ou exportação faz sentido para o seu estágio atual.</li>
+      <li class="reveal">Quais mudanças de operação, oferta e time cada frente pode exigir.</li>
+      <li class="reveal">Onde estão os riscos de dispersão, complexidade e canibalização.</li>
+      <li class="reveal">O que perguntar internamente antes de transformar ideia em projeto.</li>
+      <li class="reveal">Como operações parecidas decidiram por onde começar, e o que separou o timing certo da aposta prematura.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ MARCAS NA SALA ============ -->
+<section class="marcas">
+  <div class="wrap">
+    <p class="marcas__label reveal">Marcas na sala</p>
+    <div class="marcas__row reveal">
+      <img class="marca-logo m-pwrd" src="logo-pwrd.png" alt="PWRD by Coffee" loading="lazy">
+      <img class="marca-logo m-suamesa" src="logo-suamesa.png" alt="Sua Mesa Suas Vontades" loading="lazy">
+      <img class="marca-logo m-pitada" src="logo-pitada.png" alt="Pitada Natural" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCAL + FAQ + DEPOIMENTOS ============ -->
+<section class="section light">
+  <div class="wrap">
+    <p class="eyebrow reveal">Onde o encontro acontece</p>
+    <h2 class="reveal">Uma sala reservada na <span class="ac">Vila Olímpia.</span></h2>
+    <p class="local__lead reveal">Uma noite presencial no escritório da Nuvemshop, em São Paulo. Para troca direta entre lojistas, fundadores e time Next.</p>
+    <div class="local__card reveal">
+      <div class="local__map"><img src="asset-local-sala.webp" alt="Espaço do evento no escritório da Nuvemshop, Vila Olímpia" loading="lazy" decoding="async"></div>
+      <div class="local__info">
+        <div class="local__row"><svg aria-hidden="true"><use href="#ic-location"/></svg><div><div class="lbl">Endereço</div><div class="val">Alameda Vicente Pinzon, 51 · Vila Olímpia, São Paulo</div></div></div>
+        <div class="local__row"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg><div><div class="lbl">Como chegar</div><a class="val" href="https://www.google.com/maps/search/?api=1&query=Alameda+Vicente+Pinzon+51+Vila+Olimpia+Sao+Paulo" target="_blank" rel="noopener">Abrir no Google Maps</a></div></div>
+        <div class="local__row"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 6V4h10v2"/></svg><div><div class="lbl">Estacionamento</div><div class="val">Sim. O escritório tem estacionamento próprio, além de diversas opções na região da Vila Olímpia.</div></div></div>
+      </div>
+      <div class="local__cta"><button class="btn btn-primary btn-block" data-open-form>Confirmar minha presença</button></div>
+    </div>
+
+    <div class="faq">
+      <h3 class="reveal">Antes de confirmar sua presença</h3>
+      <p class="faq__intro reveal">Algumas informações práticas para você decidir com segurança e organizar sua ida.</p>
+      <div class="faq__group">
+        <p class="faq__gt reveal">Presença</p>
+        <details class="acc reveal"><summary class="acc__btn">O evento é gratuito?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. É um evento gratuito para convidados.</div></details>
+        <details class="acc reveal"><summary class="acc__btn">O evento é aberto ao público?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Não. É uma sala reservada, para um grupo selecionado de lojistas e convidados.</div></details>
+        <details class="acc reveal"><summary class="acc__btn">Posso levar alguém da minha empresa?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. Em geral, reservamos até 2 convites por marca, para manter o perfil da sala.</div></details>
+        <details class="acc reveal"><summary class="acc__btn">Confirmar presença garante meu lugar?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. Ao preencher o formulário, sua presença fica confirmada enquanto houver disponibilidade na sala.</div></details>
+        <details class="acc reveal"><summary class="acc__btn">O que acontece depois que confirmo?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Você recebe por e-mail a confirmação, a programação e as informações de acesso ao escritório.</div></details>
+      </div>
+      <div class="faq__group">
+        <p class="faq__gt reveal">Experiência</p>
+        <details class="acc reveal"><summary class="acc__btn">O evento será gravado?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Não. O valor está em estar na sala.</div></details>
+        <details class="acc reveal"><summary class="acc__btn">Vai ter apresentação comercial?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Não. A noite é de conteúdo prático e troca entre pares.</div></details>
+        <details class="acc reveal"><summary class="acc__btn">Como funciona o networking?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Uma noite pensada para a troca, com uma degustação de vinho guiada por sommelier para aproximar quem está na sala.</div></details>
+      </div>
+      <div class="faq__group">
+        <p class="faq__gt reveal">Local</p>
+        <details class="acc reveal"><summary class="acc__btn">Onde acontece?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">No escritório da Nuvemshop, na Vila Olímpia, São Paulo. Endereço com link para o Google Maps acima.</div></details>
+        <details class="acc reveal"><summary class="acc__btn">Há estacionamento?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. O escritório tem estacionamento próprio, além de diversas opções na região da Vila Olímpia.</div></details>
+      </div>
+    </div>
+
+    <div class="depo">
+      <p class="faq__gt reveal">Prova de par</p>
+      <h3 class="reveal">Quem já esteve na sala.</h3>
+      <p class="faq__intro reveal">Depoimentos de participantes de edições anteriores. <span class="ph">[a preencher com a Marcela]</span></p>
+      <div class="depo__grid">
+        <blockquote class="tcard reveal"><span class="tcard__mark">&ldquo;</span><p class="tcard__text ph">[Depoimento de um participante de edição anterior: o que a noite destravou, uma decisão que saiu de lá, ou a impressão que ficou.]</p><div class="tcard__by"><span class="tcard__ph"></span><div><div class="tcard__n ph">[Nome]</div><div class="tcard__r ph">[Marca · edição]</div></div></div></blockquote>
+        <blockquote class="tcard reveal"><span class="tcard__mark">&ldquo;</span><p class="tcard__text ph">[Depoimento de um participante de edição anterior: o que a noite destravou, uma decisão que saiu de lá, ou a impressão que ficou.]</p><div class="tcard__by"><span class="tcard__ph"></span><div><div class="tcard__n ph">[Nome]</div><div class="tcard__r ph">[Marca · edição]</div></div></div></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS + FECHO ============ -->
+<section class="section close">
+  <div class="wrap">
+    <p class="eyebrow reveal">A comunidade Next</p>
+    <h2 class="stats-head reveal">Os números que <span class="ac">sustentam a sala.</span></h2>
+    <div class="stats">
+      <div class="statcard reveal">
+        <div class="statcard__ico"><svg aria-hidden="true"><use href="#ic-users"/></svg></div>
+        <div class="statcard__n">+1.000</div><div class="statcard__l">líderes do e-commerce reunidos</div>
+      </div>
+      <div class="statcard reveal">
+        <div class="statcard__ico"><svg aria-hidden="true"><use href="#ic-store"/></svg></div>
+        <div class="statcard__n">+670</div><div class="statcard__l">marcas na comunidade Next</div>
+      </div>
+      <div class="statcard reveal">
+        <div class="statcard__ico"><svg aria-hidden="true"><use href="#ic-star"/></svg></div>
+        <div class="statcard__n">9,6</div><div class="statcard__l">de satisfação entre participantes</div>
+      </div>
+    </div>
+
+    <div class="final reveal">
+      <h3>25 de agosto. Vila Olímpia. 70 lugares.</h3>
+      <p>Uma conversa que não acontece em palco grande, em webinar ou em blog. Acontece na sala, entre quem está tomando decisões parecidas agora.</p>
+      <div class="occ">
+        <svg class="occ__arc" width="52" height="34" viewBox="0 0 52 34" data-arc fill="none" aria-hidden="true"></svg>
+        <div class="occ__meta"><span class="occ__state" data-seats-state>Sala reservada</span><div class="occ__count" data-seats-count></div></div>
+      </div>
+      <button class="btn btn-primary" data-open-form>Confirmar minha presença</button>
+      <p class="final__micro">Ao confirmar, você recebe a programação e os detalhes de acesso por e-mail.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot__brand"><svg class="logo" viewBox="0 0 170 29" aria-hidden="true"><use href="#ic-logo"/></svg></div>
+  <p class="foot__legal">© 2026 Nuvemshop · Next Sessions</p>
+</footer>
+
+<div class="mobilecta" id="mobilecta" aria-hidden="true">
+  <div class="mobilecta__seats" data-seats-text></div>
+  <button class="btn btn-primary btn-block" data-open-form>Confirmar minha presença</button>
+</div>
+
+<div class="modal" id="formModal" role="dialog" aria-modal="true" aria-labelledby="formTitle">
+  <div class="modal__bd" data-close-form></div>
+  <div class="modal__panel">
+    <button class="modal__x" data-close-form aria-label="Fechar"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <p class="modal__eyebrow">Next Sessions · 25 de agosto</p>
+    <h3 class="modal__title" id="formTitle">Confirmar presença</h3>
+    <p class="modal__sub">Confirme sua presença no Next Sessions. A programação e os detalhes de acesso chegam por e-mail.</p>
+    <div class="modal__form" id="hubspotForm"></div>
+  </div>
+</div>
+
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+/* ===== 1. OCUPAÇÃO — número monotônico no tempo real (curva projetada, não dado real).
+   Trocar corpo de getSeatsRemaining() pela contagem do HubSpot quando existir. ===== */
+const SEAT={TOTAL:70,BASE_OCCUPIED:29,FLOOR:4,LAUNCH:new Date('2026-07-11T09:00:00-03:00'),EVENT:new Date('2026-08-25T18:30:00-03:00'),FORCE_STATE:null,LAST_THRESHOLD:12};
+const easeInQuad=t=>t*t;
+function getSeatsRemaining(now=new Date()){let p=(now-SEAT.LAUNCH)/(SEAT.EVENT-SEAT.LAUNCH);p=Math.min(Math.max(p,0),1);const range=SEAT.TOTAL-SEAT.BASE_OCCUPIED-SEAT.FLOOR;const occ=SEAT.BASE_OCCUPIED+Math.round(range*p);return Math.max(SEAT.TOTAL-occ,SEAT.FLOOR);}
+function getSeatState(rem,now=new Date()){if(SEAT.FORCE_STATE)return SEAT.FORCE_STATE;if((SEAT.EVENT-now)<36*3600*1000)return'waitlist';if(rem<=SEAT.LAST_THRESHOLD)return'last';return'open';}
+
+/* ===== 2. TEATRO — anfiteatro em leque, enche do centro-frente para trás ===== */
+const TIERS=[10,12,14,16,18], SPAN=86, R0=90, GAP=19;
+let theaterSeats=[];
+function buildTheater(el){
+  el.innerHTML='';const seats=[];
+  TIERS.forEach((n,t)=>{
+    const R=R0+t*GAP, step=n>1?SPAN/(n-1):0, mid=(n-1)/2;
+    const order=[...Array(n).keys()].sort((a,b)=>Math.abs(a-mid)-Math.abs(b-mid));
+    order.forEach(i=>{
+      const angle=(i-mid)*step;
+      const arm=document.createElement('span');arm.className='seat-arm';
+      arm.style.height=R+'px';arm.style.transform=`translateX(-50%) rotate(${angle}deg)`;
+      const s=document.createElement('span');s.className='seat';
+      arm.appendChild(s);el.appendChild(arm);seats.push(s);
+    });
+  });
+  return seats;
+}
+function paintTheater(animate){
+  if(!theaterSeats.length)return;
+  const occ=SEAT.TOTAL-getSeatsRemaining();
+  theaterSeats.forEach((s,i)=>{
+    const take=i<occ;
+    if(animate&&take&&!s.classList.contains('taken')){setTimeout(()=>s.classList.add('taken'),i*20);}
+    else{s.classList.toggle('taken',take);}
+  });
+}
+
+/* ===== 3. Mini-arco do readout ===== */
+function drawArc(svg){
+  const rem=getSeatsRemaining(),frac=1-(rem/SEAT.TOTAL);
+  const cx=26,cy=30,r=22,a0=Math.PI,a1=0;
+  const pt=a=>[cx+r*Math.cos(a),cy-r*Math.sin(a)];
+  const [sx,sy]=pt(a0),[ex,ey]=pt(a1),[fx,fy]=pt(a0+(a1-a0)*frac);
+  svg.innerHTML=`<path d="M${sx} ${sy} A${r} ${r} 0 0 1 ${ex} ${ey}" stroke="rgba(126,178,247,.22)" stroke-width="4" stroke-linecap="round"/><path d="M${sx} ${sy} A${r} ${r} 0 0 1 ${fx} ${fy}" stroke="#3E8BF5" stroke-width="4" stroke-linecap="round"/>`;
+}
+
+function renderSeats(animateTheater){
+  const rem=getSeatsRemaining(),state=getSeatState(rem);
+  const stateText={open:'Sala reservada',last:'Últimos lugares',waitlist:'Sala lotada'};
+  document.querySelectorAll('[data-seats-state]').forEach(el=>{el.textContent=stateText[state];el.classList.toggle('is-last',state==='last');el.classList.toggle('is-wait',state==='waitlist');});
+  const countHTML=state==='waitlist'?'A sala está cheia. Entre na <b>lista de espera</b>.':`<b>${rem}</b> de ${SEAT.TOTAL} lugares disponíveis`;
+  document.querySelectorAll('[data-seats-count]').forEach(el=>el.innerHTML=countHTML);
+  const shortText=state==='waitlist'?'Lista de espera aberta':`${rem} lugares disponíveis`;
+  document.querySelectorAll('[data-seats-text]').forEach(el=>el.textContent=shortText);
+  document.querySelectorAll('[data-arc]').forEach(drawArc);
+  paintTheater(animateTheater);
+  if(state==='waitlist')document.querySelectorAll('[data-open-form]').forEach(b=>{if(!b.dataset.o)b.dataset.o=b.textContent;b.textContent='Entrar na lista de espera';});
+}
+const theaterEl=document.querySelector('[data-theater]');
+if(theaterEl)theaterSeats=buildTheater(theaterEl);
+renderSeats(false);
+setInterval(()=>renderSeats(false),60000);
+
+const salaSec=document.getElementById('sala');
+if(salaSec){const io=new IntersectionObserver(([e])=>{if(e.isIntersecting){renderSeats(true);io.disconnect();}},{threshold:.35});io.observe(salaSec);}
+
+/* ===== 4. Sticky + mobile CTA ===== */
+const hero=document.querySelector('.hero'),stickybar=document.getElementById('stickybar'),mobilecta=document.getElementById('mobilecta');
+new IntersectionObserver(([e])=>{const gone=!e.isIntersecting;stickybar.classList.toggle('show',gone);mobilecta.classList.toggle('show',gone);stickybar.setAttribute('aria-hidden',!gone);mobilecta.setAttribute('aria-hidden',!gone);},{rootMargin:'-80px 0px 0px 0px',threshold:0}).observe(hero);
+
+/* ===== 5. Reveal ===== */
+const ro=new IntersectionObserver((ents)=>{ents.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');ro.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%6)*40+'ms';ro.observe(el);});
+
+/* ===== 6. Modal HubSpot (lazy) ===== */
+const modal=document.getElementById('formModal');let formRendered=false,lastFocus=null;
+function openForm(){lastFocus=document.activeElement;modal.classList.add('open');document.body.style.overflow='hidden';if(!formRendered&&window.hbspt){hbspt.forms.create({portalId:"8180620",formId:"bdb0ccad-d2b3-471a-adf1-9187057e1ab3",target:"#hubspotForm"});formRendered=true;}const x=modal.querySelector('.modal__x');if(x)x.focus();}
+function closeForm(){modal.classList.remove('open');document.body.style.overflow='';if(lastFocus)lastFocus.focus();}
+document.querySelectorAll('[data-open-form]').forEach(b=>b.addEventListener('click',openForm));
+document.querySelectorAll('[data-close-form]').forEach(b=>b.addEventListener('click',closeForm));
+document.addEventListener('keydown',e=>{
+  if(!modal.classList.contains('open'))return;
+  if(e.key==='Escape'){closeForm();return;}
+  if(e.key==='Tab'){
+    const f=modal.querySelectorAll('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])');
+    if(!f.length)return;
+    const first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  }
+});
+</script>
+</body>
+</html>
