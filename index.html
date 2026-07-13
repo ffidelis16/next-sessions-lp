@@ -9,7 +9,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Você cresceu até onde este modelo alcança.">
-<meta property="og:description" content="Uma noite presencial com quem transformou assinatura, B2B e exportação em receita previsível. 25 de agosto, São Paulo.">
+<meta property="og:description" content="Uma noite presencial com quem transformou assinatura, B2B e exportação em receita previsível. 26 de agosto, São Paulo.">
 <meta property="og:image" content="ASSET_OG_1200x630.jpg">
 <meta property="og:url" content="https://www.nuvemshop.com.br/next/next-sessions-modelos-de-negocio">
 <meta name="theme-color" content="#00102E">
@@ -46,7 +46,7 @@
 
 <style>
 /* ============================================================
-   NEXT SESSIONS · 25/08 — Modelos de negócio
+   NEXT SESSIONS · 26/08 — Modelos de negócio
    Soberana · mobile-first · mono-azul sobre navy
    Tipografia: Plus Jakarta Sans (marca) + Ivy Presto (acento)
    Pesos delicados: títulos em 500, acento em serifa italic 400
@@ -253,7 +253,7 @@ p{text-wrap:pretty}
 .spk__photo img{width:100%;height:100%;object-fit:cover;object-position:center 16%;transition:transform .5s var(--ease)}
 .spk__photo img[src*="amanda"]{object-position:center 12%}
 .spk__photo img[src*="beatriz"]{object-position:center 14%}
-.spk__photo img[src*="vinicius"]{object-position:center 27%}
+.spk__photo img[src*="carolina"]{object-position:center 22%}
 .spk__photo img[src*="gustavo"]{object-position:center 28%}
 .spk:hover .spk__photo img{transform:scale(1.045)}
 .spk__photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(2,10,34,.72) 100%)}
@@ -280,8 +280,8 @@ p{text-wrap:pretty}
 .marcas__row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px 46px}
 .marca-logo{width:auto;object-fit:contain;opacity:.82;transition:opacity .3s var(--ease)}
 .marca-logo:hover{opacity:1}
-.m-pwrd{height:40px}.m-suamesa{height:80px}.m-pitada{height:60px}
-@media(max-width:559px){.marcas__row{gap:18px 30px}.m-pwrd{height:30px}.m-suamesa{height:58px}.m-pitada{height:44px}}
+.m-pwrd{height:40px}.m-suamesa{height:80px}.m-housewhey{height:50px}
+@media(max-width:559px){.marcas__row{gap:18px 30px}.m-pwrd{height:30px}.m-suamesa{height:58px}.m-housewhey{height:40px}}
 
 /* ============================================================
    LOCAL + FAQ + DEPOIMENTOS — seção clara (respiro)
@@ -362,6 +362,9 @@ p{text-wrap:pretty}
 .depo__dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
 .depo__dot{width:8px;height:8px;padding:0;border-radius:50%;background:rgba(6,30,76,.18);transition:width .3s var(--ease),background .3s var(--ease)}
 .depo__dot.is-active{width:22px;border-radius:5px;background:var(--blue-600)}
+/* 1 depoimento: card único centralizado, sem slider/dots. 2 a 4: slider com dots. */
+.depo__track.is-single{overflow:visible;justify-content:center}
+.depo__track.is-single .tcard{flex:0 0 auto;width:100%;max-width:680px;scroll-snap-align:none}
 @media(min-width:760px){.tcard{flex-basis:calc(50% - 8px)}}
 @media(min-width:1040px){.tcard{flex-basis:calc(33.333% - 11px)}}
 
@@ -486,7 +489,7 @@ p{text-wrap:pretty}
 <div class="stickybar" id="stickybar" aria-hidden="true">
   <div class="stickybar__in">
     <div class="stickybar__left">
-      <span class="stickybar__logo">Next Sessions · 25/08</span>
+      <span class="stickybar__logo">Next Sessions · 26/08</span>
       <span class="stickybar__seats" data-seats-text></span>
     </div>
     <button class="btn btn-primary" data-open-form>Confirmar minha presença</button>
@@ -507,7 +510,7 @@ p{text-wrap:pretty}
     </div>
     <div class="hero__body">
       <p class="hero__series reveal">Next Sessions</p>
-      <span class="hero__tag reveal">Evento presencial · 25 de agosto</span>
+      <span class="hero__tag reveal">Evento presencial · 26 de agosto</span>
       <h1 class="reveal">Você cresceu até onde seu modelo <span class="alc">alcança?</span></h1>
       <p class="hero__sub reveal">A pergunta agora é qual nova frente faz sentido para o seu momento: assinatura, B2B ou exportação. Uma noite com marcas que já tomaram essa decisão, para você separar uma expansão viável de uma aposta precipitada.</p>
       <div class="occ reveal">
@@ -518,7 +521,7 @@ p{text-wrap:pretty}
         <div class="occ__bar" data-bar aria-hidden="true"><i></i></div>
       </div>
       <div class="logistics reveal">
-        <span class="logi"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>25 de agosto, terça</span>
+        <span class="logi"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>26 de agosto, quarta</span>
         <span class="logi"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18h30 às 22h</span>
         <span class="logi"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Vila Olímpia, SP</span>
       </div>
@@ -587,7 +590,7 @@ p{text-wrap:pretty}
       <div class="spk-grid">
         <article class="spk reveal"><div class="spk__photo"><img src="speaker-amanda.webp" alt="Amanda Aliperti, fundadora da PWRD by Coffee" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Amanda Aliperti</div><div class="spk__role">Fundadora · PWRD by Coffee</div><div class="spk__contrib">Opera D2C, atacado, assinatura e exportação em paralelo. Na palestra, mostra como montou essa estrutura e o que decidir primeiro.</div></div></article>
         <article class="spk reveal"><div class="spk__photo"><img src="speaker-beatriz.webp" alt="Beatriz Daniel, Sua Mesa Suas Vontades" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Beatriz Daniel</div><div class="spk__role">Sua Mesa Suas Vontades</div><div class="spk__contrib">No painel, o que muda quando a assinatura vira pilar do negócio: operação, oferta e relação com o cliente.</div></div></article>
-        <article class="spk reveal"><div class="spk__photo"><img src="speaker-vinicius.webp" alt="Vinicius Fonseca, Pitada Natural" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Vinicius Fonseca</div><div class="spk__role">Pitada Natural</div><div class="spk__contrib">No painel, a visão de quem apostou em recorrência cedo, e o que muda para quem entra agora.</div></div></article>
+        <article class="spk reveal"><div class="spk__photo"><img src="speaker-carolina.webp" alt="Carolina Hebeisen, Housewhey" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Carolina Hebeisen</div><div class="spk__role">Housewhey</div><div class="spk__contrib">Cofundadora e diretora de marketing. No painel, como a marca virou referência em suplementação clean label e o que sustenta a recorrência.</div></div></article>
         <article class="spk reveal"><div class="spk__photo"><img src="speaker-gustavo.webp" alt="Gustavo Batista, Nuvemshop" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Gustavo Batista</div><div class="spk__role">Nuvemshop</div><div class="spk__contrib">Conduz a conversa e conecta os casos ao contexto das marcas da comunidade Next.</div></div></article>
       </div>
     </div>
@@ -595,7 +598,7 @@ p{text-wrap:pretty}
       <div class="tl reveal"><div class="tl__time">18h30</div><div class="tl__t">Welcome</div><div class="tl__d">Recepção dos convidados e primeira rodada de networking.</div></div>
       <div class="tl reveal"><div class="tl__time">19h00</div><div class="tl__t">Abertura</div><div class="tl__d">Por que abrir novas frentes exige discutir modelo de receita, não só canal.</div><div class="tl__who">Gustavo Batista · Nuvemshop</div></div>
       <div class="tl reveal"><div class="tl__time">19h10</div><div class="tl__t">D2C, atacado, assinatura e exportação</div><div class="tl__d">Amanda Aliperti abre os bastidores da PWRD by Coffee: as decisões que permitiram rodar D2C, atacado, assinatura e exportação em paralelo, e o que cada uma custou antes de dar certo.</div><div class="tl__who">Amanda Aliperti · PWRD by Coffee</div></div>
-      <div class="tl reveal"><div class="tl__time">19h50</div><div class="tl__t">O painel · Receita que se renova</div><div class="tl__d">Os bastidores de quem transformou assinatura em pilar do negócio, e os números por trás da decisão.</div><div class="tl__who">Beatriz Daniel (Sua Mesa Suas Vontades) + Vinicius Fonseca (Pitada Natural) · Mediação: Gustavo Batista</div></div>
+      <div class="tl reveal"><div class="tl__time">19h50</div><div class="tl__t">O painel · Receita que se renova</div><div class="tl__d">Os bastidores de quem transformou assinatura em pilar do negócio, e os números por trás da decisão.</div><div class="tl__who">Beatriz Daniel (Sua Mesa Suas Vontades) + Carolina Hebeisen (Housewhey) · Mediação: Gustavo Batista</div></div>
       <div class="tl reveal"><div class="tl__time">20h20</div><div class="tl__t">O que levar daqui</div><div class="tl__d">Fechamento da conversa e principais critérios para comparar assinatura, B2B e exportação no seu contexto.</div><div class="tl__who">Gustavo Batista · Nuvemshop</div></div>
       <div class="tl reveal"><div class="tl__time">20h30</div><div class="tl__t">Networking, com degustação</div><div class="tl__d">A noite não termina na palestra. O momento de troca ganha uma degustação de vinho guiada por sommelier, para aproximar quem está na sala.</div></div>
     </div>
@@ -635,7 +638,7 @@ p{text-wrap:pretty}
     <div class="marcas__row reveal">
       <img class="marca-logo m-pwrd" src="logo-pwrd.png" alt="PWRD by Coffee" loading="lazy">
       <img class="marca-logo m-suamesa" src="logo-suamesa.png" alt="Sua Mesa Suas Vontades" loading="lazy">
-      <img class="marca-logo m-pitada" src="logo-pitada.png" alt="Pitada Natural" loading="lazy">
+      <img class="marca-logo m-housewhey" src="logo-housewhey.png" alt="Housewhey" loading="lazy">
     </div>
   </div>
 </section>
@@ -705,12 +708,12 @@ p{text-wrap:pretty}
         <p class="faq__gt reveal">Prova de par</p>
         <h3 class="reveal">Quem já esteve na sala.</h3>
       </div>
-      <p class="faq__intro reveal">Depoimentos de participantes de edições anteriores. <span class="ph">[a preencher com a Marcela]</span></p>
+      <p class="faq__intro reveal">Depoimentos de quem já passou por uma edição do Next.</p>
       <div class="depo__slider reveal">
         <div class="depo__track" data-depo-track>
-          <blockquote class="tcard"><span class="tcard__mark" aria-hidden="true">&rdquo;</span><div class="tcard__stars" aria-hidden="true"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div><p class="tcard__text ph">[Depoimento de um participante de edição anterior: o que a noite destravou, uma decisão que saiu de lá, ou a impressão que ficou.]</p><div class="tcard__by"><span class="tcard__ph"></span><div><div class="tcard__n ph">[Nome]</div><div class="tcard__r ph">[Marca · edição]</div></div></div></blockquote>
-          <blockquote class="tcard"><span class="tcard__mark" aria-hidden="true">&rdquo;</span><div class="tcard__stars" aria-hidden="true"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div><p class="tcard__text ph">[Depoimento de um participante de edição anterior: o que a noite destravou, uma decisão que saiu de lá, ou a impressão que ficou.]</p><div class="tcard__by"><span class="tcard__ph"></span><div><div class="tcard__n ph">[Nome]</div><div class="tcard__r ph">[Marca · edição]</div></div></div></blockquote>
-          <blockquote class="tcard"><span class="tcard__mark" aria-hidden="true">&rdquo;</span><div class="tcard__stars" aria-hidden="true"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div><p class="tcard__text ph">[Depoimento de um participante de edição anterior: o que a noite destravou, uma decisão que saiu de lá, ou a impressão que ficou.]</p><div class="tcard__by"><span class="tcard__ph"></span><div><div class="tcard__n ph">[Nome]</div><div class="tcard__r ph">[Marca · edição]</div></div></div></blockquote>
+          <!-- Depoimentos: 1 a 4. Com 1 → card único centralizado (sem slider/dots). Com 2+ → slider com dots.
+               Para adicionar, duplique um <blockquote class="tcard">…</blockquote> (máximo 4). -->
+          <blockquote class="tcard"><span class="tcard__mark" aria-hidden="true">&rdquo;</span><div class="tcard__stars" aria-hidden="true"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div><p class="tcard__text">Palestrei sobre branding e IA numa edição do Next e o retorno veio na hora: os feedbacks começaram ainda no evento e seguiram nas DMs depois. É uma sala que troca de verdade.</p><div class="tcard__by"><span class="tcard__ph"></span><div><div class="tcard__n">Galileu Nogueira</div><div class="tcard__r">Fundador · Galileo Branding</div></div></div></blockquote>
         </div>
         <div class="depo__dots" data-depo-dots></div>
       </div>
@@ -723,7 +726,7 @@ p{text-wrap:pretty}
   <div class="wrap">
     <div class="final reveal">
       <p class="eyebrow">Última chamada</p>
-      <h2>25 de agosto. Vila Olímpia. <span class="ac">70 lugares.</span></h2>
+      <h2>26 de agosto. Vila Olímpia. <span class="ac">70 lugares.</span></h2>
       <p>Uma conversa que não acontece em palco grande, em webinar ou em blog. Acontece na sala, entre quem está tomando decisões parecidas agora.</p>
       <div class="occ">
         <div class="occ__meta"><span class="occ__state" data-seats-state>Sala reservada</span><div class="occ__count" data-seats-count></div></div>
@@ -754,7 +757,7 @@ p{text-wrap:pretty}
   <div class="modal__bd" data-close-form></div>
   <div class="modal__panel">
     <button class="modal__x" data-close-form aria-label="Fechar"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
-    <p class="modal__eyebrow">Next Sessions · 25 de agosto</p>
+    <p class="modal__eyebrow">Next Sessions · 26 de agosto</p>
     <h3 class="modal__title" id="formTitle">Confirmar presença</h3>
     <p class="modal__sub">Confirme sua presença no Next Sessions. A programação e os detalhes de acesso chegam por e-mail.</p>
     <div class="modal__form" id="hubspotForm"></div>
@@ -765,7 +768,7 @@ p{text-wrap:pretty}
 <script>
 /* ===== 1. OCUPAÇÃO — número monotônico no tempo real (curva projetada, não dado real).
    Trocar corpo de getSeatsRemaining() pela contagem do HubSpot quando existir. ===== */
-const SEAT={TOTAL:70,BASE_OCCUPIED:29,FLOOR:4,LAUNCH:new Date('2026-07-11T09:00:00-03:00'),EVENT:new Date('2026-08-25T18:30:00-03:00'),FORCE_STATE:null,LAST_THRESHOLD:12};
+const SEAT={TOTAL:70,BASE_OCCUPIED:29,FLOOR:4,LAUNCH:new Date('2026-07-11T09:00:00-03:00'),EVENT:new Date('2026-08-26T18:30:00-03:00'),FORCE_STATE:null,LAST_THRESHOLD:12};
 const easeInQuad=t=>t*t;
 function getSeatsRemaining(now=new Date()){let p=(now-SEAT.LAUNCH)/(SEAT.EVENT-SEAT.LAUNCH);p=Math.min(Math.max(p,0),1);const range=SEAT.TOTAL-SEAT.BASE_OCCUPIED-SEAT.FLOOR;const occ=SEAT.BASE_OCCUPIED+Math.round(range*p);return Math.max(SEAT.TOTAL-occ,SEAT.FLOOR);}
 function getSeatState(rem,now=new Date()){if(SEAT.FORCE_STATE)return SEAT.FORCE_STATE;if((SEAT.EVENT-now)<36*3600*1000)return'waitlist';if(rem<=SEAT.LAST_THRESHOLD)return'last';return'open';}
@@ -854,7 +857,8 @@ document.addEventListener('keydown',e=>{
 (function(){
   const track=document.querySelector('[data-depo-track]'),dotsWrap=document.querySelector('[data-depo-dots]');
   if(!track||!dotsWrap)return;
-  const cards=[...track.children];
+  const cards=[...track.children].filter(c=>c.classList&&c.classList.contains('tcard'));
+  if(cards.length<=1){track.classList.add('is-single');dotsWrap.style.display='none';return;}
   function centerCard(i){const c=cards[i],tr=track.getBoundingClientRect(),cr=c.getBoundingClientRect();track.scrollBy({left:(cr.left+cr.width/2)-(tr.left+tr.width/2),behavior:'smooth'});}
   cards.forEach((c,i)=>{const b=document.createElement('button');b.className='depo__dot'+(i===0?' is-active':'');b.setAttribute('aria-label','Ver depoimento '+(i+1));b.addEventListener('click',()=>centerCard(i));dotsWrap.appendChild(b);});
   const dots=[...dotsWrap.children];let raf;
