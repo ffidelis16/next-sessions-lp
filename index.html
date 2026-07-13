@@ -60,7 +60,7 @@
   --paper:#F4F7FC; --line-dk:rgba(133,202,255,.16); --line-lt:rgba(6,30,76,.10); --white:#FFF;
   --sans:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --serif:'ivypresto-display','Ivy Presto Display','Ivy Presto','Bodoni Moda', Georgia, serif;
-  --pad-x:24px; --sec-y:72px; --maxw:1120px;
+  --pad-x:30px; --sec-y:72px; --maxw:1120px;
   --r-lg:24px; --r-md:18px; --r-sm:12px; --r-pill:999px;
   --sh-soft:0 18px 50px rgba(0,8,34,.42); --sh-card:0 16px 40px rgba(4,22,60,.09);
   --sh-glow:0 0 0 1px rgba(133,202,255,.5), 0 14px 44px rgba(30,107,224,.42);
@@ -80,7 +80,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .section{padding-top:var(--sec-y);padding-bottom:var(--sec-y)}
 
 /* --- Tipografia: delicada --- */
-.eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-300)}
+.eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-300);display:block;margin-bottom:12px}
 h1,h2,h3{font-weight:500;line-height:1.14;letter-spacing:-.022em;text-wrap:balance}
 p{text-wrap:pretty}
 /* Acento serifa italic: semibold e em linha própria (separado do Jakarta) */
@@ -115,43 +115,44 @@ p{text-wrap:pretty}
    HERO
    ============================================================ */
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;padding-top:34px;padding-bottom:40px;overflow:hidden;background:var(--ink-900)}
-.hero__bg{position:absolute;inset:0;z-index:0}
-.hero__photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 42%}
-/* Fade elegante mobile-first: sala revelada no topo, texto emergindo do escuro embaixo, fusão na navy */
+/* Mobile-first: a foto vive numa BANDA no topo (sala cheia — teto azul, plateia),
+   fundindo na navy sólida embaixo, que sustenta o texto com contraste total. */
+.hero__bg{position:absolute;top:0;left:0;right:0;height:36svh;z-index:0;overflow:hidden}
+.hero__photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 .hero__grad{position:absolute;inset:0;background:
   linear-gradient(180deg,
-    var(--ink-900) 0%,
-    rgba(1,10,34,.99) 32%,
-    rgba(1,10,34,.93) 56%,
-    rgba(1,10,34,.55) 71%,
-    rgba(1,10,34,.2) 84%,
-    rgba(1,10,34,.52) 94%,
+    rgba(1,10,34,.5) 0%,
+    rgba(1,10,34,.16) 16%,
+    rgba(1,10,34,.12) 42%,
+    rgba(1,10,34,.46) 68%,
+    rgba(1,10,34,.9) 88%,
     var(--ink-900) 100%)}
 /* Brilho azul que ecoa a luz do palco, sem competir com o texto */
 .hero__glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(56% 44% at 80% 29%,rgba(89,169,255,.32),transparent 60%);mix-blend-mode:screen}
 .hero__in{position:relative;z-index:2;display:flex;flex-direction:column;flex:1;max-width:var(--maxw);margin:0 auto;width:100%;padding-left:var(--pad-x);padding-right:var(--pad-x)}
-.hero__topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:auto}
+.hero__topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:0}
 .brandline{display:inline-flex;align-items:center}
 .logo{height:22px;width:auto;color:#fff;display:block}
 .foot__brand .logo{height:20px}
 .brandline .dot{width:22px;height:22px;border-radius:7px;background:linear-gradient(135deg,#3E8BF5,#0050C3);box-shadow:0 4px 14px rgba(0,80,195,.5)}
 .brandline .sub{font-weight:400;color:var(--blue-200);font-size:.9rem}
 .tag-presencial{font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-150);padding:8px 14px;border-radius:var(--r-pill);border:1px solid var(--line-dk);white-space:nowrap}
-.hero__body{padding-top:40px;padding-bottom:8px;text-shadow:0 1px 2px rgba(1,10,34,.4),0 2px 34px rgba(1,10,34,.72)}
+.hero__body{padding-top:calc(36svh - 26px);padding-bottom:8px;text-shadow:0 1px 2px rgba(1,10,34,.4),0 2px 34px rgba(1,10,34,.72)}
 .hero__ctas .btn-primary{text-shadow:none}
-.hero__series{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.15rem;color:var(--blue-300);margin-bottom:14px}
-.hero__tag{display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-150);padding:7px 14px;border-radius:var(--r-pill);border:1px solid var(--glass-bd);background:rgba(133,202,255,.05);margin-bottom:22px}
-.hero h1{font-size:clamp(2.05rem,7.2vw,4.7rem);max-width:13ch;margin-bottom:22px;letter-spacing:-.03em;text-wrap:balance}
+.hero__series{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.15rem;color:var(--blue-300);margin-bottom:10px}
+.hero__tag{display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-150);padding:7px 14px;border-radius:var(--r-pill);border:1px solid var(--glass-bd);background:rgba(133,202,255,.05);margin-bottom:16px}
+.hero h1{font-size:clamp(2.05rem,7.2vw,4.7rem);max-width:13ch;margin-bottom:18px;letter-spacing:-.03em;text-wrap:balance}
 .hero h1 .alc{color:var(--blue-300)}
-.hero__sub{font-size:clamp(1.02rem,2.6vw,1.26rem);color:var(--blue-200);max-width:45ch;line-height:1.55;margin-bottom:28px;font-weight:400}
+.hero__sub{font-size:clamp(1.02rem,2.6vw,1.26rem);color:var(--blue-200);max-width:45ch;line-height:1.55;margin-bottom:22px;font-weight:400}
 .logistics{display:flex;flex-wrap:wrap;gap:10px 18px;margin-bottom:24px}
 .logi{display:flex;align-items:center;gap:9px;font-size:.9rem;color:var(--blue-150);font-weight:500}
 .logi svg{width:17px;height:17px;flex:none;color:var(--blue-400)}
 
 /* readout compacto de ocupação */
-.occ{display:flex;align-items:center;gap:13px;border:1px solid var(--glass-bd);border-radius:var(--r-md);padding:13px 16px;margin-bottom:26px;max-width:390px;background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 34px rgba(0,6,26,.4),inset 0 1px 0 rgba(255,255,255,.07)}
-.occ__arc{flex:none}
+.occ{display:flex;flex-direction:column;gap:11px;border:1px solid var(--glass-bd);border-radius:var(--r-md);padding:14px 16px;margin-bottom:26px;max-width:390px;background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 34px rgba(0,6,26,.4),inset 0 1px 0 rgba(255,255,255,.07)}
 .occ__meta{min-width:0}
+.occ__bar{height:5px;border-radius:3px;background:rgba(126,178,247,.16);overflow:hidden}
+.occ__bar>i{display:block;height:100%;border-radius:3px;background:linear-gradient(90deg,#3E8BF5,#59A9FF);box-shadow:0 0 10px rgba(89,169,255,.55);width:0;transition:width .9s var(--ease)}
 .occ__state{font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-300);display:inline-block;margin-bottom:3px}
 .occ__state.is-last{color:#fff;background:var(--blue-600);padding:3px 9px;border-radius:var(--r-pill);animation:pulse 2.6s var(--ease) infinite}
 .occ__state.is-wait{color:#fff;background:var(--ink-700);padding:3px 9px;border-radius:var(--r-pill)}
@@ -165,7 +166,7 @@ p{text-wrap:pretty}
 .btn-ghost:hover .btn__arw{transform:translateX(3px)}
 .hero__micro{font-size:.82rem;color:var(--blue-300);margin-top:16px;display:flex;align-items:center;gap:8px}
 .hero__micro svg{width:15px;height:15px;color:var(--blue-400)}
-@media(max-width:479px){.hero__ctas{flex-direction:column;align-items:stretch}.hero__ctas .btn{width:100%}}
+@media(max-width:479px){.hero__ctas{flex-direction:column;align-items:stretch}.hero__ctas .btn,.playbook__cta .btn,.final .btn{width:100%}}
 
 /* ============================================================
    A SALA — teatro (menor, integrado)
@@ -173,7 +174,7 @@ p{text-wrap:pretty}
 .sala{background:linear-gradient(180deg,var(--ink-900),#020e28 55%,var(--ink-900));overflow:hidden}
 .sala .eyebrow{color:var(--blue-300)}
 .sala__grid{display:grid;gap:30px;align-items:center}
-.sala h2{font-size:clamp(1.7rem,5vw,2.5rem);margin:12px 0 14px;max-width:18ch}
+.sala h2{font-size:clamp(1.7rem,5vw,2.5rem);margin:0 0 16px;max-width:18ch}
 .sala__lead{color:var(--blue-200);font-size:1.02rem;line-height:1.6;max-width:46ch;margin-bottom:18px;font-weight:400}
 .sala__count{font-size:1rem;color:var(--blue-150)}
 .sala__count b{color:#fff;font-weight:600}
@@ -183,6 +184,7 @@ p{text-wrap:pretty}
 
 .sala__viz{display:flex;flex-direction:column;align-items:center;gap:22px}
 .sala__counter{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center}
+.sala__bar{width:100%;max-width:210px;margin-top:3px}
 .theater-wrap{position:relative;width:100%;max-width:300px;margin:0 auto}
 /* Cone de luz do palco: sobe do ponto-base central, puramente imagético */
 .theater-wrap::before{content:"";position:absolute;left:50%;bottom:2px;transform:translateX(-50%);width:216px;height:184px;background:linear-gradient(to top,rgba(130,182,255,.42),rgba(96,156,244,.13) 42%,transparent 84%);clip-path:polygon(50% 100%,11% 0,89% 0);filter:blur(7px);pointer-events:none;z-index:0}
@@ -198,8 +200,8 @@ p{text-wrap:pretty}
    A TESE — check-bullets (estilo da casa)
    ============================================================ */
 .tese{background:var(--ink-850);position:relative}
-.tese h2{font-size:clamp(1.8rem,5.2vw,2.7rem);margin-bottom:14px;max-width:18ch}
-.tese__teto{color:var(--blue-200);font-size:1.02rem;max-width:54ch;margin-bottom:30px;opacity:.82;font-weight:400}
+.tese h2{font-size:clamp(1.8rem,5.2vw,2.7rem);margin-bottom:16px;max-width:18ch}
+.tese__teto{color:var(--blue-200);font-size:1.02rem;max-width:54ch;margin-bottom:40px;opacity:.82;font-weight:400}
 .checks{display:grid;gap:20px;max-width:620px;margin-bottom:28px}
 .check{display:flex;gap:14px;align-items:flex-start}
 .check__ico{width:26px;height:26px;border-radius:50%;background:rgba(62,139,245,.16);display:grid;place-items:center;color:var(--blue-400);flex:none;margin-top:2px}
@@ -209,7 +211,7 @@ p{text-wrap:pretty}
 .tese__close{font-size:1.1rem;color:var(--blue-150);max-width:56ch;line-height:1.6;font-weight:400}
 .tese__close b{color:#fff;font-weight:600}
 /* Tese em 3 cards (peso narrativo, padrão de card da casa) */
-.models{display:grid;gap:14px;margin:30px 0}
+.models{display:grid;gap:14px;margin:0 0 40px}
 .model{position:relative;border-radius:var(--r-md);padding:24px 22px;background:linear-gradient(180deg,rgba(133,202,255,.06),rgba(6,20,54,.34));box-shadow:inset 0 0 0 1px var(--line-dk);overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .model::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue-400),transparent 72%);opacity:.75}
 .model:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px rgba(133,202,255,.42),0 18px 44px rgba(0,8,34,.5)}
@@ -221,9 +223,9 @@ p{text-wrap:pretty}
 /* ============================================================
    PLAYBOOK — timeline + speakers
    ============================================================ */
-.playbook h2{font-size:clamp(1.8rem,5.2vw,2.7rem);margin-bottom:12px}
-.playbook__sub{color:var(--blue-200);font-size:1.02rem;max-width:52ch;margin-bottom:38px;font-weight:400}
-.timeline{position:relative;margin-left:8px;padding-left:26px}
+.playbook h2{font-size:clamp(1.8rem,5.2vw,2.7rem);margin-bottom:16px}
+.playbook__sub{color:var(--blue-200);font-size:1.02rem;max-width:52ch;margin-bottom:40px;font-weight:400}
+.timeline{position:relative;margin-left:8px;padding-left:26px;margin-top:56px}
 .timeline::before{content:"";position:absolute;left:4px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,transparent,var(--line-dk) 8%,var(--line-dk) 92%,transparent)}
 .tl{position:relative;padding:16px 14px 16px 0;border-radius:var(--r-md);transition:background .35s var(--ease)}
 .tl::before{content:"";position:absolute;left:-26px;top:22px;width:9px;height:9px;border-radius:50%;background:var(--blue-400);box-shadow:0 0 0 4px rgba(62,139,245,.16);transform:translateX(-1px);transition:box-shadow .35s var(--ease),background .35s var(--ease)}
@@ -240,15 +242,19 @@ p{text-wrap:pretty}
 .tl--anchor .tl__k{display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--blue-400);margin-bottom:8px}
 .ph{color:var(--blue-500);font-style:italic;font-weight:500}
 
-.speakers{margin-top:54px}
-.playbook__cta{margin-top:46px;text-align:center}
+.speakers{margin-top:56px}
+.playbook__cta{margin-top:48px;text-align:center}
 .speakers h3{font-size:1.35rem;margin-bottom:6px}
 .speakers__sub{color:var(--blue-200);font-size:.98rem;margin-bottom:26px;max-width:50ch;font-weight:400}
 .spk-grid{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
 .spk{position:relative;border-radius:var(--r-md);overflow:hidden;background:linear-gradient(180deg,rgba(10,42,107,.26),rgba(6,20,54,.34));box-shadow:inset 0 0 0 1px var(--line-dk);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
 .spk:hover{transform:translateY(-5px);box-shadow:inset 0 0 0 1px rgba(133,202,255,.42),0 20px 46px rgba(0,8,34,.55)}
 .spk__photo{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--ink-800)}
-.spk__photo img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s var(--ease)}
+.spk__photo img{width:100%;height:100%;object-fit:cover;object-position:center 16%;transition:transform .5s var(--ease)}
+.spk__photo img[src*="amanda"]{object-position:center 12%}
+.spk__photo img[src*="beatriz"]{object-position:center 14%}
+.spk__photo img[src*="vinicius"]{object-position:center 27%}
+.spk__photo img[src*="gustavo"]{object-position:center 28%}
 .spk:hover .spk__photo img{transform:scale(1.045)}
 .spk__photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(2,10,34,.72) 100%)}
 .spk__info{padding:15px 16px 19px}
@@ -258,15 +264,15 @@ p{text-wrap:pretty}
 @media(min-width:760px){.spk-grid{grid-template-columns:repeat(4,1fr)}}
 
 /* A experiência (degustação) — slot de foto entra em .exp__media quando houver */
-.exp{display:grid;grid-template-columns:1fr;margin-top:48px;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(180deg,rgba(10,42,107,.3),rgba(6,20,54,.36));box-shadow:inset 0 0 0 1px var(--line-dk)}
+.exp{display:grid;grid-template-columns:1fr;margin-top:56px;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(180deg,rgba(10,42,107,.3),rgba(6,20,54,.36));box-shadow:inset 0 0 0 1px var(--line-dk)}
 .exp__media{position:relative;min-height:200px;display:grid;place-items:center;color:var(--sky);background:radial-gradient(120% 92% at 32% 22%,rgba(89,169,255,.24),transparent 60%),linear-gradient(135deg,#071a4d,#03123a)}
-.exp__media svg{width:76px;height:76px;filter:drop-shadow(0 6px 26px rgba(89,169,255,.55))}
+.exp__media svg{width:104px;height:104px;filter:drop-shadow(0 6px 26px rgba(89,169,255,.55))}
 .exp__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .exp__body{padding:30px 28px}
 .exp__body h3{font-size:clamp(1.5rem,4vw,2rem);margin:10px 0 12px;max-width:16ch}
 .exp__body h3 .ac{color:var(--blue-300)}
 .exp__body p{color:var(--blue-200);font-size:1rem;line-height:1.6;max-width:46ch;font-weight:400}
-@media(min-width:760px){.exp{grid-template-columns:.92fr 1.08fr}.exp__media{min-height:240px}}
+@media(min-width:760px){.exp{grid-template-columns:.6fr 1.4fr}.exp__media{min-height:240px}}
 
 /* --- Marcas na sala (strip de acabamento) --- */
 .marcas{border-top:1px solid var(--line-dk);border-bottom:1px solid var(--line-dk);padding:34px 0;text-align:center}
@@ -274,17 +280,18 @@ p{text-wrap:pretty}
 .marcas__row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px 46px}
 .marca-logo{width:auto;object-fit:contain;opacity:.82;transition:opacity .3s var(--ease)}
 .marca-logo:hover{opacity:1}
-.m-pwrd{height:20px}.m-suamesa{height:40px}.m-pitada{height:30px}
+.m-pwrd{height:40px}.m-suamesa{height:80px}.m-pitada{height:60px}
+@media(max-width:559px){.marcas__row{gap:18px 30px}.m-pwrd{height:30px}.m-suamesa{height:58px}.m-pitada{height:44px}}
 
 /* ============================================================
    LOCAL + FAQ + DEPOIMENTOS — seção clara (respiro)
    ============================================================ */
 .light{background:var(--paper);color:#0b1b3a}
 .light .eyebrow{color:var(--blue-600)}
-.light h2{color:#08183a;font-size:clamp(1.75rem,4.8vw,2.5rem);margin-bottom:18px;max-width:20ch}
+.light h2{color:#08183a;font-size:clamp(1.75rem,4.8vw,2.5rem);margin-bottom:16px;max-width:20ch}
 .light h2 .ac{color:var(--blue-600)}
 .light h3{color:#08183a}
-.local__lead{color:#3a4a67;font-size:1.02rem;max-width:52ch;margin-bottom:26px;line-height:1.6;font-weight:400}
+.local__lead{color:#3a4a67;font-size:1.02rem;max-width:52ch;margin-bottom:40px;line-height:1.6;font-weight:400}
 .local__card{background:#fff;border-radius:var(--r-lg);box-shadow:var(--sh-card);overflow:hidden}
 .local__map{height:250px;overflow:hidden;position:relative}
 .local__map img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
@@ -298,7 +305,7 @@ p{text-wrap:pretty}
 .local__row a.val{color:var(--blue-600);text-decoration:underline;text-underline-offset:3px}
 .local__cta{padding:0 22px 22px}
 
-.faq{margin-top:52px}
+.faq{margin-top:56px}
 .faq h3{font-size:1.35rem;margin-bottom:6px}
 .faq__intro{color:#3a4a67;margin-bottom:22px;font-size:.98rem;font-weight:400}
 .faq__group{margin-bottom:24px}
@@ -316,19 +323,47 @@ p{text-wrap:pretty}
 .acc summary{list-style:none}
 .acc summary::-webkit-details-marker{display:none}
 
-/* Depoimentos (card estilo casa) */
-.depo{margin-top:56px}
-.depo__head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:24px;flex-wrap:wrap}
-.depo h2{margin-bottom:0}
-.depo__grid{display:grid;gap:16px}
-.tcard{background:#fff;border-radius:var(--r-lg);padding:28px 26px;box-shadow:var(--sh-card),inset 0 0 0 1px rgba(6,30,76,.06);position:relative}
-.tcard__mark{font-family:var(--serif);font-weight:500;font-size:2.6rem;line-height:.6;color:var(--ink-900);display:block;margin-bottom:10px}
-.tcard__text{color:#1a2740;font-size:1.05rem;line-height:1.6;margin-bottom:22px;font-weight:400}
-.tcard__by{display:flex;align-items:center;gap:12px}
+/* FAQ sanfona de duas camadas — categorias colapsáveis (reduz a altura) */
+.faq__cats{display:grid;gap:14px;margin-top:6px}
+.faq__cat{background:#fff;border-radius:var(--r-md);box-shadow:var(--sh-card),inset 0 0 0 1px rgba(6,30,76,.06);overflow:hidden;transition:box-shadow .3s var(--ease)}
+.faq__cat[open]{box-shadow:var(--sh-card),inset 0 0 0 1px rgba(30,107,224,.30)}
+.faq__cat>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:18px 22px;font-weight:600;font-size:1.05rem;color:#08183a;letter-spacing:-.01em;transition:background .2s var(--ease)}
+.faq__cat>summary::-webkit-details-marker{display:none}
+.faq__cat>summary:hover{background:var(--ice-100)}
+.faq__cat__ico{width:40px;height:40px;border-radius:12px;flex:none;display:grid;place-items:center;color:var(--blue-600);background:var(--ice-100);transition:background .25s var(--ease),color .25s var(--ease)}
+.faq__cat[open] .faq__cat__ico{background:var(--blue-600);color:#fff}
+.faq__cat__ico svg{width:20px;height:20px}
+.faq__cat__meta{display:flex;flex-direction:column;min-width:0;line-height:1.22}
+.faq__cat__count{font-size:.74rem;font-weight:500;letter-spacing:0;color:#5b6b86}
+.faq__cat__chev{margin-left:auto;width:22px;height:22px;flex:none;color:var(--blue-600);transition:transform .3s var(--ease)}
+.faq__cat[open] .faq__cat__chev{transform:rotate(180deg)}
+.faq__cat__body{padding:2px 22px 6px;border-top:1px solid var(--line-lt)}
+.faq__cat__body .acc:last-child{border-bottom:none}
+
+/* Depoimentos — slider (scroll-snap + dots), card mais atrativo */
+.depo{margin-top:64px}
+.depo__head{margin-bottom:8px}
+.depo h3{margin-bottom:0}
+.depo__slider{position:relative}
+.depo__track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+  margin-left:calc(-1*var(--pad-x));margin-right:calc(-1*var(--pad-x));padding:8px var(--pad-x) 10px;scroll-padding-left:var(--pad-x)}
+.depo__track::-webkit-scrollbar{display:none}
+.tcard{scroll-snap-align:center;flex:0 0 86%;display:flex;flex-direction:column;position:relative;overflow:hidden;
+  background:linear-gradient(180deg,#fff,#f6faff);border-radius:var(--r-lg);padding:30px 28px 26px;box-shadow:var(--sh-card),inset 0 0 0 1px rgba(6,30,76,.06)}
+.tcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue-400),var(--blue-600))}
+.tcard__mark{position:absolute;top:14px;right:22px;font-family:var(--serif);font-weight:600;font-style:italic;font-size:4rem;line-height:1;color:rgba(30,107,224,.12);pointer-events:none}
+.tcard__stars{display:flex;gap:3px;color:var(--blue-500);margin-bottom:14px}
+.tcard__stars svg{width:16px;height:16px}
+.tcard__text{color:#182642;font-size:1.06rem;line-height:1.62;margin-bottom:24px;font-weight:400;flex:1}
+.tcard__by{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--line-lt)}
 .tcard__ph{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--blue-400),var(--ink-700));flex:none}
 .tcard__n{font-weight:600;color:#08183a;font-size:.95rem}
 .tcard__r{color:#5b6b86;font-size:.82rem}
-@media(min-width:760px){.depo__grid{grid-template-columns:repeat(2,1fr)}}
+.depo__dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+.depo__dot{width:8px;height:8px;padding:0;border-radius:50%;background:rgba(6,30,76,.18);transition:width .3s var(--ease),background .3s var(--ease)}
+.depo__dot.is-active{width:22px;border-radius:5px;background:var(--blue-600)}
+@media(min-width:760px){.tcard{flex-basis:calc(50% - 8px)}}
+@media(min-width:1040px){.tcard{flex-basis:calc(33.333% - 11px)}}
 
 /* ============================================================
    STATS + FECHO — navy (decisão)
@@ -350,6 +385,13 @@ p{text-wrap:pretty}
 .final p{color:var(--blue-200);font-size:1.06rem;margin-bottom:22px;max-width:44ch;margin-inline:auto;font-weight:400}
 .final .occ{margin-inline:auto;justify-content:center}
 .final__micro{font-size:.82rem;color:var(--blue-300);margin-top:16px}
+/* Seção final mais curta + stats discretos em strip */
+.section.close{padding-top:62px;padding-bottom:58px}
+.final .eyebrow{margin-bottom:12px}
+.statstrip{display:grid;grid-template-columns:repeat(3,auto);justify-content:center;gap:16px 34px;max-width:560px;margin:52px auto 0;padding-top:30px;border-top:1px solid var(--line-dk)}
+.statstrip .stat{display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center}
+.statstrip .stat b{font-size:1.55rem;font-weight:600;letter-spacing:-.02em;color:#fff;line-height:1}
+.statstrip .stat span{font-size:.76rem;color:var(--blue-300);font-weight:400;line-height:1.3;max-width:13ch}
 
 .foot{border-top:1px solid var(--line-dk);padding:28px var(--pad-x) 34px;text-align:center}
 .foot__brand{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:600;margin-bottom:12px;letter-spacing:-.01em}
@@ -371,22 +413,28 @@ p{text-wrap:pretty}
 
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.in{opacity:1;transform:none}
+/* Diagramação: evita viúvas e quebras ruins */
+.hero__sub,.sala__lead,.tese__teto,.leva__list li,.sala__mirrors li,.exp__body p,.final p,.speakers__sub,.local__lead,.acc__body,.spk__contrib{text-wrap:pretty}
+.sala h2,.tese h2,.leva h2,.light h2,.exp__body h3,.final h3,.speakers h3,.hero__sub{text-wrap:balance}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}.seat{transition:none!important}}
 @media(min-width:860px){:root{--sec-y:110px;--pad-x:40px}.hero__body{padding-top:56px;max-width:52ch}.stats{gap:16px}
-  /* Desktop: escurece a esquerda (coluna de texto) e revela a sala à direita, ainda fundindo na base */
-  .hero__photo{object-position:68% 42%}
+  /* Desktop: cor sólida à esquerda (~40%, coluna de texto); a partir da emenda a imagem
+     é revelada à direita, começando colada ao sólido na mesma cor (continuidade uniforme). */
+  .hero__bg{inset:0;height:auto}
+  .hero__topbar{margin-bottom:auto}
+  .hero__body{padding-top:56px}
+  .hero__photo{object-position:64% 46%}
   .hero__grad{background:
-    linear-gradient(96deg,rgba(1,10,34,.95) 0%,rgba(1,10,34,.86) 28%,rgba(1,10,34,.5) 56%,rgba(1,10,34,.12) 100%),
-    radial-gradient(120% 120% at 20% 60%,transparent 45%,rgba(1,10,34,.5) 100%),
-    linear-gradient(180deg,rgba(1,10,34,.45) 0%,transparent 24%,transparent 58%,rgba(1,10,34,.6) 88%,var(--ink-900) 100%)}
+    linear-gradient(90deg,var(--ink-900) 0%,var(--ink-900) 40%,rgba(1,10,34,.5) 64%,rgba(1,10,34,0) 92%),
+    linear-gradient(180deg,rgba(1,10,34,.3) 0%,transparent 28%,transparent 64%,rgba(1,10,34,.72) 90%,var(--ink-900) 100%)}
 }
 /* Sala: espelhos de ICP */
 .sala__mirrors{list-style:none;display:grid;gap:11px;margin:16px 0;padding:0;max-width:46ch}
 .sala__mirrors li{color:var(--blue-200);font-size:.95rem;line-height:1.55;padding-left:20px;position:relative;font-weight:400}
-.sala__mirrors li::before{content:"—";position:absolute;left:0;color:var(--blue-400)}
+.sala__mirrors li::before{content:"";position:absolute;left:1px;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--blue-400)}
 /* O que você leva */
 .leva{background:var(--ink-850)}
-.leva h2{font-size:clamp(1.8rem,5.2vw,2.7rem);margin-bottom:22px;max-width:22ch}
+.leva h2{font-size:clamp(1.8rem,5.2vw,2.7rem);margin-bottom:28px;max-width:22ch}
 .leva h2 .ac{color:var(--blue-300)}
 .leva__list{list-style:none;display:grid;gap:14px;max-width:640px}
 .leva__list li{color:var(--blue-200);font-size:.97rem;line-height:1.55;padding-left:22px;position:relative;font-weight:400}
@@ -400,14 +448,9 @@ p{text-wrap:pretty}
 @media(max-width:759px){
   .exp__media{min-height:150px}
   .exp__media svg{width:62px;height:62px}
-  /* Cabeçalhos centralizados no mobile (respiro editorial) */
-  .sala .eyebrow,.sala h2,.sala__lead,
-  .tese .eyebrow,.tese h2,.tese__teto,.tese__close,
-  .playbook .eyebrow,.playbook h2,.playbook__sub,.speakers h3,.speakers__sub,
-  .leva .eyebrow,.leva h2,
-  .light .eyebrow,.light h2,.local__lead,
-  .close .eyebrow,.stats-head{text-align:center}
-  .sala h2,.sala__lead,.tese h2,.tese__teto,.tese__close,.playbook h2,.playbook__sub,.speakers__sub,.leva h2,.light h2,.local__lead,.stats-head{margin-left:auto;margin-right:auto}
+  /* Alinhamento: conteúdo à esquerda em todos os tamanhos (leitura/scan em F-pattern;
+     header compartilha a margem-esquerda do corpo). Cerimônia (.final/.statstrip/.marcas)
+     e a viz do teatro seguem centradas por suas próprias regras. */
   /* Participantes: slider full-bleed que vaza à direita */
   .spk-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;
     margin-left:calc(-1 * var(--pad-x));margin-right:calc(-1 * var(--pad-x));
@@ -464,15 +507,15 @@ p{text-wrap:pretty}
     </div>
     <div class="hero__body">
       <p class="hero__series reveal">Next Sessions</p>
-      <span class="hero__tag reveal">Modelos de negócio · 25 de agosto</span>
-      <h1 class="reveal">Você cresceu até onde seu modelo <span class="alc">alcança.</span></h1>
+      <span class="hero__tag reveal">Evento presencial · 25 de agosto</span>
+      <h1 class="reveal">Você cresceu até onde seu modelo <span class="alc">alcança?</span></h1>
       <p class="hero__sub reveal">A pergunta agora é qual nova frente faz sentido para o seu momento: assinatura, B2B ou exportação. Uma noite com marcas que já tomaram essa decisão, para você separar uma expansão viável de uma aposta precipitada.</p>
       <div class="occ reveal">
-        <svg class="occ__arc" width="52" height="34" viewBox="0 0 52 34" data-arc fill="none" aria-hidden="true"></svg>
         <div class="occ__meta">
           <span class="occ__state" data-seats-state>Sala reservada</span>
           <div class="occ__count" data-seats-count></div>
         </div>
+        <div class="occ__bar" data-bar aria-hidden="true"><i></i></div>
       </div>
       <div class="logistics reveal">
         <span class="logi"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>25 de agosto, terça</span>
@@ -495,7 +538,7 @@ p{text-wrap:pretty}
       <div class="sala__copy reveal">
         <p class="eyebrow">A sala</p>
         <h2>Para quem já domina um modelo e está diante do próximo.</h2>
-        <p class="sala__lead">Setenta lugares para founders e líderes de e-commerce com operação rodando, avaliando novas frentes de receita.</p>
+        <p class="sala__lead">70 lugares para founders e líderes de e-commerce com operação rodando, avaliando novas frentes de receita.</p>
         <ul class="sala__mirrors">
           <li>Seu canal principal é forte, mas o próximo ciclo não pode depender só dele.</li>
           <li>Assinatura, B2B ou exportação já são hipótese, mas falta critério para priorizar.</li>
@@ -510,6 +553,7 @@ p{text-wrap:pretty}
         <div class="sala__counter">
           <span class="sala__state" data-seats-state>Sala reservada</span>
           <div class="sala__count" data-seats-count></div>
+          <div class="occ__bar sala__bar" data-bar aria-hidden="true"><i></i></div>
         </div>
       </div>
     </div>
@@ -537,20 +581,6 @@ p{text-wrap:pretty}
     <p class="eyebrow reveal">O playbook da noite</p>
     <h2 class="reveal">Uma sequência, <span class="ac">não uma grade.</span></h2>
     <p class="playbook__sub reveal">Cada momento tem uma função: entender o tema, ver como funciona na prática e trocar com quem está na mesma decisão.</p>
-    <div class="timeline">
-      <div class="tl reveal"><div class="tl__time">18h30</div><div class="tl__t">Welcome</div><div class="tl__d">Recepção dos convidados e primeira rodada de networking.</div></div>
-      <div class="tl reveal"><div class="tl__time">19h00</div><div class="tl__t">Abertura</div><div class="tl__d">Por que abrir novas frentes exige discutir modelo de receita, não só canal.</div><div class="tl__who">Gustavo Batista · Nuvemshop</div></div>
-      <div class="tl tl--anchor reveal">
-        <span class="tl__k">A palestra</span>
-        <div class="tl__time">19h10</div>
-        <div class="tl__t">D2C, atacado, assinatura e exportação</div>
-        <div class="tl__d">Amanda Aliperti abre os bastidores da PWRD by Coffee: as decisões que permitiram rodar D2C, atacado, assinatura e exportação em paralelo, e o que cada uma custou antes de dar certo.</div>
-        <div class="tl__who">Amanda Aliperti · PWRD by Coffee</div>
-      </div>
-      <div class="tl reveal"><div class="tl__time">19h50</div><div class="tl__t">O painel · Receita que se renova</div><div class="tl__d">Os bastidores de quem transformou assinatura em pilar do negócio, e os números por trás da decisão.</div><div class="tl__who">Beatriz Daniel (Sua Mesa Suas Vontades) + Vinicius Fonseca (Pitada Natural) · Mediação: Gustavo Batista</div></div>
-      <div class="tl reveal"><div class="tl__time">20h20</div><div class="tl__t">O que levar daqui</div><div class="tl__d">Fechamento da conversa e principais critérios para comparar assinatura, B2B e exportação no seu contexto.</div><div class="tl__who">Gustavo Batista · Nuvemshop</div></div>
-      <div class="tl reveal"><div class="tl__time">20h30</div><div class="tl__t">Networking, com degustação</div><div class="tl__d">A noite não termina na palestra. O momento de troca ganha uma degustação de vinho guiada por sommelier, para aproximar quem está na sala.</div></div>
-    </div>
     <div class="speakers">
       <h3 class="reveal">Quem conduz a conversa</h3>
       <p class="speakers__sub reveal">Fundadores e operadores que ajudam a responder, na prática, como novas frentes de receita saem da ideia e entram na operação.</p>
@@ -561,10 +591,17 @@ p{text-wrap:pretty}
         <article class="spk reveal"><div class="spk__photo"><img src="speaker-gustavo.webp" alt="Gustavo Batista, Nuvemshop" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Gustavo Batista</div><div class="spk__role">Nuvemshop</div><div class="spk__contrib">Conduz a conversa e conecta os casos ao contexto das marcas da comunidade Next.</div></div></article>
       </div>
     </div>
+    <div class="timeline">
+      <div class="tl reveal"><div class="tl__time">18h30</div><div class="tl__t">Welcome</div><div class="tl__d">Recepção dos convidados e primeira rodada de networking.</div></div>
+      <div class="tl reveal"><div class="tl__time">19h00</div><div class="tl__t">Abertura</div><div class="tl__d">Por que abrir novas frentes exige discutir modelo de receita, não só canal.</div><div class="tl__who">Gustavo Batista · Nuvemshop</div></div>
+      <div class="tl reveal"><div class="tl__time">19h10</div><div class="tl__t">D2C, atacado, assinatura e exportação</div><div class="tl__d">Amanda Aliperti abre os bastidores da PWRD by Coffee: as decisões que permitiram rodar D2C, atacado, assinatura e exportação em paralelo, e o que cada uma custou antes de dar certo.</div><div class="tl__who">Amanda Aliperti · PWRD by Coffee</div></div>
+      <div class="tl reveal"><div class="tl__time">19h50</div><div class="tl__t">O painel · Receita que se renova</div><div class="tl__d">Os bastidores de quem transformou assinatura em pilar do negócio, e os números por trás da decisão.</div><div class="tl__who">Beatriz Daniel (Sua Mesa Suas Vontades) + Vinicius Fonseca (Pitada Natural) · Mediação: Gustavo Batista</div></div>
+      <div class="tl reveal"><div class="tl__time">20h20</div><div class="tl__t">O que levar daqui</div><div class="tl__d">Fechamento da conversa e principais critérios para comparar assinatura, B2B e exportação no seu contexto.</div><div class="tl__who">Gustavo Batista · Nuvemshop</div></div>
+      <div class="tl reveal"><div class="tl__time">20h30</div><div class="tl__t">Networking, com degustação</div><div class="tl__d">A noite não termina na palestra. O momento de troca ganha uma degustação de vinho guiada por sommelier, para aproximar quem está na sala.</div></div>
+    </div>
     <div class="exp reveal">
-      <div class="exp__media" aria-hidden="true">
-        <!-- Trocar por foto real da degustação/networking quando houver: <img src="asset-degustacao.webp" alt="Degustação de vinho guiada por sommelier"> -->
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10c0 5-2.2 8-5 8S7 8 7 3Z"/><path d="M12 11v7M8.5 21h7"/></svg>
+      <div class="exp__media">
+        <img src="asset-degustacao.webp" alt="Taça de vinho tinto sob luz suave numa noite de networking" loading="lazy" decoding="async">
       </div>
       <div class="exp__body">
         <span class="tl__k" style="color:var(--blue-400)">A experiência</span>
@@ -610,7 +647,7 @@ p{text-wrap:pretty}
     <h2 class="reveal">Uma sala reservada na <span class="ac">Vila Olímpia.</span></h2>
     <p class="local__lead reveal">Uma noite presencial no escritório da Nuvemshop, em São Paulo. Para troca direta entre lojistas, fundadores e time Next.</p>
     <div class="local__card reveal">
-      <div class="local__map"><img src="asset-local-sala.webp" alt="Espaço do evento no escritório da Nuvemshop, Vila Olímpia" loading="lazy" decoding="async"></div>
+      <div class="local__map"><img src="asset-local-escritorio.webp" alt="Escritório da Nuvemshop na Vila Olímpia, espaço do evento" loading="lazy" decoding="async"></div>
       <div class="local__info">
         <div class="local__row"><svg aria-hidden="true"><use href="#ic-location"/></svg><div><div class="lbl">Endereço</div><div class="val">Alameda Vicente Pinzon, 51 · Vila Olímpia, São Paulo</div></div></div>
         <div class="local__row"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg><div><div class="lbl">Como chegar</div><a class="val" href="https://www.google.com/maps/search/?api=1&query=Alameda+Vicente+Pinzon+51+Vila+Olimpia+Sao+Paulo" target="_blank" rel="noopener">Abrir no Google Maps</a></div></div>
@@ -622,34 +659,60 @@ p{text-wrap:pretty}
     <div class="faq">
       <h3 class="reveal">Antes de confirmar sua presença</h3>
       <p class="faq__intro reveal">Algumas informações práticas para você decidir com segurança e organizar sua ida.</p>
-      <div class="faq__group">
-        <p class="faq__gt reveal">Presença</p>
-        <details class="acc reveal"><summary class="acc__btn">O evento é gratuito?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. É um evento gratuito para convidados.</div></details>
-        <details class="acc reveal"><summary class="acc__btn">O evento é aberto ao público?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Não. É uma sala reservada, para um grupo selecionado de lojistas e convidados.</div></details>
-        <details class="acc reveal"><summary class="acc__btn">Posso levar alguém da minha empresa?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. Em geral, reservamos até 2 convites por marca, para manter o perfil da sala.</div></details>
-        <details class="acc reveal"><summary class="acc__btn">Confirmar presença garante meu lugar?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. Ao preencher o formulário, sua presença fica confirmada enquanto houver disponibilidade na sala.</div></details>
-        <details class="acc reveal"><summary class="acc__btn">O que acontece depois que confirmo?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Você recebe por e-mail a confirmação, a programação e as informações de acesso ao escritório.</div></details>
-      </div>
-      <div class="faq__group">
-        <p class="faq__gt reveal">Experiência</p>
-        <details class="acc reveal"><summary class="acc__btn">O evento será gravado?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Não. O valor está em estar na sala.</div></details>
-        <details class="acc reveal"><summary class="acc__btn">Vai ter apresentação comercial?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Não. A noite é de conteúdo prático e troca entre pares.</div></details>
-        <details class="acc reveal"><summary class="acc__btn">Como funciona o networking?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Uma noite pensada para a troca, com uma degustação de vinho guiada por sommelier para aproximar quem está na sala.</div></details>
-      </div>
-      <div class="faq__group">
-        <p class="faq__gt reveal">Local</p>
-        <details class="acc reveal"><summary class="acc__btn">Onde acontece?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">No escritório da Nuvemshop, na Vila Olímpia, São Paulo. Endereço com link para o Google Maps acima.</div></details>
-        <details class="acc reveal"><summary class="acc__btn">Há estacionamento?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. O escritório tem estacionamento próprio, além de diversas opções na região da Vila Olímpia.</div></details>
+      <div class="faq__cats">
+        <details class="faq__cat reveal" open>
+          <summary>
+            <span class="faq__cat__ico"><svg aria-hidden="true"><use href="#ic-users"/></svg></span>
+            <span class="faq__cat__meta"><span>Presença</span><span class="faq__cat__count">5 perguntas</span></span>
+            <svg class="faq__cat__chev" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq__cat__body">
+            <details class="acc"><summary class="acc__btn">O evento é gratuito?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. É um evento gratuito para convidados.</div></details>
+            <details class="acc"><summary class="acc__btn">O evento é aberto ao público?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Não. É uma sala reservada, para um grupo selecionado de lojistas e convidados.</div></details>
+            <details class="acc"><summary class="acc__btn">Posso levar alguém da minha empresa?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. Em geral, reservamos até 2 convites por marca, para manter o perfil da sala.</div></details>
+            <details class="acc"><summary class="acc__btn">Confirmar presença garante meu lugar?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. Ao preencher o formulário, sua presença fica confirmada enquanto houver disponibilidade na sala.</div></details>
+            <details class="acc"><summary class="acc__btn">O que acontece depois que confirmo?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Você recebe por e-mail a confirmação, a programação e as informações de acesso ao escritório.</div></details>
+          </div>
+        </details>
+        <details class="faq__cat reveal">
+          <summary>
+            <span class="faq__cat__ico"><svg aria-hidden="true"><use href="#ic-star"/></svg></span>
+            <span class="faq__cat__meta"><span>Experiência</span><span class="faq__cat__count">3 perguntas</span></span>
+            <svg class="faq__cat__chev" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq__cat__body">
+            <details class="acc"><summary class="acc__btn">O evento será gravado?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Não. O valor está em estar na sala.</div></details>
+            <details class="acc"><summary class="acc__btn">Vai ter apresentação comercial?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Não. A noite é de conteúdo prático e troca entre pares.</div></details>
+            <details class="acc"><summary class="acc__btn">Como funciona o networking?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Uma noite pensada para a troca, com uma degustação de vinho guiada por sommelier para aproximar quem está na sala.</div></details>
+          </div>
+        </details>
+        <details class="faq__cat reveal">
+          <summary>
+            <span class="faq__cat__ico"><svg aria-hidden="true"><use href="#ic-location"/></svg></span>
+            <span class="faq__cat__meta"><span>Local</span><span class="faq__cat__count">2 perguntas</span></span>
+            <svg class="faq__cat__chev" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq__cat__body">
+            <details class="acc"><summary class="acc__btn">Onde acontece?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">No escritório da Nuvemshop, na Vila Olímpia, São Paulo. Endereço com link para o Google Maps acima.</div></details>
+            <details class="acc"><summary class="acc__btn">Há estacionamento?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. O escritório tem estacionamento próprio, além de diversas opções na região da Vila Olímpia.</div></details>
+          </div>
+        </details>
       </div>
     </div>
 
     <div class="depo">
-      <p class="faq__gt reveal">Prova de par</p>
-      <h3 class="reveal">Quem já esteve na sala.</h3>
+      <div class="depo__head">
+        <p class="faq__gt reveal">Prova de par</p>
+        <h3 class="reveal">Quem já esteve na sala.</h3>
+      </div>
       <p class="faq__intro reveal">Depoimentos de participantes de edições anteriores. <span class="ph">[a preencher com a Marcela]</span></p>
-      <div class="depo__grid">
-        <blockquote class="tcard reveal"><span class="tcard__mark">&ldquo;</span><p class="tcard__text ph">[Depoimento de um participante de edição anterior: o que a noite destravou, uma decisão que saiu de lá, ou a impressão que ficou.]</p><div class="tcard__by"><span class="tcard__ph"></span><div><div class="tcard__n ph">[Nome]</div><div class="tcard__r ph">[Marca · edição]</div></div></div></blockquote>
-        <blockquote class="tcard reveal"><span class="tcard__mark">&ldquo;</span><p class="tcard__text ph">[Depoimento de um participante de edição anterior: o que a noite destravou, uma decisão que saiu de lá, ou a impressão que ficou.]</p><div class="tcard__by"><span class="tcard__ph"></span><div><div class="tcard__n ph">[Nome]</div><div class="tcard__r ph">[Marca · edição]</div></div></div></blockquote>
+      <div class="depo__slider reveal">
+        <div class="depo__track" data-depo-track>
+          <blockquote class="tcard"><span class="tcard__mark" aria-hidden="true">&rdquo;</span><div class="tcard__stars" aria-hidden="true"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div><p class="tcard__text ph">[Depoimento de um participante de edição anterior: o que a noite destravou, uma decisão que saiu de lá, ou a impressão que ficou.]</p><div class="tcard__by"><span class="tcard__ph"></span><div><div class="tcard__n ph">[Nome]</div><div class="tcard__r ph">[Marca · edição]</div></div></div></blockquote>
+          <blockquote class="tcard"><span class="tcard__mark" aria-hidden="true">&rdquo;</span><div class="tcard__stars" aria-hidden="true"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div><p class="tcard__text ph">[Depoimento de um participante de edição anterior: o que a noite destravou, uma decisão que saiu de lá, ou a impressão que ficou.]</p><div class="tcard__by"><span class="tcard__ph"></span><div><div class="tcard__n ph">[Nome]</div><div class="tcard__r ph">[Marca · edição]</div></div></div></blockquote>
+          <blockquote class="tcard"><span class="tcard__mark" aria-hidden="true">&rdquo;</span><div class="tcard__stars" aria-hidden="true"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div><p class="tcard__text ph">[Depoimento de um participante de edição anterior: o que a noite destravou, uma decisão que saiu de lá, ou a impressão que ficou.]</p><div class="tcard__by"><span class="tcard__ph"></span><div><div class="tcard__n ph">[Nome]</div><div class="tcard__r ph">[Marca · edição]</div></div></div></blockquote>
+        </div>
+        <div class="depo__dots" data-depo-dots></div>
       </div>
     </div>
   </div>
@@ -658,32 +721,21 @@ p{text-wrap:pretty}
 <!-- ============ STATS + FECHO ============ -->
 <section class="section close">
   <div class="wrap">
-    <p class="eyebrow reveal">A comunidade Next</p>
-    <h2 class="stats-head reveal">Os números que <span class="ac">sustentam a sala.</span></h2>
-    <div class="stats">
-      <div class="statcard reveal">
-        <div class="statcard__ico"><svg aria-hidden="true"><use href="#ic-users"/></svg></div>
-        <div class="statcard__n">+1.000</div><div class="statcard__l">líderes do e-commerce reunidos</div>
-      </div>
-      <div class="statcard reveal">
-        <div class="statcard__ico"><svg aria-hidden="true"><use href="#ic-store"/></svg></div>
-        <div class="statcard__n">+670</div><div class="statcard__l">marcas na comunidade Next</div>
-      </div>
-      <div class="statcard reveal">
-        <div class="statcard__ico"><svg aria-hidden="true"><use href="#ic-star"/></svg></div>
-        <div class="statcard__n">9,6</div><div class="statcard__l">de satisfação entre participantes</div>
-      </div>
-    </div>
-
     <div class="final reveal">
-      <h3>25 de agosto. Vila Olímpia. 70 lugares.</h3>
+      <p class="eyebrow">Última chamada</p>
+      <h2>25 de agosto. Vila Olímpia. <span class="ac">70 lugares.</span></h2>
       <p>Uma conversa que não acontece em palco grande, em webinar ou em blog. Acontece na sala, entre quem está tomando decisões parecidas agora.</p>
       <div class="occ">
-        <svg class="occ__arc" width="52" height="34" viewBox="0 0 52 34" data-arc fill="none" aria-hidden="true"></svg>
         <div class="occ__meta"><span class="occ__state" data-seats-state>Sala reservada</span><div class="occ__count" data-seats-count></div></div>
+        <div class="occ__bar" data-bar aria-hidden="true"><i></i></div>
       </div>
       <button class="btn btn-primary" data-open-form>Confirmar minha presença</button>
       <p class="final__micro">Ao confirmar, você recebe a programação e os detalhes de acesso por e-mail.</p>
+    </div>
+    <div class="statstrip reveal">
+      <div class="stat"><b>+1.000</b><span>líderes reunidos</span></div>
+      <div class="stat"><b>+670</b><span>marcas na comunidade</span></div>
+      <div class="stat"><b>9,6</b><span>de satisfação</span></div>
     </div>
   </div>
 </section>
@@ -747,12 +799,9 @@ function paintTheater(animate){
 }
 
 /* ===== 3. Mini-arco do readout ===== */
-function drawArc(svg){
-  const rem=getSeatsRemaining(),frac=1-(rem/SEAT.TOTAL);
-  const cx=26,cy=30,r=22,a0=Math.PI,a1=0;
-  const pt=a=>[cx+r*Math.cos(a),cy-r*Math.sin(a)];
-  const [sx,sy]=pt(a0),[ex,ey]=pt(a1),[fx,fy]=pt(a0+(a1-a0)*frac);
-  svg.innerHTML=`<path d="M${sx} ${sy} A${r} ${r} 0 0 1 ${ex} ${ey}" stroke="rgba(126,178,247,.22)" stroke-width="4" stroke-linecap="round"/><path d="M${sx} ${sy} A${r} ${r} 0 0 1 ${fx} ${fy}" stroke="#3E8BF5" stroke-width="4" stroke-linecap="round"/>`;
+function drawBar(el){
+  const rem=getSeatsRemaining(),frac=Math.max(0,Math.min(1,1-rem/SEAT.TOTAL));
+  const fill=el.querySelector('i');if(fill)fill.style.width=(frac*100).toFixed(1)+'%';
 }
 
 function renderSeats(animateTheater){
@@ -763,7 +812,7 @@ function renderSeats(animateTheater){
   document.querySelectorAll('[data-seats-count]').forEach(el=>el.innerHTML=countHTML);
   const shortText=state==='waitlist'?'Lista de espera aberta':`${rem} lugares disponíveis`;
   document.querySelectorAll('[data-seats-text]').forEach(el=>el.textContent=shortText);
-  document.querySelectorAll('[data-arc]').forEach(drawArc);
+  document.querySelectorAll('[data-bar]').forEach(drawBar);
   paintTheater(animateTheater);
   if(state==='waitlist')document.querySelectorAll('[data-open-form]').forEach(b=>{if(!b.dataset.o)b.dataset.o=b.textContent;b.textContent='Entrar na lista de espera';});
 }
@@ -800,6 +849,21 @@ document.addEventListener('keydown',e=>{
     else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
   }
 });
+
+/* ===== 7. Slider de depoimentos — dots sincronizados ===== */
+(function(){
+  const track=document.querySelector('[data-depo-track]'),dotsWrap=document.querySelector('[data-depo-dots]');
+  if(!track||!dotsWrap)return;
+  const cards=[...track.children];
+  function centerCard(i){const c=cards[i],tr=track.getBoundingClientRect(),cr=c.getBoundingClientRect();track.scrollBy({left:(cr.left+cr.width/2)-(tr.left+tr.width/2),behavior:'smooth'});}
+  cards.forEach((c,i)=>{const b=document.createElement('button');b.className='depo__dot'+(i===0?' is-active':'');b.setAttribute('aria-label','Ver depoimento '+(i+1));b.addEventListener('click',()=>centerCard(i));dotsWrap.appendChild(b);});
+  const dots=[...dotsWrap.children];let raf;
+  track.addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{
+    const tr=track.getBoundingClientRect(),center=tr.left+tr.width/2;let best=0,bestD=Infinity;
+    cards.forEach((c,i)=>{const r=c.getBoundingClientRect(),cc=r.left+r.width/2,d=Math.abs(cc-center);if(d<bestD){bestD=d;best=i;}});
+    dots.forEach((d,i)=>d.classList.toggle('is-active',i===best));
+  });},{passive:true});
+})();
 </script>
 </body>
 </html>
