@@ -746,7 +746,7 @@ p{text-wrap:pretty}
    • LAST_THRESHOLD → abaixo disso vira "Últimos lugares" (pulse)
    • FORCE_STATE    → 'open' | 'last' | 'waitlist' p/ forçar um estado (teste)
    Contagem real do HubSpot: trocar só o corpo de getSeatsRemaining(). ===== */
-const SEAT={TOTAL:60,BASE_OCCUPIED:26,FLOOR:4,LAUNCH:new Date('2026-07-11T09:00:00-03:00'),EVENT:new Date('2026-08-26T18:30:00-03:00'),STEP_DAYS:3,SEATS_PER_STEP:2,FORCE_STATE:null,LAST_THRESHOLD:10};
+const SEAT={TOTAL:60,BASE_OCCUPIED:26,FLOOR:4,LAUNCH:new Date('2026-07-11T09:00:00-03:00'),EVENT:new Date('2026-08-26T18:30:00-03:00'),STEP_DAYS:2,SEATS_PER_STEP:null,FORCE_STATE:null,LAST_THRESHOLD:10};
 function getSeatsRemaining(now=new Date()){
   const dayMs=86400000, totalDays=(SEAT.EVENT-SEAT.LAUNCH)/dayMs;
   const elapsed=Math.min(Math.max((now-SEAT.LAUNCH)/dayMs,0),totalDays);
