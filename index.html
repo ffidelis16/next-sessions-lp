@@ -14,6 +14,15 @@
 <meta property="og:url" content="https://www.nuvemshop.com.br/next/next-sessions-modelos-de-negocio">
 <meta name="theme-color" content="#00102E">
 
+<!-- ===== GTM (Google Tag Manager) — camada de tags =====
+     A página já EMPURRA eventos no dataLayer (ver script "0. TRACKING" no fim).
+     Falta só o container escutar. ATENÇÃO: como a LP entra embedada no HubSpot,
+     confirmar com o time de dados da Nuvemshop se o site deles JÁ dispara GTM/GA/Pixel
+     (para não duplicar pageview/conversão). Se NÃO herdar, descomente abaixo e troque GTM-XXXXXXX:
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+===== -->
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -445,6 +454,9 @@ p{text-wrap:pretty}
 <noscript><style>.reveal{opacity:1!important;transform:none!important}.seat{background:rgba(126,178,247,.14)!important}</style></noscript>
 </head>
 <body>
+<!-- GTM noscript (par do snippet do <head>): descomentar junto, mesmo container.
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
 
 <!-- Sprite de ícones do sistema Nimbus (Nuvemshop DS), vetores fiéis, viewBox 45x45 -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -736,6 +748,12 @@ p{text-wrap:pretty}
 
 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
 <script>
+/* ===== 0. TRACKING — camada de eventos para GTM / GA4 / Meta Pixel.
+   A página só EMPURRA eventos no dataLayer; quem escuta e dispara as tags é o container (GTM).
+   Eventos: cta_click, form_open, form_submit, generate_lead, scroll_depth, scarcity_state. ===== */
+window.dataLayer=window.dataLayer||[];
+function track(ev,params){try{window.dataLayer.push(Object.assign({event:ev},params||{}));}catch(e){}}
+
 /* ===== 1. OCUPAÇÃO — contador "fake" monotônico no tempo real (projeção, não dado real).
    Tudo se ajusta a partir do config abaixo — mude só o que precisar:
    • TOTAL          → nº de vagas (teatro e textos "N lugares" se ajustam sozinhos)
@@ -809,6 +827,7 @@ function renderSeats(animateTheater){
   document.querySelectorAll('[data-seats-text]').forEach(el=>el.textContent=shortText);
   document.querySelectorAll('[data-bar]').forEach(drawBar);
   paintTheater(animateTheater);
+  if(state!==window.__seatState){window.__seatState=state;track('scarcity_state',{state:state});}
   if(state==='waitlist')document.querySelectorAll('[data-open-form]').forEach(b=>{if(!b.dataset.o)b.dataset.o=b.textContent;b.textContent='Entrar na lista de espera';});
 }
 const theaterEl=document.querySelector('[data-theater]');
@@ -828,10 +847,10 @@ const ro=new IntersectionObserver((ents)=>{ents.forEach(en=>{if(en.isIntersectin
 document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%6)*40+'ms';ro.observe(el);});
 
 /* ===== 6. Modal HubSpot (lazy) ===== */
-const modal=document.getElementById('formModal');let formRendered=false,lastFocus=null;
-function openForm(){lastFocus=document.activeElement;modal.classList.add('open');document.body.style.overflow='hidden';if(!formRendered&&window.hbspt){hbspt.forms.create({portalId:"8180620",formId:"bdb0ccad-d2b3-471a-adf1-9187057e1ab3",target:"#hubspotForm"});formRendered=true;}const x=modal.querySelector('.modal__x');if(x)x.focus();}
+const modal=document.getElementById('formModal');let formRendered=false,lastFocus=null,lastCta='cta';
+function openForm(src){lastCta=src||'cta';lastFocus=document.activeElement;modal.classList.add('open');document.body.style.overflow='hidden';track('form_open',{cta:lastCta});if(!formRendered&&window.hbspt){hbspt.forms.create({portalId:"8180620",formId:"bdb0ccad-d2b3-471a-adf1-9187057e1ab3",target:"#hubspotForm",onFormSubmitted:function(){track('form_submit',{cta:lastCta});track('generate_lead',{value:1});}});formRendered=true;}const x=modal.querySelector('.modal__x');if(x)x.focus();}
 function closeForm(){modal.classList.remove('open');document.body.style.overflow='';if(lastFocus)lastFocus.focus();}
-document.querySelectorAll('[data-open-form]').forEach(b=>b.addEventListener('click',openForm));
+document.querySelectorAll('[data-open-form]').forEach(b=>b.addEventListener('click',()=>{track('cta_click',{cta:b.dataset.cta||'cta'});openForm(b.dataset.cta);}));
 document.querySelectorAll('[data-close-form]').forEach(b=>b.addEventListener('click',closeForm));
 document.addEventListener('keydown',e=>{
   if(!modal.classList.contains('open'))return;
@@ -859,6 +878,14 @@ document.addEventListener('keydown',e=>{
     cards.forEach((c,i)=>{const r=c.getBoundingClientRect(),cc=r.left+r.width/2,d=Math.abs(cc-center);if(d<bestD){bestD=d;best=i;}});
     dots.forEach((d,i)=>d.classList.toggle('is-active',i===best));
   });},{passive:true});
+})();
+
+/* ===== 8. TRACKING — rotula cada CTA pela origem e mede profundidade de scroll ===== */
+(function(){
+  const label=b=>b.closest('.stickybar')?'sticky':b.closest('.mobilecta')?'mobile_bar':b.closest('.hero__topbar')?'hero_topbar':b.closest('.hero')?'hero':b.closest('.playbook')?'playbook':b.closest('.local__card')?'local':b.closest('.close')?'final':'cta';
+  document.querySelectorAll('[data-open-form]').forEach(b=>{if(!b.dataset.cta)b.dataset.cta=label(b);});
+  const seen={};
+  addEventListener('scroll',()=>{const h=document.body.scrollHeight-innerHeight;if(h<=0)return;const pct=Math.round((scrollY/h)*100);[25,50,75,100].forEach(m=>{if(!seen[m]&&pct>=m){seen[m]=1;track('scroll_depth',{percent:m});}});},{passive:true});
 })();
 </script>
 </body>
