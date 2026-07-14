@@ -202,12 +202,6 @@ p{text-wrap:pretty}
 .tese{background:var(--ink-850);position:relative}
 .tese h2{font-size:clamp(1.8rem,5.2vw,2.7rem);margin-bottom:16px;max-width:18ch}
 .tese__teto{color:var(--blue-200);font-size:1.02rem;max-width:54ch;margin-bottom:40px;opacity:.82;font-weight:400}
-.checks{display:grid;gap:20px;max-width:620px;margin-bottom:28px}
-.check{display:flex;gap:14px;align-items:flex-start}
-.check__ico{width:26px;height:26px;border-radius:50%;background:rgba(62,139,245,.16);display:grid;place-items:center;color:var(--blue-400);flex:none;margin-top:2px}
-.check__ico svg{width:14px;height:14px}
-.check__t{font-weight:600;font-size:1.05rem;margin-bottom:3px;letter-spacing:-.01em}
-.check__d{color:var(--blue-200);font-size:.96rem;line-height:1.5;max-width:44ch;font-weight:400}
 .tese__close{font-size:1.1rem;color:var(--blue-150);max-width:56ch;line-height:1.6;font-weight:400}
 .tese__close b{color:#fff;font-weight:600}
 /* Tese em 3 cards (peso narrativo, padrão de card da casa) */
@@ -236,11 +230,6 @@ p{text-wrap:pretty}
 .tl__t{font-size:1.08rem;font-weight:600;margin-bottom:6px;letter-spacing:-.01em}
 .tl__d{color:var(--blue-200);font-size:.94rem;line-height:1.55;max-width:56ch;font-weight:400}
 .tl__who{margin-top:8px;font-size:.83rem;color:var(--blue-300);font-weight:500}
-.tl--anchor{background:linear-gradient(180deg,rgba(30,107,224,.15),rgba(10,42,107,.13));border:1px solid var(--line-dk);border-radius:var(--r-md);padding:20px;margin:6px 0 6px -6px}
-.tl--anchor::before{background:var(--blue-400);box-shadow:0 0 0 5px rgba(62,139,245,.22),0 0 16px rgba(62,139,245,.65);width:11px;height:11px;top:26px;left:-26px}
-.tl--anchor .tl__t{font-size:1.18rem}
-.tl--anchor .tl__k{display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--blue-400);margin-bottom:8px}
-.ph{color:var(--blue-500);font-style:italic;font-weight:500}
 
 .speakers{margin-top:56px}
 .playbook__cta{margin-top:48px;text-align:center}
@@ -266,7 +255,6 @@ p{text-wrap:pretty}
 /* A experiência (degustação) — slot de foto entra em .exp__media quando houver */
 .exp{display:grid;grid-template-columns:1fr;margin-top:56px;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(180deg,rgba(10,42,107,.3),rgba(6,20,54,.36));box-shadow:inset 0 0 0 1px var(--line-dk)}
 .exp__media{position:relative;min-height:200px;display:grid;place-items:center;color:var(--sky);background:radial-gradient(120% 92% at 32% 22%,rgba(89,169,255,.24),transparent 60%),linear-gradient(135deg,#071a4d,#03123a)}
-.exp__media svg{width:104px;height:104px;filter:drop-shadow(0 6px 26px rgba(89,169,255,.55))}
 .exp__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .exp__body{padding:30px 28px}
 .exp__body h3{font-size:clamp(1.5rem,4vw,2rem);margin:10px 0 12px;max-width:16ch}
@@ -308,7 +296,6 @@ p{text-wrap:pretty}
 .faq{margin-top:56px}
 .faq h3{font-size:1.35rem;margin-bottom:6px}
 .faq__intro{color:#3a4a67;margin-bottom:22px;font-size:.98rem;font-weight:400}
-.faq__group{margin-bottom:24px}
 .faq__gt{font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-600);margin-bottom:4px}
 .acc{border-bottom:1px solid var(--line-lt)}
 .acc__btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;text-align:left;font-weight:500;font-size:1rem;color:#0b1b3a;letter-spacing:-.01em}
@@ -372,16 +359,6 @@ p{text-wrap:pretty}
    STATS + FECHO — navy (decisão)
    ============================================================ */
 .close{background:radial-gradient(78% 48% at 50% 0%,rgba(62,139,245,.15),transparent 62%),linear-gradient(180deg,var(--ink-900),var(--ink-850))}
-.stats-head{font-size:clamp(1.6rem,5vw,2.4rem);margin-bottom:26px;max-width:20ch}
-.stats-head .ac{color:var(--blue-300)}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:56px}
-.statcard{border-radius:var(--r-md);padding:24px 20px;background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:inset 0 0 0 1px var(--line-dk);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
-.statcard:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px rgba(133,202,255,.42),0 16px 40px rgba(0,8,34,.5)}
-.statcard__ico{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 32% 26%,rgba(89,169,255,.3),rgba(62,139,245,.1));display:grid;place-items:center;color:var(--sky);margin-bottom:16px;box-shadow:inset 0 0 0 1px rgba(133,202,255,.26)}
-.statcard__ico svg{width:22px;height:22px}
-.statcard__n{font-size:clamp(1.9rem,6vw,2.6rem);font-weight:600;letter-spacing:-.03em;color:#fff;line-height:1}
-.statcard__l{color:var(--blue-200);font-size:.8rem;margin-top:8px;line-height:1.35;font-weight:400}
-
 .final{text-align:center;max-width:620px;margin:0 auto}
 .final h2,.final h3{font-size:clamp(2rem,6.2vw,3rem);margin-bottom:16px}
 .final h2 .ac,.final h3 .ac{color:var(--blue-300)}
@@ -450,8 +427,7 @@ p{text-wrap:pretty}
 }
 @media(max-width:759px){
   .exp__media{min-height:150px}
-  .exp__media svg{width:62px;height:62px}
-  /* Alinhamento: conteúdo à esquerda em todos os tamanhos (leitura/scan em F-pattern;
+    /* Alinhamento: conteúdo à esquerda em todos os tamanhos (leitura/scan em F-pattern;
      header compartilha a margem-esquerda do corpo). Cerimônia (.final/.statstrip/.marcas)
      e a viz do teatro seguem centradas por suas próprias regras. */
   /* Participantes: slider full-bleed que vaza à direita */
@@ -464,12 +440,6 @@ p{text-wrap:pretty}
 @media(max-width:559px){
   /* CTA do header some no mobile (redundante com o CTA do corpo + barra fixa) */
   .hero__topbar .btn-sm{display:none}
-  /* Stats: cards horizontais empilhados, o número respira (some o corte do +1.000) */
-  .stats{grid-template-columns:1fr;gap:10px;margin-bottom:44px}
-  .statcard{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"ico num" "ico lbl";column-gap:16px;row-gap:2px;align-items:center;padding:18px 20px}
-  .statcard__ico{grid-area:ico;margin-bottom:0}
-  .statcard__n{grid-area:num;font-size:2.2rem}
-  .statcard__l{grid-area:lbl;margin-top:0}
 }
 </style>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}.seat{background:rgba(126,178,247,.14)!important}</style></noscript>
@@ -769,7 +739,6 @@ p{text-wrap:pretty}
 /* ===== 1. OCUPAÇÃO — número monotônico no tempo real (curva projetada, não dado real).
    Trocar corpo de getSeatsRemaining() pela contagem do HubSpot quando existir. ===== */
 const SEAT={TOTAL:70,BASE_OCCUPIED:29,FLOOR:4,LAUNCH:new Date('2026-07-11T09:00:00-03:00'),EVENT:new Date('2026-08-26T18:30:00-03:00'),FORCE_STATE:null,LAST_THRESHOLD:12};
-const easeInQuad=t=>t*t;
 function getSeatsRemaining(now=new Date()){let p=(now-SEAT.LAUNCH)/(SEAT.EVENT-SEAT.LAUNCH);p=Math.min(Math.max(p,0),1);const range=SEAT.TOTAL-SEAT.BASE_OCCUPIED-SEAT.FLOOR;const occ=SEAT.BASE_OCCUPIED+Math.round(range*p);return Math.max(SEAT.TOTAL-occ,SEAT.FLOOR);}
 function getSeatState(rem,now=new Date()){if(SEAT.FORCE_STATE)return SEAT.FORCE_STATE;if((SEAT.EVENT-now)<36*3600*1000)return'waitlist';if(rem<=SEAT.LAST_THRESHOLD)return'last';return'open';}
 
