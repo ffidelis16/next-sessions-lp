@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Novas frentes de receita no e-commerce | Nuvemshop Next</title>
-<meta name="description" content="Encontro presencial e reservado em São Paulo. Veja como marcas cresceram com assinatura, B2B e exportação sem depender de um só canal. 70 lugares.">
+<meta name="description" content="Encontro presencial e reservado em São Paulo. Veja como marcas cresceram com assinatura, B2B e exportação sem depender de um só canal. 60 lugares.">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Você cresceu até onde este modelo alcança.">
@@ -499,7 +499,7 @@ p{text-wrap:pretty}
         <button class="btn btn-primary" data-open-form>Confirmar minha presença</button>
         <a class="btn btn-ghost" href="#playbook">Ver programação da noite <svg class="btn__arw" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
-      <p class="hero__micro reveal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Evento presencial e reservado. 70 lugares.</p>
+      <p class="hero__micro reveal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Evento presencial e reservado. <span data-seats-total>60</span> lugares.</p>
     </div>
   </div>
 </header>
@@ -511,7 +511,7 @@ p{text-wrap:pretty}
       <div class="sala__copy reveal">
         <p class="eyebrow">A sala</p>
         <h2>Para quem já domina um modelo e está diante do próximo.</h2>
-        <p class="sala__lead">70 lugares para founders e líderes de e-commerce com operação rodando, avaliando novas frentes de receita.</p>
+        <p class="sala__lead"><span data-seats-total>60</span> lugares para founders e líderes de e-commerce com operação rodando, avaliando novas frentes de receita.</p>
         <ul class="sala__mirrors">
           <li>Seu canal principal é forte, mas o próximo ciclo não pode depender só dele.</li>
           <li>Assinatura, B2B ou exportação já são hipótese, mas falta critério para priorizar.</li>
@@ -696,7 +696,7 @@ p{text-wrap:pretty}
   <div class="wrap">
     <div class="final reveal">
       <p class="eyebrow">Última chamada</p>
-      <h2>26 de agosto. Vila Olímpia. <span class="ac">70 lugares.</span></h2>
+      <h2>26 de agosto. Vila Olímpia. <span class="ac"><span data-seats-total>60</span> lugares.</span></h2>
       <p>Uma conversa que não acontece em palco grande, em webinar ou em blog. Acontece na sala, entre quem está tomando decisões parecidas agora.</p>
       <div class="occ">
         <div class="occ__meta"><span class="occ__state" data-seats-state>Sala reservada</span><div class="occ__count" data-seats-count></div></div>
@@ -736,14 +736,36 @@ p{text-wrap:pretty}
 
 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
 <script>
-/* ===== 1. OCUPAÇÃO — número monotônico no tempo real (curva projetada, não dado real).
-   Trocar corpo de getSeatsRemaining() pela contagem do HubSpot quando existir. ===== */
-const SEAT={TOTAL:70,BASE_OCCUPIED:29,FLOOR:4,LAUNCH:new Date('2026-07-11T09:00:00-03:00'),EVENT:new Date('2026-08-26T18:30:00-03:00'),FORCE_STATE:null,LAST_THRESHOLD:12};
-function getSeatsRemaining(now=new Date()){let p=(now-SEAT.LAUNCH)/(SEAT.EVENT-SEAT.LAUNCH);p=Math.min(Math.max(p,0),1);const range=SEAT.TOTAL-SEAT.BASE_OCCUPIED-SEAT.FLOOR;const occ=SEAT.BASE_OCCUPIED+Math.round(range*p);return Math.max(SEAT.TOTAL-occ,SEAT.FLOOR);}
+/* ===== 1. OCUPAÇÃO — contador "fake" monotônico no tempo real (projeção, não dado real).
+   Tudo se ajusta a partir do config abaixo — mude só o que precisar:
+   • TOTAL          → nº de vagas (teatro e textos "N lugares" se ajustam sozinhos)
+   • BASE_OCCUPIED  → quantas já contam como ocupadas no lançamento
+   • FLOOR          → mínimo exibido (nunca chega a 0)
+   • STEP_DAYS      → de quantos em quantos dias o contador dá um "pulo"
+   • SEATS_PER_STEP → quantas vagas somem a cada pulo (null = calcula p/ chegar no piso no evento)
+   • LAST_THRESHOLD → abaixo disso vira "Últimos lugares" (pulse)
+   • FORCE_STATE    → 'open' | 'last' | 'waitlist' p/ forçar um estado (teste)
+   Contagem real do HubSpot: trocar só o corpo de getSeatsRemaining(). ===== */
+const SEAT={TOTAL:60,BASE_OCCUPIED:26,FLOOR:4,LAUNCH:new Date('2026-07-11T09:00:00-03:00'),EVENT:new Date('2026-08-26T18:30:00-03:00'),STEP_DAYS:3,SEATS_PER_STEP:2,FORCE_STATE:null,LAST_THRESHOLD:10};
+function getSeatsRemaining(now=new Date()){
+  const dayMs=86400000, totalDays=(SEAT.EVENT-SEAT.LAUNCH)/dayMs;
+  const elapsed=Math.min(Math.max((now-SEAT.LAUNCH)/dayMs,0),totalDays);
+  const steps=Math.floor(elapsed/SEAT.STEP_DAYS);                 // pulos já dados
+  const nSteps=Math.max(1,Math.floor(totalDays/SEAT.STEP_DAYS));  // total de pulos até o evento
+  const range=SEAT.TOTAL-SEAT.BASE_OCCUPIED-SEAT.FLOOR;
+  const perStep=(SEAT.SEATS_PER_STEP!=null)?SEAT.SEATS_PER_STEP:range/nSteps;
+  let occ=SEAT.BASE_OCCUPIED+Math.round(perStep*steps);
+  occ=Math.min(occ,SEAT.TOTAL-SEAT.FLOOR);                        // nunca passa do piso
+  return Math.max(SEAT.TOTAL-occ,SEAT.FLOOR);
+}
 function getSeatState(rem,now=new Date()){if(SEAT.FORCE_STATE)return SEAT.FORCE_STATE;if((SEAT.EVENT-now)<36*3600*1000)return'waitlist';if(rem<=SEAT.LAST_THRESHOLD)return'last';return'open';}
 
 /* ===== 2. TEATRO — anfiteatro em leque, enche do centro-frente para trás ===== */
-const TIERS=[10,12,14,16,18], SPAN=86, R0=90, GAP=19;
+function makeTiers(total){ // 5 fileiras em leque que somam `total` (a última absorve a diferença)
+  const a=Math.max(2,Math.round((total-20)/5)), t=[a,a+2,a+4,a+6,a+8];
+  t[4]+=total-t.reduce((s,x)=>s+x,0); return t;
+}
+const TIERS=makeTiers(SEAT.TOTAL), SPAN=86, R0=90, GAP=19;
 let theaterSeats=[];
 function buildTheater(el){
   el.innerHTML='';const seats=[];
@@ -782,6 +804,7 @@ function renderSeats(animateTheater){
   document.querySelectorAll('[data-seats-state]').forEach(el=>{el.textContent=stateText[state];el.classList.toggle('is-last',state==='last');el.classList.toggle('is-wait',state==='waitlist');});
   const countHTML=state==='waitlist'?'A sala está cheia. Entre na <b>lista de espera</b>.':`<b>${rem}</b> de ${SEAT.TOTAL} lugares disponíveis`;
   document.querySelectorAll('[data-seats-count]').forEach(el=>el.innerHTML=countHTML);
+  document.querySelectorAll('[data-seats-total]').forEach(el=>el.textContent=SEAT.TOTAL);
   const shortText=state==='waitlist'?'Lista de espera aberta':`${rem} lugares disponíveis`;
   document.querySelectorAll('[data-seats-text]').forEach(el=>el.textContent=shortText);
   document.querySelectorAll('[data-bar]').forEach(drawBar);
