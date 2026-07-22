@@ -6,12 +6,24 @@
 
 <title>Novas frentes de receita no e-commerce | Nuvemshop Next</title>
 <meta name="description" content="Encontro presencial e reservado em São Paulo. Veja como marcas cresceram com assinatura, B2B e exportação sem depender de um só canal. 60 lugares.">
+<link rel="canonical" href="https://ffidelis16.github.io/next-sessions-lp/">
+<link rel="icon" href="favicon-next.ico" sizes="any">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Você cresceu até onde este modelo alcança.">
-<meta property="og:description" content="Uma noite presencial com quem transformou assinatura, B2B e exportação em receita previsível. 26 de agosto, São Paulo.">
-<meta property="og:image" content="ASSET_OG_1200x630.jpg">
-<meta property="og:url" content="https://www.nuvemshop.com.br/next/next-sessions-modelos-de-negocio">
+<meta property="og:title" content="Eventos presenciais exclusivos | Nuvemshop Next">
+<meta property="og:description" content="Encontros reservados para founders e líderes de e-commerce. Conteúdo prático, troca entre pares e lugares limitados.">
+<meta property="og:image" content="https://ffidelis16.github.io/next-sessions-lp/og-eventos-nuvemshop-next.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Eventos presenciais Nuvemshop Next — encontros exclusivos, com lugares limitados.">
+<meta property="og:url" content="https://ffidelis16.github.io/next-sessions-lp/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Nuvemshop Next">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Eventos presenciais exclusivos | Nuvemshop Next">
+<meta name="twitter:description" content="Encontros reservados para founders e líderes de e-commerce. Conteúdo prático, troca entre pares e lugares limitados.">
+<meta name="twitter:image" content="https://ffidelis16.github.io/next-sessions-lp/og-eventos-nuvemshop-next.jpg">
 <meta name="theme-color" content="#00102E">
 
 <!-- ===== GTM (Google Tag Manager) — camada de tags =====
@@ -26,11 +38,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Ivy Presto (Adobe Fonts / Typekit). Trocar REPLACE_KIT_ID pelo ID do kit da Nuvemshop (ex.: use.typekit.net/abc1def.css).
-     Renderiza só em domínio autorizado na allowlist do kit; fora dele, cai no fallback Bodoni Moda. -->
-<link rel="preconnect" href="https://use.typekit.net" crossorigin>
-<link rel="stylesheet" href="https://use.typekit.net/REPLACE_KIT_ID.css">
-<!-- Produção: carregar Ivy Presto pelo kit Adobe da Nuvemshop. Bodoni Moda entra só como fallback de preview. -->
+<!-- Produção HubSpot: o package aceita a URL real do kit Adobe autorizado.
+     No preview público, Bodoni Moda evita uma chamada quebrada para um kit placeholder. -->
 <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500;1,6..96,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500;1,6..96,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"></noscript>
 
@@ -55,7 +64,7 @@
 
 <style>
 /* ============================================================
-   NEXT SESSIONS · 26/08 — Modelos de negócio
+   EVENTO PRESENCIAL · 26/08 — Modelos de negócio
    Soberana · mobile-first · mono-azul sobre navy
    Tipografia: Plus Jakarta Sans (marca) + Ivy Presto (acento)
    Pesos delicados: títulos em 500, acento em serifa italic 400
@@ -148,7 +157,6 @@ p{text-wrap:pretty}
 .tag-presencial{font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-150);padding:8px 14px;border-radius:var(--r-pill);border:1px solid var(--line-dk);white-space:nowrap}
 .hero__body{padding-top:calc(36svh - 26px);padding-bottom:8px;text-shadow:0 1px 2px rgba(1,10,34,.4),0 2px 34px rgba(1,10,34,.72)}
 .hero__ctas .btn-primary{text-shadow:none}
-.hero__series{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.15rem;color:var(--blue-300);margin-bottom:10px}
 .hero__tag{display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-150);padding:7px 14px;border-radius:var(--r-pill);border:1px solid var(--glass-bd);background:rgba(133,202,255,.05);margin-bottom:16px}
 .hero h1{font-size:clamp(2.05rem,7.2vw,4.7rem);max-width:13ch;margin-bottom:18px;letter-spacing:-.03em;text-wrap:balance}
 .hero h1 .alc{color:var(--blue-300)}
@@ -352,7 +360,7 @@ p{text-wrap:pretty}
 .tcard__stars svg{width:16px;height:16px}
 .tcard__text{color:#182642;font-size:1.06rem;line-height:1.62;margin-bottom:24px;font-weight:400;flex:1}
 .tcard__by{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--line-lt)}
-.tcard__ph{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--blue-400),var(--ink-700));flex:none}
+.tcard__photo{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:center;flex:none;box-shadow:0 0 0 2px #fff,0 0 0 3px rgba(6,30,76,.12)}
 .tcard__n{font-weight:600;color:#08183a;font-size:.95rem}
 .tcard__r{color:#5b6b86;font-size:.82rem}
 .depo__dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
@@ -471,7 +479,7 @@ p{text-wrap:pretty}
 <div class="stickybar" id="stickybar" aria-hidden="true">
   <div class="stickybar__in">
     <div class="stickybar__left">
-      <span class="stickybar__logo">Next Sessions · 26/08</span>
+      <span class="stickybar__logo">Evento presencial · 26/08</span>
       <span class="stickybar__seats" data-seats-text></span>
     </div>
     <button class="btn btn-primary" data-open-form>Confirmar minha presença</button>
@@ -491,7 +499,6 @@ p{text-wrap:pretty}
       <button class="btn btn-primary btn-sm" data-open-form>Confirmar minha presença</button>
     </div>
     <div class="hero__body">
-      <p class="hero__series reveal">Next Sessions</p>
       <span class="hero__tag reveal">Evento presencial · 26 de agosto</span>
       <h1 class="reveal">Você cresceu até onde seu modelo <span class="alc">alcança?</span></h1>
       <p class="hero__sub reveal">A pergunta agora é qual nova frente faz sentido para o seu momento: assinatura, B2B ou exportação. Uma noite com marcas que já tomaram essa decisão, para você separar uma expansão viável de uma aposta precipitada.</p>
@@ -695,7 +702,7 @@ p{text-wrap:pretty}
         <div class="depo__track" data-depo-track>
           <!-- Depoimentos: 1 a 4. Com 1 → card único centralizado (sem slider/dots). Com 2+ → slider com dots.
                Para adicionar, duplique um <blockquote class="tcard">…</blockquote> (máximo 4). -->
-          <blockquote class="tcard"><span class="tcard__mark" aria-hidden="true">&rdquo;</span><div class="tcard__stars" aria-hidden="true"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div><p class="tcard__text">Palestrei sobre branding e IA numa edição do Next e o retorno veio na hora: os feedbacks começaram ainda no evento e seguiram nas DMs depois. É uma sala que troca de verdade.</p><div class="tcard__by"><span class="tcard__ph"></span><div><div class="tcard__n">Galileu Nogueira</div><div class="tcard__r">Fundador · Galileo Branding</div></div></div></blockquote>
+          <blockquote class="tcard"><span class="tcard__mark" aria-hidden="true">&rdquo;</span><div class="tcard__stars" aria-hidden="true"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div><p class="tcard__text">Palestrei sobre branding e IA numa edição do Next e o retorno veio na hora: os feedbacks começaram ainda no evento e seguiram nas DMs depois. É uma sala que troca de verdade.</p><div class="tcard__by"><img class="tcard__photo" src="speaker-galileu.webp" alt="" loading="lazy" decoding="async" width="192" height="192"><div><div class="tcard__n">Galileu Nogueira</div><div class="tcard__r">Fundador · Galileo Branding</div></div></div></blockquote>
         </div>
         <div class="depo__dots" data-depo-dots></div>
       </div>
@@ -727,7 +734,7 @@ p{text-wrap:pretty}
 
 <footer class="foot">
   <div class="foot__brand"><svg class="logo" viewBox="0 0 170 29" aria-hidden="true"><use href="#ic-logo"/></svg></div>
-  <p class="foot__legal">© 2026 Nuvemshop · Next Sessions</p>
+  <p class="foot__legal">© 2026 Nuvemshop</p>
 </footer>
 
 <div class="mobilecta" id="mobilecta" aria-hidden="true">
@@ -739,9 +746,9 @@ p{text-wrap:pretty}
   <div class="modal__bd" data-close-form></div>
   <div class="modal__panel">
     <button class="modal__x" data-close-form aria-label="Fechar"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
-    <p class="modal__eyebrow">Next Sessions · 26 de agosto</p>
+    <p class="modal__eyebrow">Evento presencial · 26 de agosto</p>
     <h3 class="modal__title" id="formTitle">Confirmar presença</h3>
-    <p class="modal__sub">Confirme sua presença no Next Sessions. A programação e os detalhes de acesso chegam por e-mail.</p>
+    <p class="modal__sub">Confirme sua presença no evento. A programação e os detalhes de acesso chegam por e-mail.</p>
     <div class="modal__form" id="hubspotForm"></div>
   </div>
 </div>
@@ -754,29 +761,33 @@ p{text-wrap:pretty}
 window.dataLayer=window.dataLayer||[];
 function track(ev,params){try{window.dataLayer.push(Object.assign({event:ev},params||{}));}catch(e){}}
 
-/* ===== 1. OCUPAÇÃO — contador "fake" monotônico no tempo real (projeção, não dado real).
-   Tudo se ajusta a partir do config abaixo — mude só o que precisar:
-   • TOTAL          → nº de vagas (teatro e textos "N lugares" se ajustam sozinhos)
-   • BASE_OCCUPIED  → quantas já contam como ocupadas no lançamento
-   • FLOOR          → mínimo exibido (nunca chega a 0)
-   • STEP_DAYS      → de quantos em quantos dias o contador dá um "pulo"
-   • SEATS_PER_STEP → quantas vagas somem a cada pulo (null = calcula p/ chegar no piso no evento)
-   • LAST_THRESHOLD → abaixo disso vira "Últimos lugares" (pulse)
-   • FORCE_STATE    → 'open' | 'last' | 'waitlist' p/ forçar um estado (teste)
-   Contagem real do HubSpot: trocar só o corpo de getSeatsRemaining(). ===== */
-const SEAT={TOTAL:60,BASE_OCCUPIED:26,FLOOR:4,LAUNCH:new Date('2026-07-11T09:00:00-03:00'),EVENT:new Date('2026-08-26T18:30:00-03:00'),STEP_DAYS:2,SEATS_PER_STEP:null,FORCE_STATE:null,LAST_THRESHOLD:10};
+/* ===== 1. OCUPAÇÃO — agenda de disponibilidade aprovada pelo cliente.
+   Cada marco entra na virada do respectivo dia D-N (00h, BRT).
+   Antes de D-45 a página permanece em 60; de D-1 até o início do evento, em 2.
+   • TOTAL          → nº total de lugares
+   • SCHEDULE       → pares [dias antes, lugares disponíveis]
+   • LAST_THRESHOLD → abaixo ou igual vira "Últimos lugares"
+   • FORCE_STATE    → 'open' | 'last' | 'waitlist' para teste visual
+   Contagem real do HubSpot: trocar somente o corpo de getSeatsRemaining(). ===== */
+const SEAT={
+  TOTAL:60,
+  EVENT:new Date('2026-08-26T18:30:00-03:00'),
+  EVENT_DAY:new Date('2026-08-26T00:00:00-03:00'),
+  SCHEDULE:[[45,60],[40,54],[35,53],[30,49],[25,42],[20,36],[15,29],[12,21],[10,16],[7,12],[5,8],[3,4],[1,2]],
+  FORCE_STATE:null,
+  LAST_THRESHOLD:10
+};
 function getSeatsRemaining(now=new Date()){
-  const dayMs=86400000, totalDays=(SEAT.EVENT-SEAT.LAUNCH)/dayMs;
-  const elapsed=Math.min(Math.max((now-SEAT.LAUNCH)/dayMs,0),totalDays);
-  const steps=Math.floor(elapsed/SEAT.STEP_DAYS);                 // pulos já dados
-  const nSteps=Math.max(1,Math.floor(totalDays/SEAT.STEP_DAYS));  // total de pulos até o evento
-  const range=SEAT.TOTAL-SEAT.BASE_OCCUPIED-SEAT.FLOOR;
-  const perStep=(SEAT.SEATS_PER_STEP!=null)?SEAT.SEATS_PER_STEP:range/nSteps;
-  let occ=SEAT.BASE_OCCUPIED+Math.round(perStep*steps);
-  occ=Math.min(occ,SEAT.TOTAL-SEAT.FLOOR);                        // nunca passa do piso
-  return Math.max(SEAT.TOTAL-occ,SEAT.FLOOR);
+  const dayMs=86400000;
+  let remaining=SEAT.TOTAL;
+  for(const [daysBefore,seats] of SEAT.SCHEDULE){
+    const milestone=new Date(SEAT.EVENT_DAY.getTime()-daysBefore*dayMs);
+    if(now>=milestone)remaining=seats;
+    else break;
+  }
+  return remaining;
 }
-function getSeatState(rem,now=new Date()){if(SEAT.FORCE_STATE)return SEAT.FORCE_STATE;if((SEAT.EVENT-now)<36*3600*1000)return'waitlist';if(rem<=SEAT.LAST_THRESHOLD)return'last';return'open';}
+function getSeatState(rem,now=new Date()){if(SEAT.FORCE_STATE)return SEAT.FORCE_STATE;if(now>=SEAT.EVENT)return'waitlist';if(rem<=SEAT.LAST_THRESHOLD)return'last';return'open';}
 
 /* ===== 2. TEATRO — anfiteatro em leque, enche do centro-frente para trás ===== */
 function makeTiers(total){ // 5 fileiras em leque que somam `total` (a última absorve a diferença)

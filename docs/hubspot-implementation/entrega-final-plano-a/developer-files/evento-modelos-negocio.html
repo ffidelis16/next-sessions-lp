@@ -1,0 +1,320 @@
+﻿<!--
+  templateType: page
+  isAvailableForNewContent: true
+  enableDomainStylesheets: false
+  label: Evento presencial Nuvemshop Next Â· 26/08
+-->
+{% set event_asset_base = "__EVENT_ASSET_BASE_URL__" %}
+<!doctype html>
+<html lang="{{ html_lang }}" dir="{{ html_lang_dir }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00102E">
+  <title>{{ page_meta.html_title }}</title>
+  <meta name="description" content="{{ page_meta.meta_description|escape_attr }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  __ADOBE_FONT_LINK__
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500;1,6..96,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
+  <link rel="preload" as="image" href="{{ event_asset_base }}/asset-hero-sala.webp" imagesrcset="{{ event_asset_base }}/asset-hero-sala-m.webp 1080w, {{ event_asset_base }}/asset-hero-sala.webp 2000w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="{{ get_asset_url('./evento-modelos-negocio.css') }}">
+  {{ standard_header_includes }}
+  <link rel="icon" href="{{ event_asset_base }}/favicon-next.ico" sizes="any">
+</head>
+<body class="evento-modelos-negocio-page" data-page-version="1.0.0">
+<!-- GTM noscript (par do snippet do <head>): descomentar junto, mesmo container.
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
+
+<!-- Sprite de ícones do sistema Nimbus (Nuvemshop DS), vetores fiéis, viewBox 45x45 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="ic-calendar" viewBox="0 0 45 45"><path d="M11.5312 22.5V25.875H8.4375V22.5H11.5312Z" fill="currentColor"/><path d="M11.5312 32.625V29.25H8.4375V32.625H11.5312Z" fill="currentColor"/><path d="M36.2812 22.5V25.875H33.1875V22.5H36.2812Z" fill="currentColor"/><path d="M36.2812 32.625V29.25H33.1875V32.625H36.2812Z" fill="currentColor"/><path d="M30.0938 22.5V25.875H27V22.5H30.0938Z" fill="currentColor"/><path d="M30.0938 32.625V29.25H27V32.625H30.0938Z" fill="currentColor"/><path d="M23.9062 22.5V25.875H20.8125V22.5H23.9062Z" fill="currentColor"/><path d="M23.9062 32.625V29.25H20.8125V32.625H23.9062Z" fill="currentColor"/><path d="M17.7188 22.5V25.875H14.625V22.5H17.7188Z" fill="currentColor"/><path d="M17.7188 32.625V29.25H14.625V32.625H17.7188Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3359 4.21875V7.03125H34.3828V4.21875H37.8984V7.03125H40.0781C42.0198 7.03125 43.5938 8.60525 43.5938 10.5469V37.2656C43.5938 39.2073 42.0198 40.7812 40.0781 40.7812H4.92187C2.98025 40.7812 1.40625 39.2073 1.40625 37.2656V10.5469C1.40625 8.60525 2.98025 7.03125 4.92188 7.03125H6.82031V4.21875H10.3359ZM4.92188 10.5469H40.0781V14.0625H4.92188V10.5469ZM4.92187 17.5781L4.92187 37.2656H40.0781V17.5781H4.92187Z" fill="currentColor"/></symbol>
+<symbol id="ic-location" viewBox="0 0 45 45"><path d="M22.5 1.46676C18.4975 1.31429 14.5973 2.75209 11.6514 5.46605C8.70559 8.18001 6.95357 11.9495 6.77812 15.9511C6.77812 30.0136 17.6906 40.1668 21.3188 43.1199C21.6513 43.3942 22.0689 43.5442 22.5 43.5442C22.9311 43.5442 23.3487 43.3942 23.6813 43.1199C27.3094 40.1668 38.2219 30.098 38.2219 15.9511C38.0464 11.9495 36.2944 8.18001 33.3486 5.46605C30.4027 2.75209 26.5025 1.31429 22.5 1.46676ZM22.5 39.3793C19.8865 37.0829 17.563 34.4761 15.5812 31.6168C12.2652 27.0548 10.4206 21.5895 10.2937 15.9511C10.4681 12.8817 11.8494 10.0058 14.1361 7.95093C16.4228 5.89604 19.4295 4.82891 22.5 4.98238C25.5705 4.82891 28.5772 5.89604 30.8639 7.95093C33.1506 10.0058 34.5319 12.8817 34.7063 15.9511C34.7063 27.4261 26.3813 36.0886 22.5 39.3793Z" fill="currentColor"/><path d="M22.5 7.15029C21.4846 7.10893 20.4712 7.26955 19.5183 7.62282C18.5655 7.97608 17.6923 8.51498 16.9493 9.20827C16.2063 9.90155 15.6083 10.7354 15.19 11.6616C14.7717 12.5877 14.5414 13.5876 14.5125 14.6034C14.5451 15.618 14.7779 16.6162 15.1975 17.5406C15.6171 18.465 16.2151 19.2974 16.9574 19.9899C17.6996 20.6825 18.5713 21.2216 19.5225 21.5762C20.4737 21.9309 21.4855 22.0941 22.5 22.0565C24.5421 22.1173 26.5253 21.3676 28.0165 19.9712C29.5078 18.5748 30.386 16.6451 30.4594 14.6034C30.4267 13.5912 30.1948 12.5954 29.777 11.6729C29.3592 10.7505 28.7637 9.91935 28.0245 9.22716C27.2852 8.53497 26.4169 7.99526 25.4689 7.6389C24.521 7.28253 23.5121 7.1165 22.5 7.15029ZM22.5 18.5409C21.3928 18.6024 20.3063 18.2225 19.4787 17.4844C18.651 16.7464 18.1497 15.7104 18.0844 14.6034C18.1497 13.4964 18.651 12.4604 19.4787 11.7224C20.3063 10.9844 21.3928 10.6045 22.5 10.6659C23.6101 10.6043 24.6996 10.9833 25.5318 11.7206C26.3639 12.458 26.8713 13.494 26.9438 14.6034C26.8713 15.7129 26.3639 16.7489 25.5318 17.4862C24.6996 18.2235 23.6101 18.6026 22.5 18.5409Z" fill="currentColor"/></symbol>
+<symbol id="ic-star" viewBox="0 0 45 45"><path d="M22.4438 8.81715L26.4656 16.6078L27.3375 18.2671L29.1938 18.4921L37.9688 19.4765L31.6125 25.3546L30.2063 26.6765L32.0344 36.8578L24.0188 32.864L22.4438 32.0765L20.8406 32.864L12.825 36.914L14.6531 26.7328L13.2469 25.3546L6.89063 19.5046L15.6656 18.4921L17.5219 18.2671L18.3937 16.6078L22.4438 8.81715ZM22.4438 3.19215C22.1169 3.18389 21.7942 3.26622 21.5112 3.43003C21.2283 3.59384 20.9962 3.83273 20.8406 4.12027L15.2156 14.9203L2.53125 16.4671C2.22544 16.5085 1.93722 16.6343 1.69897 16.8304C1.46072 17.0266 1.28188 17.2852 1.18255 17.5774C1.08321 17.8696 1.06731 18.1836 1.13664 18.4843C1.20597 18.7851 1.35777 19.0605 1.575 19.2796L10.8563 27.9421L8.71875 39.7828C8.68167 40.0307 8.69938 40.2838 8.77064 40.5242C8.8419 40.7645 8.96498 40.9864 9.13121 41.1741C9.29744 41.3617 9.50279 41.5107 9.73279 41.6105C9.9628 41.7102 10.2119 41.7584 10.4625 41.7515C10.7133 41.7553 10.9622 41.7074 11.1938 41.6109L22.4438 35.9859L33.6938 41.6109C33.9467 41.7389 34.2259 41.8063 34.5094 41.8078C34.76 41.8146 35.0091 41.7665 35.2391 41.6667C35.4691 41.567 35.6744 41.418 35.8407 41.2303C36.0069 41.0426 36.13 40.8208 36.2012 40.5804C36.2725 40.34 36.2902 40.087 36.2531 39.839L34.1156 27.9984L43.425 19.3078C43.6422 19.0886 43.794 18.8132 43.8634 18.5125C43.9327 18.2118 43.9168 17.8977 43.8175 17.6055C43.7181 17.3134 43.5393 17.0547 43.301 16.8586C43.0628 16.6624 42.7746 16.5366 42.4688 16.4953L29.7 15.0609L24.075 4.2609C23.9251 3.95849 23.6919 3.70519 23.4029 3.5308C23.114 3.35641 22.7812 3.26819 22.4438 3.27652V3.19215Z" fill="currentColor"/></symbol>
+<symbol id="ic-users" viewBox="0 0 45 45"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.3338 18.7768C16.4751 18.7768 18.6121 16.8393 18.6121 13.9684C18.6121 11.0975 16.4751 9.16007 14.3338 9.16007C12.1926 9.16007 10.0556 11.0975 10.0556 13.9684C10.0556 16.8393 12.1926 18.7768 14.3338 18.7768ZM14.3338 22.2986C18.634 22.2986 22.1339 18.5633 22.1339 13.9684C22.1339 9.3735 18.634 5.63826 14.3338 5.63826C10.0336 5.63826 6.53378 9.3735 6.53378 13.9684C6.53378 18.5633 10.0336 22.2986 14.3338 22.2986Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M34.5552 19.8476C35.9738 19.8476 37.5227 18.5378 37.5227 16.4391C37.5227 14.3403 35.9738 13.0305 34.5552 13.0305C33.1365 13.0305 31.5877 14.3403 31.5877 16.4391C31.5877 18.5378 33.1365 19.8476 34.5552 19.8476ZM34.5552 23.3694C38.1328 23.3694 41.0445 20.2618 41.0445 16.4391C41.0445 12.6163 38.1328 9.50871 34.5552 9.50871C30.9776 9.50871 28.0659 12.6163 28.0659 16.4391C28.0659 20.2618 30.9776 23.3694 34.5552 23.3694Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.3338 29.3356C8.26267 29.3356 3.52181 33.941 3.52181 39.3617H0C0 31.786 6.53449 25.8138 14.3338 25.8138C22.1331 25.8138 28.6675 31.786 28.6675 39.3617H25.1457C25.1457 33.941 20.4049 29.3356 14.3338 29.3356Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M34.3817 30.4156C31.0795 30.4156 28.3816 32.49 27.5538 35.1735L24.1885 34.1354C25.4959 29.8968 29.6182 26.8938 34.3817 26.8938C40.1315 26.8938 45 31.3031 45 36.9585V39.3617H41.4782V36.9585C41.4782 33.4581 38.4034 30.4156 34.3817 30.4156Z" fill="currentColor"/></symbol>
+<symbol id="ic-store" viewBox="0 0 45 45"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 21.0205C27.3389 21.0205 31.1199 25.1119 31.1201 29.9795V40.7812H27.6045V29.9795C27.6043 26.8937 25.2406 24.5371 22.5 24.5371C19.7594 24.5371 17.3957 26.8937 17.3955 29.9795V40.7812H13.8799V29.9795C13.8801 25.1119 17.6611 21.0205 22.5 21.0205ZM38.3164 4.21777C41.231 4.21789 43.5937 6.58161 43.5938 9.49707V40.7803H40.0752V9.49707C40.0751 8.52534 39.2878 7.73742 38.3164 7.7373H6.68359C5.71217 7.73742 4.92488 8.52534 4.9248 9.49707V40.7803H1.40625V9.49707C1.40633 6.58162 3.76902 4.21789 6.68359 4.21777H38.3164ZM37.9629 15.9199H7.00195V12.2598H37.9629V15.9199Z" fill="currentColor"/></symbol>
+<symbol id="ic-logo" viewBox="0 0 170 29"><path d="M24.7764 0C32.4484 0.0123461 38.6865 6.28658 38.6865 14.0137C38.6864 21.7406 32.4363 28.0272 24.7539 28.0273C20.9828 28.0273 17.5584 26.5101 15.0479 24.0537C13.7208 24.6144 12.2867 24.913 10.8369 24.9131C4.86203 24.9131 8.20907e-05 20.0232 0 14.0137C0 8.00425 4.86141 3.1145 10.8379 3.11426C12.3106 3.11426 13.7369 3.40642 15.0605 3.9707C17.6464 1.44241 21.1103 0.00541084 24.7461 0H24.7764ZM163.753 7.50098C164.922 7.50098 165.978 7.79213 166.921 8.37207C167.864 8.95222 168.611 9.73227 169.167 10.7109V10.7129C169.723 11.6897 170 12.8076 170 14.0137C170 15.2197 169.727 16.3218 169.18 17.3145C168.633 18.3089 167.888 19.092 166.946 19.665C166.005 20.2381 164.933 20.5254 163.732 20.5254C162.835 20.5254 162.011 20.3489 161.259 19.998C160.751 19.7618 160.314 19.445 159.947 19.0537V24.9287H156.938V7.77637H159.765V9.25195C160.154 8.76184 160.64 8.3632 161.224 8.06348C161.953 7.68804 162.796 7.50103 163.753 7.50098ZM24.7607 3.11426C22.1958 3.11602 19.7391 4.03137 17.8018 5.66602C20.2685 7.74327 21.6729 10.7532 21.6729 14.0137H18.5771C18.5771 11.5415 17.4483 9.26973 15.4795 7.7832C14.1331 6.7658 12.5269 6.22858 10.8369 6.22852C6.5696 6.22852 3.0957 9.72162 3.0957 14.0137C3.09579 18.3057 6.56965 21.7988 10.8369 21.7988C11.5644 21.7988 12.2853 21.6932 12.9795 21.4922C11.6155 19.3268 10.8213 16.7627 10.8213 14.0137H13.917C13.9171 20.023 18.7783 24.9118 24.7529 24.9121C30.7273 24.9115 35.5888 20.021 35.5889 14.0137C35.5889 8.00592 30.7321 3.11787 24.7607 3.11426ZM62.6523 15.251C62.6523 15.7552 62.7596 16.1947 62.9717 16.5703C63.1838 16.9459 63.48 17.239 63.8604 17.4541C64.2408 17.6675 64.6745 17.7744 65.1602 17.7744C65.6455 17.7744 66.1012 17.6673 66.4814 17.4541C66.8619 17.2407 67.1552 16.9459 67.3604 16.5703C67.5654 16.1965 67.6689 15.7552 67.6689 15.251V7.77637H70.6562V15.3428C70.6562 16.3672 70.4245 17.2685 69.96 18.0479C69.4954 18.8271 68.8574 19.4356 68.0459 19.8711C67.2324 20.3066 66.2709 20.5254 65.1611 20.5254C64.0515 20.5253 63.1048 20.3066 62.2773 19.8711C61.4482 19.4356 60.8026 18.8272 60.3398 18.0479C59.8754 17.2685 59.6445 16.3654 59.6445 15.3428V7.77637H62.6523V15.251ZM122.868 7.49805C124.037 7.49805 125.072 7.77983 125.968 8.3457C126.864 8.91175 127.502 9.70771 127.883 10.7305L125.604 11.8076C125.391 11.2416 125.034 10.7956 124.532 10.4658C124.031 10.1378 123.468 9.97169 122.846 9.97168C122.344 9.97168 121.948 10.0825 121.66 10.3047C121.371 10.5269 121.228 10.8293 121.228 11.2119L121.226 11.2168C121.226 11.4319 121.287 11.6225 121.408 11.79C121.529 11.9592 121.701 12.0946 121.922 12.2021C122.143 12.3097 122.397 12.4093 122.687 12.501L124.669 13.0967C125.688 13.4035 126.474 13.8616 127.029 14.4717C127.583 15.0836 127.861 15.8336 127.861 16.7188C127.861 17.4681 127.663 18.1291 127.269 18.7021C126.874 19.2752 126.326 19.723 125.628 20.0439C124.928 20.3649 124.107 20.5254 123.166 20.5254C121.844 20.5253 120.693 20.2079 119.713 19.5732C118.733 18.9384 118.052 18.0794 117.672 16.9932L119.929 15.916C120.248 16.6196 120.693 17.1696 121.263 17.5664C121.832 17.9631 122.467 18.163 123.166 18.1631C123.697 18.1631 124.123 18.0409 124.442 17.7959C124.761 17.5508 124.922 17.2298 124.922 16.833C124.922 16.588 124.856 16.385 124.727 16.2246C124.597 16.0642 124.427 15.9271 124.213 15.8125C123.999 15.6979 123.757 15.602 123.483 15.5244L121.455 14.9512C120.421 14.6602 119.636 14.1982 119.096 13.5635C118.556 12.9287 118.285 12.185 118.285 11.3281C118.285 10.5647 118.48 9.89432 118.867 9.32129C119.255 8.74833 119.795 8.30041 120.485 7.97949C121.176 7.65859 121.971 7.49808 122.868 7.49805ZM90.2217 7.50098C91.1947 7.50098 92.049 7.66149 92.7871 7.98242C93.5252 8.30335 94.1508 8.74648 94.668 9.3125V9.30859C95.1834 9.87464 95.58 10.5206 95.8535 11.2471C96.1269 11.9735 96.2637 12.7567 96.2637 13.5977C96.2637 13.8268 96.2513 14.0524 96.2285 14.2744C96.2057 14.4966 96.1649 14.6994 96.1035 14.8828H87.1729C87.2149 15.3006 87.3152 15.6867 87.4746 16.041C87.7393 16.63 88.1359 17.0853 88.6602 17.4062C89.1843 17.7271 89.789 17.8877 90.4727 17.8877C91.1563 17.8877 91.7382 17.743 92.2168 17.4521C92.6953 17.163 93.0722 16.7733 93.3457 16.2832L95.7617 17.4746C95.518 18.0706 95.1393 18.5982 94.6221 19.0566C94.1049 19.515 93.4898 19.8746 92.7764 20.1338C92.0628 20.393 91.2875 20.5234 90.4512 20.5234C89.175 20.5234 88.053 20.2342 87.0889 19.6523C86.123 19.0722 85.3739 18.2864 84.8428 17.292C84.3116 16.2992 84.0449 15.244 84.0449 13.9902C84.045 12.7366 84.3193 11.6258 84.8662 10.6543C85.4132 9.68275 86.1497 8.91562 87.0771 8.34961C88.0027 7.78374 89.0508 7.50102 90.2217 7.50098ZM148.676 7.50098C149.906 7.50099 151.014 7.78368 152.003 8.34961V8.34766C152.992 8.91369 153.778 9.68252 154.363 10.6523C154.949 11.624 155.241 12.7597 155.241 14.0117C155.241 15.2637 154.945 16.3798 154.353 17.3584C153.76 18.337 152.969 19.1078 151.982 19.6738C150.995 20.2398 149.879 20.5224 148.678 20.5225C147.477 20.5225 146.379 20.2399 145.383 19.6738C144.387 19.1096 143.593 18.337 143.001 17.3584C142.408 16.3815 142.111 15.2637 142.111 14.0117C142.111 12.7597 142.408 11.6437 143.001 10.665C143.594 9.68816 144.382 8.91564 145.371 8.34961C146.358 7.78362 147.445 7.50098 148.676 7.50098ZM52.875 7.5C53.7569 7.5 54.5972 7.69894 55.3037 8.0957C56.0101 8.49421 56.5599 9.04828 56.9561 9.75879L56.9531 9.76074C57.3474 10.4713 57.5459 11.2929 57.5459 12.2256V20.251H54.5596V12.9365C54.5596 12.3864 54.4533 11.9114 54.2412 11.5146C54.0291 11.1179 53.7303 10.811 53.3516 10.5977C52.9712 10.3844 52.5382 10.2773 52.0527 10.2773C51.5672 10.2774 51.1325 10.3844 50.7539 10.5977C50.3736 10.811 50.0774 11.118 49.8652 11.5146C49.6513 11.9132 49.5459 12.3864 49.5459 12.9365V20.251H46.5371V7.77637H49.3633V9.31055C49.6508 8.7957 50.0504 8.38649 50.5605 8.08496C51.2215 7.69526 51.9932 7.50001 52.875 7.5ZM77.8613 15.918L80.8125 7.77637H84.0732L79.1943 20.251H76.5508L71.6709 7.77637H74.9307L77.8613 15.918ZM111.83 7.5C112.712 7.5 113.498 7.69894 114.19 8.0957C114.881 8.49421 115.424 9.04825 115.82 9.75879L115.822 9.76074C116.217 10.4713 116.415 11.2929 116.415 12.2256V20.251H113.429V12.9365C113.429 12.3864 113.331 11.9114 113.133 11.5146C112.935 11.118 112.657 10.811 112.3 10.5977C111.942 10.3844 111.521 10.2773 111.034 10.2773C110.547 10.2774 110.145 10.3843 109.78 10.5977C109.416 10.811 109.134 11.1181 108.938 11.5146C108.739 11.9132 108.642 12.3864 108.642 12.9365V20.251H105.655V12.9365C105.655 12.3864 105.557 11.9114 105.359 11.5146C105.161 11.1179 104.884 10.811 104.526 10.5977C104.169 10.3844 103.748 10.2774 103.261 10.2773C102.773 10.2773 102.372 10.3843 102.007 10.5977C101.642 10.811 101.36 11.118 101.164 11.5146C100.966 11.9132 100.867 12.3864 100.867 12.9365V20.251H97.8594V7.77637H100.686V9.34375C100.938 8.85023 101.286 8.45688 101.733 8.16602C102.417 7.72341 103.222 7.50098 104.149 7.50098C105.168 7.50098 106.064 7.76941 106.839 8.30371C107.328 8.64047 107.707 9.04587 107.979 9.5166C108.31 8.99124 108.72 8.566 109.209 8.24512C109.968 7.74789 110.843 7.50003 111.83 7.5ZM132.532 9.01953C132.799 8.64056 133.137 8.32845 133.547 8.08691C134.208 7.69723 134.98 7.501 135.861 7.50098C136.743 7.50098 137.583 7.7009 138.29 8.09766C138.996 8.49616 139.547 9.05023 139.943 9.76074H139.941C140.336 10.4713 140.534 11.293 140.534 12.2256V20.251H137.548V12.9365C137.548 12.3864 137.441 11.9114 137.229 11.5146C137.016 11.118 136.724 10.811 136.351 10.5977C135.977 10.3843 135.54 10.2773 135.039 10.2773C134.538 10.2774 134.119 10.3844 133.74 10.5977C133.36 10.811 133.064 11.118 132.852 11.5146C132.638 11.9132 132.532 12.3864 132.532 12.9365V20.251H129.523V3.12305H132.532V9.01953ZM148.676 10.2773C148.008 10.2773 147.415 10.4379 146.897 10.7588C146.381 11.0797 145.974 11.5221 145.678 12.0879C145.381 12.6539 145.232 13.2942 145.232 14.0137C145.232 14.733 145.382 15.3782 145.678 15.9512C145.974 16.5241 146.381 16.9721 146.897 17.293C147.413 17.6139 147.992 17.7744 148.676 17.7744C149.36 17.7744 149.956 17.6139 150.466 17.293C150.974 16.972 151.378 16.5242 151.674 15.9512C151.97 15.3782 152.119 14.7312 152.119 14.0137C152.119 13.296 151.97 12.6539 151.674 12.0879C151.378 11.5237 150.974 11.0797 150.466 10.7588C149.956 10.4379 149.344 10.2774 148.676 10.2773ZM163.387 10.2773C162.733 10.2774 162.144 10.4379 161.62 10.7588C161.096 11.0797 160.685 11.5218 160.389 12.0879C160.092 12.6539 159.943 13.2801 159.943 14.0137C159.943 14.7471 160.092 15.396 160.389 15.9619C160.685 16.528 161.096 16.9711 161.62 17.292C162.144 17.6127 162.703 17.7734 163.387 17.7734C164.07 17.7734 164.676 17.6129 165.2 17.292C165.724 16.9711 166.139 16.5279 166.442 15.9619C166.746 15.3977 166.898 14.7313 166.898 14.0137C166.898 13.296 166.746 12.6539 166.442 12.0879C166.137 11.5239 165.724 11.0797 165.2 10.7588C164.676 10.4379 164.041 10.2773 163.387 10.2773ZM90.2236 9.97754C89.6013 9.97755 89.0452 10.1381 88.5596 10.459C88.0724 10.7799 87.7038 11.2381 87.4531 11.834C87.3585 12.0596 87.2872 12.3048 87.2363 12.5674H93.0693C93.0518 12.2854 92.9952 12.0159 92.9023 11.7656C92.6972 11.2155 92.3623 10.7799 91.8994 10.459C91.4348 10.1381 90.846 9.97754 90.2236 9.97754Z" fill="currentColor"/></symbol>
+</defs></svg>
+
+<div class="stickybar" id="stickybar" aria-hidden="true">
+  <div class="stickybar__in">
+    <div class="stickybar__left">
+      <span class="stickybar__logo">Evento presencial · 26/08</span>
+      <span class="stickybar__seats" data-seats-text></span>
+    </div>
+    <button class="btn btn-primary" data-open-form>Confirmar minha presença</button>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero__bg">
+    <img class="hero__photo" src="{{ event_asset_base }}/asset-hero-sala.webp" srcset="{{ event_asset_base }}/asset-hero-sala-m.webp 1080w, {{ event_asset_base }}/asset-hero-sala.webp 2000w" sizes="100vw" alt="Plateia numa sessão presencial da Nuvemshop Next, sala cheia sob luz azul" fetchpriority="high" decoding="async" width="2000" height="1333">
+    <div class="hero__grad"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+  </div>
+  <div class="hero__in">
+    <div class="hero__topbar">
+      <a class="brandline" href="#top" aria-label="Nuvemshop Next"><svg class="logo" viewBox="0 0 170 29" aria-hidden="true"><use href="#ic-logo"/></svg></a>
+      <button class="btn btn-primary btn-sm" data-open-form>Confirmar minha presença</button>
+    </div>
+    <div class="hero__body">
+      <span class="hero__tag reveal">Evento presencial · 26 de agosto</span>
+      <h1 class="reveal">Você cresceu até onde seu modelo <span class="alc">alcança?</span></h1>
+      <p class="hero__sub reveal">A pergunta agora é qual nova frente faz sentido para o seu momento: assinatura, B2B ou exportação. Uma noite com marcas que já tomaram essa decisão, para você separar uma expansão viável de uma aposta precipitada.</p>
+      <div class="occ reveal">
+        <div class="occ__meta">
+          <span class="occ__state" data-seats-state>Sala reservada</span>
+          <div class="occ__count" data-seats-count></div>
+        </div>
+        <div class="occ__bar" data-bar aria-hidden="true"><i></i></div>
+      </div>
+      <div class="logistics reveal">
+        <span class="logi"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>26 de agosto, quarta</span>
+        <span class="logi"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18h30 às 22h</span>
+        <span class="logi"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Vila Olímpia, SP</span>
+      </div>
+      <div class="hero__ctas reveal">
+        <button class="btn btn-primary" data-open-form>Confirmar minha presença</button>
+        <a class="btn btn-ghost" href="#playbook">Ver programação da noite <svg class="btn__arw" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <p class="hero__micro reveal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Evento presencial e reservado. <span data-seats-total>60</span> lugares.</p>
+    </div>
+  </div>
+</header>
+
+<!-- ============ A SALA (teatro menor, ao lado da copy) ============ -->
+<section class="section sala" id="sala">
+  <div class="wrap">
+    <div class="sala__grid">
+      <div class="sala__copy reveal">
+        <p class="eyebrow">A sala</p>
+        <h2>Para quem já domina um modelo e está diante do próximo.</h2>
+        <p class="sala__lead"><span data-seats-total>60</span> lugares para founders e líderes de e-commerce com operação rodando, avaliando novas frentes de receita.</p>
+        <ul class="sala__mirrors">
+          <li>Seu canal principal é forte, mas o próximo ciclo não pode depender só dele.</li>
+          <li>Assinatura, B2B ou exportação já são hipótese, mas falta critério para priorizar.</li>
+          <li>Você quer ouvir quem já colocou uma dessas frentes de pé antes de levar a pauta ao time.</li>
+        </ul>
+      </div>
+      <div class="sala__viz reveal">
+        <div class="theater-wrap">
+          <div class="theater" data-theater aria-hidden="true"></div>
+          <div class="stage" aria-hidden="true"></div>
+        </div>
+        <div class="sala__counter">
+          <span class="sala__state" data-seats-state>Sala reservada</span>
+          <div class="sala__count" data-seats-count></div>
+          <div class="occ__bar sala__bar" data-bar aria-hidden="true"><i></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ A TESE (check-bullets) ============ -->
+<section class="section tese">
+  <div class="wrap">
+    <p class="eyebrow reveal">A tese da noite</p>
+    <h2 class="reveal">Diversificar não é abrir tudo. <span class="win">É escolher a frente certa primeiro.</span></h2>
+    <p class="tese__teto reveal">Assinatura, B2B e exportação ampliam receita e reduzem a dependência de um só canal. Mas cada uma exige decisões próprias de operação, margem, oferta e time.</p>
+    <div class="models">
+      <article class="model reveal"><span class="model__k">Modelo 01</span><h3 class="model__t">Assinatura</h3><p class="model__d">Quando faz sentido virar recorrência, e o que precisa estar pronto para sustentar.</p></article>
+      <article class="model reveal"><span class="model__k">Modelo 02</span><h3 class="model__t">B2B</h3><p class="model__d">Como abrir atacado sem confundir canal novo com operação duplicada.</p></article>
+      <article class="model reveal"><span class="model__k">Modelo 03</span><h3 class="model__t">Exportação</h3><p class="model__d">Exportar começa na operação, não no idioma. O que avaliar antes de entrar em um novo mercado.</p></article>
+    </div>
+    <p class="tese__close reveal"><b>A noite existe para você sair com critério para comparar essas frentes, não com mais uma tendência para discutir depois.</b></p>
+  </div>
+</section>
+
+<!-- ============ PLAYBOOK ============ -->
+<section class="section playbook" id="playbook">
+  <div class="wrap">
+    <p class="eyebrow reveal">O playbook da noite</p>
+    <h2 class="reveal">Uma sequência, <span class="ac">não uma grade.</span></h2>
+    <p class="playbook__sub reveal">Cada momento tem uma função: entender o tema, ver como funciona na prática e trocar com quem está na mesma decisão.</p>
+    <div class="speakers">
+      <h3 class="reveal">Quem conduz a conversa</h3>
+      <p class="speakers__sub reveal">Fundadores e operadores que ajudam a responder, na prática, como novas frentes de receita saem da ideia e entram na operação.</p>
+      <div class="spk-grid">
+        <article class="spk reveal"><div class="spk__photo"><img src="{{ event_asset_base }}/speaker-amanda.webp" alt="Amanda Aliperti, fundadora da PWRD by Coffee" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Amanda Aliperti</div><div class="spk__role">Fundadora · PWRD by Coffee</div><div class="spk__contrib">Opera D2C, atacado, assinatura e exportação em paralelo. Na palestra, mostra como montou essa estrutura e o que decidir primeiro.</div></div></article>
+        <article class="spk reveal"><div class="spk__photo"><img src="{{ event_asset_base }}/speaker-beatriz.webp" alt="Beatriz Daniel, Sua Mesa Suas Vontades" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Beatriz Daniel</div><div class="spk__role">Sua Mesa Suas Vontades</div><div class="spk__contrib">No painel, o que muda quando a assinatura vira pilar do negócio: operação, oferta e relação com o cliente.</div></div></article>
+        <article class="spk reveal"><div class="spk__photo"><img src="{{ event_asset_base }}/speaker-carolina.webp" alt="Carolina Hebeisen, Housewhey" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Carolina Hebeisen</div><div class="spk__role">Housewhey</div><div class="spk__contrib">Cofundadora e diretora de marketing. No painel, como a marca virou referência em suplementação clean label e o que sustenta a recorrência.</div></div></article>
+        <article class="spk reveal"><div class="spk__photo"><img src="{{ event_asset_base }}/speaker-gustavo.webp" alt="Gustavo Batista, Nuvemshop" loading="lazy" decoding="async"></div><div class="spk__info"><div class="spk__name">Gustavo Batista</div><div class="spk__role">Nuvemshop</div><div class="spk__contrib">Conduz a conversa e conecta os casos ao contexto das marcas da comunidade Next.</div></div></article>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl reveal"><div class="tl__time">18h30</div><div class="tl__t">Welcome</div><div class="tl__d">Recepção dos convidados e primeira rodada de networking.</div></div>
+      <div class="tl reveal"><div class="tl__time">19h00</div><div class="tl__t">Abertura</div><div class="tl__d">Por que abrir novas frentes exige discutir modelo de receita, não só canal.</div><div class="tl__who">Gustavo Batista · Nuvemshop</div></div>
+      <div class="tl reveal"><div class="tl__time">19h10</div><div class="tl__t">D2C, atacado, assinatura e exportação</div><div class="tl__d">Amanda Aliperti abre os bastidores da PWRD by Coffee: as decisões que permitiram rodar D2C, atacado, assinatura e exportação em paralelo, e o que cada uma custou antes de dar certo.</div><div class="tl__who">Amanda Aliperti · PWRD by Coffee</div></div>
+      <div class="tl reveal"><div class="tl__time">19h50</div><div class="tl__t">O painel · Receita que se renova</div><div class="tl__d">Os bastidores de quem transformou assinatura em pilar do negócio, e os números por trás da decisão.</div><div class="tl__who">Beatriz Daniel (Sua Mesa Suas Vontades) + Carolina Hebeisen (Housewhey) · Mediação: Gustavo Batista</div></div>
+      <div class="tl reveal"><div class="tl__time">20h20</div><div class="tl__t">O que levar daqui</div><div class="tl__d">Fechamento da conversa e principais critérios para comparar assinatura, B2B e exportação no seu contexto.</div><div class="tl__who">Gustavo Batista · Nuvemshop</div></div>
+      <div class="tl reveal"><div class="tl__time">20h30</div><div class="tl__t">Networking, com degustação</div><div class="tl__d">A noite não termina na palestra. O momento de troca ganha uma degustação de vinho guiada por sommelier, para aproximar quem está na sala.</div></div>
+    </div>
+    <div class="exp reveal">
+      <div class="exp__media">
+        <img src="{{ event_asset_base }}/asset-degustacao.webp" alt="Taça de vinho tinto sob luz suave numa noite de networking" loading="lazy" decoding="async">
+      </div>
+      <div class="exp__body">
+        <span class="tl__k" style="color:var(--blue-400)">A experiência</span>
+        <h3>A noite fecha com <span class="ac">uma taça na mão.</span></h3>
+        <p>Depois da conversa, o networking ganha uma degustação de vinho guiada por sommelier. Um encerramento sensorial, à altura de quem está na sala.</p>
+      </div>
+    </div>
+    <div class="playbook__cta"><button class="btn btn-primary" data-open-form>Confirmar minha presença</button></div>
+  </div>
+</section>
+
+<!-- ============ O QUE VOCÊ LEVA ============ -->
+<section class="section leva">
+  <div class="wrap">
+    <p class="eyebrow reveal">O que você leva</p>
+    <h2 class="reveal">Critérios para decidir, <span class="ac">não uma lista de tendências.</span></h2>
+    <ul class="leva__list">
+      <li class="reveal">Como avaliar se assinatura, B2B ou exportação faz sentido para o seu estágio atual.</li>
+      <li class="reveal">Quais mudanças de operação, oferta e time cada frente pode exigir.</li>
+      <li class="reveal">Onde estão os riscos de dispersão, complexidade e canibalização.</li>
+      <li class="reveal">O que perguntar internamente antes de transformar ideia em projeto.</li>
+      <li class="reveal">Como operações parecidas decidiram por onde começar, e o que separou o timing certo da aposta prematura.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ MARCAS NA SALA ============ -->
+<section class="marcas">
+  <div class="wrap">
+    <p class="marcas__label reveal">Marcas na sala</p>
+    <div class="marcas__row reveal">
+      <img class="marca-logo m-pwrd" src="{{ event_asset_base }}/logo-pwrd.png" alt="PWRD by Coffee" loading="lazy">
+      <img class="marca-logo m-suamesa" src="{{ event_asset_base }}/logo-suamesa.png" alt="Sua Mesa Suas Vontades" loading="lazy">
+      <img class="marca-logo m-housewhey" src="{{ event_asset_base }}/logo-housewhey.png" alt="Housewhey" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCAL + FAQ + DEPOIMENTOS ============ -->
+<section class="section light">
+  <div class="wrap">
+    <p class="eyebrow reveal">Onde o encontro acontece</p>
+    <h2 class="reveal">Uma sala reservada na <span class="ac">Vila Olímpia.</span></h2>
+    <p class="local__lead reveal">Uma noite presencial no escritório da Nuvemshop, em São Paulo. Para troca direta entre lojistas, fundadores e time Next.</p>
+    <div class="local__card reveal">
+      <div class="local__map"><img src="{{ event_asset_base }}/asset-local-escritorio.webp" alt="Escritório da Nuvemshop na Vila Olímpia, espaço do evento" loading="lazy" decoding="async"></div>
+      <div class="local__info">
+        <div class="local__row"><svg aria-hidden="true"><use href="#ic-location"/></svg><div><div class="lbl">Endereço</div><div class="val">Alameda Vicente Pinzon, 51 · Vila Olímpia, São Paulo</div></div></div>
+        <div class="local__row"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg><div><div class="lbl">Como chegar</div><a class="val" href="https://www.google.com/maps/search/?api=1&query=Alameda+Vicente+Pinzon+51+Vila+Olimpia+Sao+Paulo" target="_blank" rel="noopener">Abrir no Google Maps</a></div></div>
+        <div class="local__row"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 6V4h10v2"/></svg><div><div class="lbl">Estacionamento</div><div class="val">Sim. O escritório tem estacionamento próprio, além de diversas opções na região da Vila Olímpia.</div></div></div>
+      </div>
+      <div class="local__cta"><button class="btn btn-primary btn-block" data-open-form>Confirmar minha presença</button></div>
+    </div>
+
+    <div class="faq">
+      <h3 class="reveal">Antes de confirmar sua presença</h3>
+      <p class="faq__intro reveal">Algumas informações práticas para você decidir com segurança e organizar sua ida.</p>
+      <div class="faq__cats">
+        <details class="faq__cat reveal" open>
+          <summary>
+            <span class="faq__cat__ico"><svg aria-hidden="true"><use href="#ic-users"/></svg></span>
+            <span class="faq__cat__meta"><span>Presença</span><span class="faq__cat__count">5 perguntas</span></span>
+            <svg class="faq__cat__chev" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq__cat__body">
+            <details class="acc"><summary class="acc__btn">O evento é gratuito?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. É um evento gratuito para convidados.</div></details>
+            <details class="acc"><summary class="acc__btn">O evento é aberto ao público?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Não. É uma sala reservada, para um grupo selecionado de lojistas e convidados.</div></details>
+            <details class="acc"><summary class="acc__btn">Posso levar alguém da minha empresa?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. Em geral, reservamos até 2 convites por marca, para manter o perfil da sala.</div></details>
+            <details class="acc"><summary class="acc__btn">Confirmar presença garante meu lugar?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. Ao preencher o formulário, sua presença fica confirmada enquanto houver disponibilidade na sala.</div></details>
+            <details class="acc"><summary class="acc__btn">O que acontece depois que confirmo?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Você recebe por e-mail a confirmação, a programação e as informações de acesso ao escritório.</div></details>
+          </div>
+        </details>
+        <details class="faq__cat reveal">
+          <summary>
+            <span class="faq__cat__ico"><svg aria-hidden="true"><use href="#ic-star"/></svg></span>
+            <span class="faq__cat__meta"><span>Experiência</span><span class="faq__cat__count">3 perguntas</span></span>
+            <svg class="faq__cat__chev" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq__cat__body">
+            <details class="acc"><summary class="acc__btn">O evento será gravado?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Não. O valor está em estar na sala.</div></details>
+            <details class="acc"><summary class="acc__btn">Vai ter apresentação comercial?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Não. A noite é de conteúdo prático e troca entre pares.</div></details>
+            <details class="acc"><summary class="acc__btn">Como funciona o networking?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Uma noite pensada para a troca, com uma degustação de vinho guiada por sommelier para aproximar quem está na sala.</div></details>
+          </div>
+        </details>
+        <details class="faq__cat reveal">
+          <summary>
+            <span class="faq__cat__ico"><svg aria-hidden="true"><use href="#ic-location"/></svg></span>
+            <span class="faq__cat__meta"><span>Local</span><span class="faq__cat__count">2 perguntas</span></span>
+            <svg class="faq__cat__chev" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq__cat__body">
+            <details class="acc"><summary class="acc__btn">Onde acontece?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">No escritório da Nuvemshop, na Vila Olímpia, São Paulo. Endereço com link para o Google Maps acima.</div></details>
+            <details class="acc"><summary class="acc__btn">Há estacionamento?<span class="acc__ico" aria-hidden="true"></span></summary><div class="acc__body">Sim. O escritório tem estacionamento próprio, além de diversas opções na região da Vila Olímpia.</div></details>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="depo">
+      <div class="depo__head">
+        <p class="faq__gt reveal">Prova de par</p>
+        <h3 class="reveal">Quem já esteve na sala.</h3>
+      </div>
+      <p class="faq__intro reveal">Depoimentos de quem já passou por uma edição do Next.</p>
+      <div class="depo__slider reveal">
+        <div class="depo__track" data-depo-track>
+          <!-- Depoimentos: 1 a 4. Com 1 → card único centralizado (sem slider/dots). Com 2+ → slider com dots.
+               Para adicionar, duplique um <blockquote class="tcard">…</blockquote> (máximo 4). -->
+          <blockquote class="tcard"><span class="tcard__mark" aria-hidden="true">&rdquo;</span><div class="tcard__stars" aria-hidden="true"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div><p class="tcard__text">Palestrei sobre branding e IA numa edição do Next e o retorno veio na hora: os feedbacks começaram ainda no evento e seguiram nas DMs depois. É uma sala que troca de verdade.</p><div class="tcard__by"><img class="tcard__photo" src="{{ event_asset_base }}/speaker-galileu.webp" alt="" loading="lazy" decoding="async" width="192" height="192"><div><div class="tcard__n">Galileu Nogueira</div><div class="tcard__r">Fundador · Galileo Branding</div></div></div></blockquote>
+        </div>
+        <div class="depo__dots" data-depo-dots></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS + FECHO ============ -->
+<section class="section close">
+  <div class="wrap">
+    <div class="final reveal">
+      <p class="eyebrow">Última chamada</p>
+      <h2>26 de agosto. Vila Olímpia. <span class="ac"><span data-seats-total>60</span> lugares.</span></h2>
+      <p>Uma conversa que não acontece em palco grande, em webinar ou em blog. Acontece na sala, entre quem está tomando decisões parecidas agora.</p>
+      <div class="occ">
+        <div class="occ__meta"><span class="occ__state" data-seats-state>Sala reservada</span><div class="occ__count" data-seats-count></div></div>
+        <div class="occ__bar" data-bar aria-hidden="true"><i></i></div>
+      </div>
+      <button class="btn btn-primary" data-open-form>Confirmar minha presença</button>
+      <p class="final__micro">Ao confirmar, você recebe a programação e os detalhes de acesso por e-mail.</p>
+    </div>
+    <div class="statstrip reveal">
+      <div class="stat"><b>+1.000</b><span>líderes reunidos</span></div>
+      <div class="stat"><b>+670</b><span>marcas na comunidade</span></div>
+      <div class="stat"><b>9,6</b><span>de satisfação</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot__brand"><svg class="logo" viewBox="0 0 170 29" aria-hidden="true"><use href="#ic-logo"/></svg></div>
+  <p class="foot__legal">© 2026 Nuvemshop</p>
+</footer>
+
+<div class="mobilecta" id="mobilecta" aria-hidden="true">
+  <div class="mobilecta__seats" data-seats-text></div>
+  <button class="btn btn-primary btn-block" data-open-form>Confirmar minha presença</button>
+</div>
+
+<div class="modal" id="formModal" role="dialog" aria-modal="true" aria-labelledby="formTitle">
+  <div class="modal__bd" data-close-form></div>
+  <div class="modal__panel">
+    <button class="modal__x" data-close-form aria-label="Fechar"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <p class="modal__eyebrow">Evento presencial · 26 de agosto</p>
+    <h3 class="modal__title" id="formTitle">Confirmar presença</h3>
+    <p class="modal__sub">Confirme sua presença no evento. A programação e os detalhes de acesso chegam por e-mail.</p>
+    <div class="modal__form" id="hubspotForm"></div>
+  </div>
+</div>
+<script charset="utf-8" src="https://js.hsforms.net/forms/embed/v2.js"></script>
+<script src="{{ get_asset_url('./evento-modelos-negocio.js') }}" defer></script>
+{{ standard_footer_includes }}
+</body>
+</html>
