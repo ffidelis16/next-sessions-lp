@@ -1,0 +1,49 @@
+name: Fix evento 08-09
+
+on:
+  push:
+    branches:
+      - evento-08-09-marca-valor
+    paths:
+      - scripts/fix_evento_08_09.py
+      - .github/workflows/fix-evento-08-09.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: evento-08-09-marca-valor
+          fetch-depth: 0
+
+      - name: Aplicar correções
+        run: python scripts/fix_evento_08_09.py
+
+      - name: Validar conteúdo crítico
+        run: |
+          grep -q "Enviar meus dados garante meu lugar?" evento-08-09-marca-valor.html
+          grep -q "Gutto Paixão · Weethub" evento-08-09-marca-valor.html
+          grep -q "Caroline Domingues · Nuvemshop" evento-08-09-marca-valor.html
+          grep -q "EVENT_DAY:new Date('2026-09-08T00:00:00-03:00')" evento-08-09-marca-valor.html
+          grep -q "SCHEDULE:\[\[35,48\]" evento-08-09-marca-valor.html
+          ! grep -q "htmlog-eventos" evento-08-09-marca-valor.html
+
+      - name: Commitar correções
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add evento-08-09-marca-valor.html \
+            docs/hubspot-implementation/entrega-final-plano-a/developer-files/evento-marca-valor.html \
+            docs/hubspot-implementation/entrega-final-plano-a/developer-files/evento-marca-valor.js \
+            docs/hubspot-implementation/entrega-final-plano-a/RELATORIO-EVENTO-08-09-MARCA-VALOR.md
+          if git diff --cached --quiet; then
+            echo "Nenhuma correção pendente."
+          else
+            git commit -m "Corrige QA e curva da página 08/09"
+            git push origin HEAD:evento-08-09-marca-valor
+          fi
