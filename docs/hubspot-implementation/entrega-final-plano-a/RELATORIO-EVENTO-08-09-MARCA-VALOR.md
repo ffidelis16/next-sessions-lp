@@ -133,3 +133,11 @@ A lista abaixo não indica necessariamente erro: algumas strings aparecem apenas
 - `uma taça na mão.`
 - `É escolher a frente certa primeiro.`
 - `Última chamada`
+
+## Correções de QA aplicadas
+
+- 49 correções editoriais pontuais aplicadas após a geração.
+- Open Graph e Twitter Image corrigidos para reutilizar o asset raiz.
+- Programação reconciliada com Caroline Domingues, Gutto Paixão, Katharina Neves e Ângela Coelho da Fonseca.
+- Curva técnica provisória adaptada para 70 cadeiras e evento em 08/09.
+- Imagens e logos da edição anterior permanecem explicitamente provisórios.

@@ -6,7 +6,7 @@ function track(ev,params){try{window.dataLayer.push(Object.assign({event:ev},par
 
 /* ===== 1. OCUPAÇÃO — agenda de disponibilidade aprovada pelo cliente.
    Cada marco entra na virada do respectivo dia D-N (00h, BRT).
-   Antes de D-45 a página permanece em 60; de D-1 até o início do evento, em 2.
+   Antes de D-35 a página permanece em 70; de D-1 até o início do evento, em 2.
    • TOTAL          → nº total de lugares
    • SCHEDULE       → pares [dias antes, lugares disponíveis]
    • LAST_THRESHOLD → abaixo ou igual vira "Últimos lugares"
@@ -15,8 +15,8 @@ function track(ev,params){try{window.dataLayer.push(Object.assign({event:ev},par
 const SEAT={
   TOTAL: 70,
   EVENT:new Date('2026-09-08T08:30:00-03:00'),
-  EVENT_DAY:new Date('2026-08-26T00:00:00-03:00'),
-  SCHEDULE:[[45,60],[40,54],[35,53],[30,49],[25,42],[20,36],[15,29],[12,21],[10,16],[7,12],[5,8],[3,4],[1,2]],
+  EVENT_DAY:new Date('2026-09-08T00:00:00-03:00'),
+  SCHEDULE:[[35,48],[30,43],[25,37],[20,31],[15,24],[12,19],[10,15],[7,10],[5,7],[3,4],[1,2]],
   FORCE_STATE:null,
   LAST_THRESHOLD: 10
 };
