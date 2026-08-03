@@ -1,0 +1,37 @@
+name: Corrigir alts do template 08-09
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/fix-brand-alts-0809.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix-alts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Corrigir textos alternativos
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('docs/hubspot-implementation/entrega-final-plano-a/developer-files/evento-marca-valor.html')
+          text = path.read_text(encoding='utf-8')
+          text = text.replace('src="{{ event_asset_base }}/logo-suamesa.png" alt="Nuvemshop"', 'src="{{ event_asset_base }}/logo-suamesa.png" alt="Sua Mesa Suas Vontades"')
+          text = text.replace('src="{{ event_asset_base }}/logo-housewhey.png" alt="Mica Chocolates"', 'src="{{ event_asset_base }}/logo-housewhey.png" alt="Housewhey"')
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Publicar correção
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/hubspot-implementation/entrega-final-plano-a/developer-files/evento-marca-valor.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Corrige alts dos logos reutilizados no template de 08/09"
+          git push
